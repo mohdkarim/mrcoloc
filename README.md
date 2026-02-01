@@ -1,5 +1,7 @@
 # Impact of proteogenomic evidence on clinical success
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18451758.svg)](https://doi.org/10.5281/zenodo.18451758)
+
 Code and data to reproduce analyses from:
 
 > **Impact of proteogenomic evidence on clinical success**  
@@ -15,6 +17,38 @@ Code and data to reproduce analyses from:
 ## Interactive Browser
 
 Browse all MR results (FDR < 0.05): **https://mk31.shinyapps.io/pqtl_mr_fdr05/**
+
+## Quick Start
+
+```r
+# Clone the repository
+git clone https://github.com/mohdkarim/mrcoloc.git
+cd mrcoloc
+
+# Run setup (installs packages + downloads data from Zenodo)
+Rscript scripts/setup.R
+
+# Generate all outputs
+Rscript scripts/generate_mrcoloc_supplement.R   # Supplementary tables
+Rscript scripts/mrcoloc_paper_2025_main_figures.R    # Figure 1a-c
+Rscript scripts/mrcoloc_paper_2025_supp_figures.R    # Figures S2-S3
+```
+
+## Data Availability
+
+### Automatic download (Zenodo)
+The setup script automatically downloads analysis data from Zenodo:
+- **DOI**: [10.5281/zenodo.18451758](https://doi.org/10.5281/zenodo.18451758)
+- **Size**: ~1 GB total
+- **Contents**: MR-coloc results, ChEMBL annotations, background gene sets
+
+### Manual download (Minikel et al.)
+Some files must be downloaded manually from the Minikel et al. Nature 2024 supplement:
+1. Go to [https://doi.org/10.1038/s41586-024-07316-0](https://doi.org/10.1038/s41586-024-07316-0)
+2. Download supplementary data files
+3. Place `merge2.tsv.gz` and `assoc.tsv.gz` in `data/minikel/`
+
+See `data/README.md` for detailed instructions.
 
 ## Repository Structure
 

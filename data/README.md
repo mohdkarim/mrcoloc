@@ -1,6 +1,40 @@
 # Data Requirements
 
-This directory contains small reference files. Large data files must be downloaded separately.
+This directory contains small reference files. Large data files are downloaded automatically from Zenodo.
+
+## Automatic Download (Zenodo)
+
+Run the setup script to download all required data files:
+
+```r
+Rscript scripts/setup.R
+```
+
+Or download manually from: **https://doi.org/10.5281/zenodo.18451758**
+
+### Files downloaded from Zenodo (placed in `data_raw/`):
+| File | Size | Description |
+|------|------|-------------|
+| `pqtl_mrcoloc_2025.rds` | 55 MB | Main pQTL MR-coloc results |
+| `ukb_ppp_mr_coloc_results.rds` | 225 MB | UKB-PPP MR-coloc results |
+| `mr_prot_filtered_dataset_v1_v2.rds` | 7.8 MB | Legacy MR results (filtered) |
+| `mr_prot_unfiltered_dataset_v1_v2_without_egger_with_transcoloc.rds` | 376 MB | Legacy MR results (full) |
+| `ttpairs_tested.rds` | 25 MB | Background target-trait pairs |
+| `trans_genes.rds` | 494 KB | Trans-coloc gene annotations |
+| `chembl.rds` | 272 MB | ChEMBL drug-target data |
+| `panukb.rds` | 92 KB | Pan-UK Biobank trait mappings |
+| `ST7_all_MR_pairs.rds` | 11 MB | All significant MR pairs |
+
+## Manual Download (Minikel et al.)
+
+Some files must be downloaded from the Minikel et al. Nature 2024 supplementary data:
+
+1. Go to: https://doi.org/10.1038/s41586-024-07316-0
+2. Navigate to Supplementary Information
+3. Download the data files
+4. Place in `data/minikel/`:
+   - `merge2.tsv.gz` (21 MB) - Main therapeutic index
+   - `assoc.tsv.gz` (16 MB) - Association data
 
 ## Files included in this repository
 
