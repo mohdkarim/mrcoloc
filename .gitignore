@@ -1,0 +1,33 @@
+# Large data files (too big for GitHub)
+*.rds
+data_raw/
+data_cache/
+
+# Minikel et al data (users download from their supplement)
+genetic_support-main/data/merge2.tsv.gz
+genetic_support-main/data/pp.tsv
+genetic_support-main/data/sim.tsv.gz
+genetic_support-main/data/assoc.tsv.gz
+
+# TopLD API binary and temp files
+topld_api/
+
+# R session artifacts
+.Rhistory
+.RData
+.Rproj.user/
+*.Rproj
+
+# Generated outputs (can be regenerated)
+output/*.xlsx
+output/*.html
+output/*_files/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*~
+*.tmp
+*.bak
