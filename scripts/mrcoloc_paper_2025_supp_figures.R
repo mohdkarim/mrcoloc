@@ -45,11 +45,12 @@ gs4_deauth()
 
 project_root <- Sys.getenv(
   "PQTL_ENRICH_ROOT",
-  "/home/mohd/mohd-sandbox/pQTL_enrichment/mrcoloc_paper2025"
+  getwd()
 )
 
 fig_dir       <- file.path(project_root, "figures")
-data_dir      <- file.path(project_root, "genetic_support-main", "data")
+data_dir      <- file.path(project_root, "data")
+minikel_dir   <- file.path(project_root, "data", "minikel")
 r_dir         <- project_root
 
 if (!dir.exists(fig_dir)) {
@@ -76,7 +77,7 @@ if (!exists("merge3_pqtl")) {
     filter(bxy_pval <= mr_pval_threshold)
   
   # Merge2 with annotations
-  merge2 <- read_tsv(file.path(data_dir, "merge2.tsv.gz"),
+  merge2 <- read_tsv(file.path(minikel_dir, "merge2.tsv.gz"),
                      show_col_types = FALSE) %>%
     mutate(
       otg_study = if_else(
@@ -148,8 +149,10 @@ if (!exists("pgenes")) {
     filter(!is.na(hgnc_protein))
   
   olink_genes <- unique(as.character(olink2$hgnc_protein))
-  otherttpairs <- readRDS(file.path(project_root, "data_raw/ttpairs_tested.rds"))
-  othergenes   <- unique(gsub("_.*", "", otherttpairs))
+  # Derive gene list from unfiltered dataset
+  df_unfiltered <- readRDS(file.path(project_root, "data_raw", "mr_prot_unfiltered_dataset_v1_v2_without_egger_with_transcoloc.rds"))
+  othergenes <- unique(df_unfiltered$hgnc_protein[!is.na(df_unfiltered$hgnc_protein)])
+  rm(df_unfiltered); gc(verbose = FALSE)
   pgenes       <- unique(c(olink_genes, othergenes))
 }
 
@@ -446,3 +449,116 @@ Notes:
   - Background restricted to ", length(pgenes), " measured proteins
   - pQTL-supported T-I pairs: ", nrow(df_pqtl_support), "
 ")
+# ==============================================================================
+# Figure S4: pQTL Enrichment with Full Minikel Background
+# ==============================================================================
+# Sensitivity analysis comparing pQTL enrichment using:
+# 1. Measured proteins background (main analysis)
+# 2. Full Minikel T-I pairs background (no pgenes restriction)
+# ==============================================================================
+
+message("[S4] Generating Figure S4 (pQTL enrichment - background comparison)...")
+
+# pQTL-supported TI pairs (same as main analysis)
+df_pqtl_support <- merge3_pqtl %>%
+  filter(
+    grepl("pqtl", original_link, ignore.case = TRUE),
+    comb_norm >= 0.8,
+    !is.na(l2g_share), l2g_share >= 0.5
+  ) %>%
+  distinct(ti_uid)
+
+# --- Analysis 1: Measured proteins background (pgenes) ---
+ti_best_pgenes <- merge3_pqtl %>%
+  filter(!is.na(gene), gene != "",
+         !is.na(indication_mesh_id), indication_mesh_id != "",
+         !is.na(ccat), gene %in% pgenes) %>%
+  left_join(indic %>% select(indication_mesh_id, genetic_insight),
+            by = "indication_mesh_id") %>%
+  filter(genetic_insight != "none") %>%
+  mutate(highest_phase = case_when(
+    !is.na(succ_3_a) ~ 3, !is.na(succ_2_3) ~ 2,
+    !is.na(succ_1_2) ~ 1, !is.na(succ_p_1) ~ 0, TRUE ~ NA_real_
+  )) %>%
+  arrange(ti_uid, desc(highest_phase), desc(comb_norm)) %>%
+  group_by(ti_uid) %>%
+  slice(1) %>%
+  ungroup() %>%
+  mutate(gensup = ti_uid %in% df_pqtl_support$ti_uid)
+
+long_pg <- ti_best_pgenes %>% filter(!is.na(succ_3_a)) %>% rename(success = succ_3_a)
+base_pg <- ti_best_pgenes %>% filter(!is.na(succ_1_2))
+
+rs_pgenes <- as.data.frame(BinomRatioCI(
+  x1 = sum(long_pg$gensup & long_pg$success), n1 = sum(base_pg$gensup),
+  x2 = sum(!long_pg$gensup & long_pg$success), n2 = sum(!base_pg$gensup),
+  method = "katz"
+)) %>% mutate(
+  source = "pQTL (measured proteins)",
+  n = paste0("(", sum(long_pg$gensup & long_pg$success), "/", sum(base_pg$gensup), ")/(",
+             sum(!long_pg$gensup & long_pg$success), "/", sum(!base_pg$gensup), ")")
+)
+
+# --- Analysis 2: Full Minikel background (no pgenes restriction) ---
+ti_best_full <- merge3_pqtl %>%
+  filter(!is.na(gene), gene != "",
+         !is.na(indication_mesh_id), indication_mesh_id != "",
+         !is.na(ccat)) %>%
+  left_join(indic %>% select(indication_mesh_id, genetic_insight),
+            by = "indication_mesh_id") %>%
+  filter(genetic_insight != "none") %>%
+  mutate(highest_phase = case_when(
+    !is.na(succ_3_a) ~ 3, !is.na(succ_2_3) ~ 2,
+    !is.na(succ_1_2) ~ 1, !is.na(succ_p_1) ~ 0, TRUE ~ NA_real_
+  )) %>%
+  arrange(ti_uid, desc(highest_phase), desc(comb_norm)) %>%
+  group_by(ti_uid) %>%
+  slice(1) %>%
+  ungroup() %>%
+  mutate(gensup = ti_uid %in% df_pqtl_support$ti_uid)
+
+long_full <- ti_best_full %>% filter(!is.na(succ_3_a)) %>% rename(success = succ_3_a)
+base_full <- ti_best_full %>% filter(!is.na(succ_1_2))
+
+rs_full <- as.data.frame(BinomRatioCI(
+  x1 = sum(long_full$gensup & long_full$success), n1 = sum(base_full$gensup),
+  x2 = sum(!long_full$gensup & long_full$success), n2 = sum(!base_full$gensup),
+  method = "katz"
+)) %>% mutate(
+  source = "pQTL (all Minikel T-I pairs)",
+  n = paste0("(", sum(long_full$gensup & long_full$success), "/", sum(base_full$gensup), ")/(",
+             sum(!long_full$gensup & long_full$success), "/", sum(!base_full$gensup), ")")
+)
+
+# --- Combine and plot ---
+figS4_data <- bind_rows(rs_pgenes, rs_full) %>%
+  mutate(colour = "blue", subgroup = row_number())
+
+row_labels_s4 <- data.frame(
+  subgroup = 1:2,
+  label = c("Measured proteins background", "Full Minikel background")
+)
+
+figS4 <- forest_plot(
+  figS4_data,
+  col.key = "subgroup", col.lci = "lwr.ci", col.uci = "upr.ci",
+  exponentiate = FALSE, colour = "colour", nullval = 1,
+  col.left = "n", stroke = 1, shape = 16, estcolumn = TRUE,
+  base_size = 14, xlim = c(1, 9), xticks = 1:8,
+  col.right.heading = "RS, 95% CI",
+  col.left.heading = "(A[G]/S[G])/(A![G]/S![G])",
+  xlab = "Phase I-Launch Relative Success (RS), 95% CI",
+  panel.headings = "pQTL Enrichment by Background Universe",
+  row.labels = row_labels_s4
+)
+
+ggsave(file.path(fig_dir, "figS4_background_comparison.pdf"), 
+       plot = figS4$plot, device = "pdf", width = 8, height = 3)
+ggsave(file.path(fig_dir, "figS4_background_comparison.png"), 
+       plot = figS4$plot, device = "png", width = 8, height = 3, dpi = 300)
+
+message("   Saved: figS4_background_comparison.pdf/.png")
+message("   Measured proteins: RS = ", round(rs_pgenes$est, 2), 
+        " (95% CI: ", round(rs_pgenes$lwr.ci, 2), "-", round(rs_pgenes$upr.ci, 2), ")")
+message("   Full Minikel:      RS = ", round(rs_full$est, 2),
+        " (95% CI: ", round(rs_full$lwr.ci, 2), "-", round(rs_full$upr.ci, 2), ")")

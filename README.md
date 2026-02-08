@@ -19,100 +19,81 @@ Code and data to reproduce analyses from:
 Browse all MR results (FDR < 0.05): **https://mk31.shinyapps.io/pqtl_mr_fdr05/**
 
 ## Quick Start
-
-```r
+```bash
 # Clone the repository
 git clone https://github.com/mohdkarim/mrcoloc.git
 cd mrcoloc
 
-# Run setup (installs packages + downloads data from Zenodo)
-Rscript scripts/setup.R
+# Download all data (~1 GB)
+Rscript scripts/download_data.R
 
-# Generate all outputs
-Rscript scripts/generate_mrcoloc_supplement.R   # Supplementary tables
-Rscript scripts/mrcoloc_paper_2025_main_figures.R    # Figure 1a-c
-Rscript scripts/mrcoloc_paper_2025_supp_figures.R    # Figures S2-S3
+# Create derived datasets
+Rscript scripts/create_derived_data.R
+
+# Generate main figures (Figure 1a-c)
+Rscript scripts/mrcoloc_paper_2025_main_figures.R
+
+# Generate supplementary figures (Figures S2-S4)
+Rscript scripts/mrcoloc_paper_2025_supp_figures.R
+
+# Generate supplementary tables (ST1-ST17)
+Rscript scripts/generate_mrcoloc_supplement.R
+```
+
+Or run the full setup in one command:
+```bash
+Rscript scripts/setup.R
 ```
 
 ## Data Availability
 
-### Automatic download (Zenodo)
-The setup script automatically downloads analysis data from Zenodo:
-- **DOI**: [10.5281/zenodo.18451758](https://doi.org/10.5281/zenodo.18451758)
-- **Size**: ~1 GB total
-- **Contents**: MR-coloc results, ChEMBL annotations, background gene sets
+All data is automatically downloaded by `scripts/download_data.R`:
 
-### Manual download (Minikel et al.)
-Some files must be downloaded manually from the Minikel et al. Nature 2024 supplement:
-1. Go to [https://doi.org/10.1038/s41586-024-07316-0](https://doi.org/10.1038/s41586-024-07316-0)
-2. Download supplementary data files
-3. Place `merge2.tsv.gz` and `assoc.tsv.gz` in `data/minikel/`
+| Source | Files | Size | Description |
+|--------|-------|------|-------------|
+| [Zenodo](https://doi.org/10.5281/zenodo.18451758) | 5 | ~922 MB | MR-coloc results, ChEMBL annotations |
+| [Minikel et al. GitHub](https://github.com/ericminikel/genetic_support) | 30 | ~120 MB | Therapeutic index, drug phase data |
+| [Gene lists](https://github.com/ericminikel/genetic_support) | 9 | ~100 KB | Protein family annotations |
 
-See `data/README.md` for detailed instructions.
+### Data Sources
+- **Zenodo DOI**: [10.5281/zenodo.18451758](https://doi.org/10.5281/zenodo.18451758)
+- **Minikel et al. Nature 2024**: [10.1038/s41586-024-07316-0](https://doi.org/10.1038/s41586-024-07316-0)
 
 ## Repository Structure
-
 ```
 mrcoloc/
+├── scripts/                    # Analysis scripts
+│   ├── download_data.R                 # Downloads all required data
+│   ├── create_derived_data.R           # Creates derived datasets
+│   ├── setup.R                         # Full setup (download + derive)
+│   ├── mrcoloc_paper_2025_main_figures.R    # Figure 1a-c
+│   ├── mrcoloc_paper_2025_supp_figures.R    # Figures S2-S4
+│   ├── generate_mrcoloc_supplement.R   # Supplementary Tables ST1-ST17
+│   └── flowchart_numbers.R             # Flowchart statistics
 ├── R/                          # Helper functions
 │   ├── advancement_rr.R        # Relative success calculations
 │   ├── genes_tbl.R             # Gene annotation utilities
 │   ├── pipeline_best.R         # T-I pair processing
 │   └── triangulate_ot.R        # Open Targets triangulation
-├── scripts/                    # Analysis scripts
-│   ├── generate_mrcoloc_supplement.R   # Supplementary Tables ST1-ST17
-│   ├── flowchart_numbers.R             # Flowchart statistics
-│   ├── mrcoloc_paper_2025_main_figures.R    # Figure 1a-c
-│   └── mrcoloc_paper_2025_supp_figures.R    # Figures S2-S3
-├── data/                       # Reference data files
+├── data/                       # Reference data (downloaded)
+│   ├── minikel/                # Core Minikel files (merge2, assoc)
 │   ├── gene_lists/             # Protein family annotations
-│   ├── areas.tsv               # Therapeutic area mappings
-│   └── indic.tsv               # Indication annotations
-├── figures/                    # Publication figures
+│   └── *.tsv                   # Therapeutic area mappings, etc.
+├── data_raw/                   # Analysis data (downloaded from Zenodo)
+├── figures/                    # Generated figures
 └── output/                     # Generated supplementary tables
 ```
 
-## Data Requirements
-
-### Files included in this repository
-- Gene family lists (kinases, enzymes, etc.)
-- Therapeutic area mappings
-- Indication annotations
-
-### Files to download (see data/README.md)
-1. **Minikel et al. therapeutic index** - From [Nature 2024 supplement](https://doi.org/10.1038/s41586-024-07316-0)
-2. **pQTL summary statistics** - From [GWAS Catalog](https://www.ebi.ac.uk/gwas/downloads/summary-statistics)
-3. **MR-coloc results** - Available from [link pending]
-
-## Reproducing the Analysis
-
-### Prerequisites
-
+## Prerequisites
 ```r
 # Install required packages
 install.packages(c(
   "tidyverse", "data.table", "openxlsx", "DescTools",
-  "ggplot2", "UpSetR", "DiagrammeR", "googlesheets4"
+  "ggplot2", "UpSetR", "googlesheets4", "ckbplotr"
 ))
 
 # Bioconductor packages
-BiocManager::install(c("AnnotationDbi", "org.Hs.eg.db", "biomaRt"))
-```
-
-### Running the analysis
-
-```r
-# Set project root
-Sys.setenv(PQTL_ENRICH_ROOT = "/path/to/mrcoloc")
-
-# Generate supplementary tables (ST1-ST17)
-source("scripts/generate_mrcoloc_supplement.R")
-
-# Generate main figures
-source("scripts/mrcoloc_paper_2025_main_figures.R")
-
-# Generate supplementary figures
-source("scripts/mrcoloc_paper_2025_supp_figures.R")
+BiocManager::install(c("AnnotationDbi", "org.Hs.eg.db"))
 ```
 
 ## Outputs
@@ -121,6 +102,11 @@ source("scripts/mrcoloc_paper_2025_supp_figures.R")
 - **Figure 1a**: Forest plot showing relative success by genetic evidence source
 - **Figure 1b**: UpSet plot of MR-coloc overlap for launched T-I pairs
 - **Figure 1c**: Gene family enrichment comparing L2G vs L2G+pQTL
+
+### Supplementary Figures
+- **Figure S2**: Relative success by therapeutic area
+- **Figure S3**: Relative success by phase transition
+- **Figure S4**: pQTL enrichment by background universe (sensitivity analysis)
 
 ### Supplementary Tables
 | Table | Description |
@@ -141,7 +127,6 @@ source("scripts/mrcoloc_paper_2025_supp_figures.R")
 | ST17 | Successful pQTL-supported T-I pairs |
 
 ## Citation
-
 ```bibtex
 @article{karim2025proteogenomic,
   title={Impact of proteogenomic evidence on clinical success},
@@ -156,7 +141,6 @@ source("scripts/mrcoloc_paper_2025_supp_figures.R")
 
 - **Open Targets Genetics**: https://genetics.opentargets.org/
 - **Minikel et al. (2024)**: https://doi.org/10.1038/s41586-024-07316-0
-- **Previous preprint**: https://doi.org/10.1101/2023.06.01.23290252
 
 ## License
 

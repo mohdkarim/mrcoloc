@@ -31,3 +31,22 @@ Thumbs.db
 *~
 *.tmp
 *.bak
+# Downloaded data (use scripts/download_data.R to get these)
+data/*.tsv
+data/*.gz
+data/minikel/
+data_raw/*.rds
+
+# Generated outputs (reproducible from scripts)
+output/*.xlsx
+figures/*.pdf
+figures/*.png
+
+# R artifacts
+Rplots.pdf
+.RData
+.Rhistory
+
+# Backups
+*_backup/
+*.bak

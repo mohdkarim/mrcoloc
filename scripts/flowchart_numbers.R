@@ -47,8 +47,10 @@ gs4_deauth()
 
 # --- Paths ---
 project_root <- Sys.getenv("PQTL_ENRICH_ROOT", 
-                           "/home/mohd/mohd-sandbox/pQTL_enrichment/mrcoloc_paper2025")
+                           getwd())
 data_raw     <- file.path(project_root, "data_raw")
+data_dir    <- file.path(project_root, "data")
+minikel_dir <- file.path(project_root, "data", "minikel")
 output_dir   <- file.path(project_root, "output")
 dir.create(output_dir, showWarnings = FALSE, recursive = TRUE)
 
@@ -189,13 +191,13 @@ cat("   Unique proteins with match: ", flowchart$path1_proteins_matched, "\n")
 message("[6/10] Loading Pharmaprojects and building enrichment dataset...")
 
 # Load merge2 (Minikel et al data)
-merge2 <- read_tsv(file.path(project_root, "genetic_support-main/data/merge2.tsv.gz"),
+merge2 <- read_tsv(file.path(minikel_dir, "merge2.tsv.gz"),
                    show_col_types = FALSE)
 
 flowchart$pharmaprojects_total_ti <- n_distinct(merge2$ti_uid)
 
 # Load indications
-indic <- read_tsv(file.path(project_root, "genetic_support-main/data/indic.tsv"), 
+indic <- read_tsv(file.path(data_dir, "indic.tsv"), 
                   show_col_types = FALSE)
 
 # Build merge3_pqtl for enrichment
@@ -248,8 +250,10 @@ olink2 <- olink %>%
 
 olink_genes <- unique(as.character(olink2$hgnc_protein))
 
-otherttpairs <- readRDS(file.path(data_raw, "ttpairs_tested.rds"))
-othergenes <- unique(gsub("_.*", "", otherttpairs))
+# Derive gene list from unfiltered dataset
+df_unfiltered <- readRDS(file.path(data_raw, "mr_prot_unfiltered_dataset_v1_v2_without_egger_with_transcoloc.rds"))
+othergenes <- unique(df_unfiltered$hgnc_protein[!is.na(df_unfiltered$hgnc_protein)])
+rm(df_unfiltered); gc(verbose = FALSE)
 
 pgenes <- unique(c(olink_genes, othergenes))
 

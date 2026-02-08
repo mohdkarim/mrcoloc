@@ -64,9 +64,10 @@ gs4_deauth()
 
 # --- Paths ---
 project_root <- Sys.getenv("PQTL_ENRICH_ROOT", 
-                           "/home/mohd/mohd-sandbox/pQTL_enrichment/mrcoloc_paper2025")
+                           getwd())
 data_raw     <- file.path(project_root, "data_raw")
-data_dir     <- file.path(project_root, "genetic_support-main", "data")
+data_dir     <- file.path(project_root, "data")
+minikel_dir  <- file.path(project_root, "data", "minikel")
 output_dir   <- file.path(project_root, "output")
 dir.create(output_dir, showWarnings = FALSE, recursive = TRUE)
 
@@ -263,7 +264,7 @@ pqtl2 <- readRDS(file.path(data_raw, "pqtl_mrcoloc_2025.rds")) %>%
   filter(bxy_pval <= BONFERRONI_P)
 
 # Load merge2 (genetic support data)
-merge2 <- read_tsv(file.path(data_dir, "merge2.tsv.gz"), show_col_types = FALSE) %>%
+merge2 <- read_tsv(file.path(minikel_dir, "merge2.tsv.gz"), show_col_types = FALSE) %>%
   mutate(
     otg_study = if_else(assoc_source == "OTG",
                         str_remove(original_link, "https://genetics.opentargets.org/study/"),
@@ -308,8 +309,11 @@ olink_genes <- olink %>%
   mutate(hgnc_protein = mapIds(org.Hs.eg.db, keys = `Uniprot ID`, column = "SYMBOL",
                                keytype = "UNIPROT", multiVals = "first")) %>%
   filter(!is.na(hgnc_protein)) %>% pull(hgnc_protein) %>% unique()
-otherttpairs <- readRDS(file.path(data_raw, "ttpairs_tested.rds"))
-pgenes <- unique(c(olink_genes, unique(gsub("_.*", "", otherttpairs))))
+# Derive gene list from unfiltered dataset
+df_unfiltered <- readRDS(file.path(data_raw, "mr_prot_unfiltered_dataset_v1_v2_without_egger_with_transcoloc.rds"))
+othergenes <- unique(df_unfiltered$hgnc_protein[!is.na(df_unfiltered$hgnc_protein)])
+rm(df_unfiltered); gc(verbose = FALSE)
+pgenes <- unique(c(olink_genes, othergenes))
 
 cat(sprintf("  Background genes: %d\n", length(pgenes)))
 
@@ -537,6 +541,10 @@ olink2 <- olink_full %>%
   mutate(hgnc = unlist(mapIds(org.Hs.eg.db, `UniProt ID`, "SYMBOL", "UNIPROT", multiVals="first"))) %>%
   filter(!is.na(hgnc))
 
+# Protein name mapping for legacy gene symbols
+protein_map <- c(C7orf50="CHLSN", EFCAB2="DRC8", BAP18="BACC1", DDX58="RIGI", DUSP13="DUSP13B",
+                 WARS="WARS1", KIR2DL2="ENSG00000275914", NTproBNP="NPPB", SLC9A3R1="NHERF1",
+                 GPR15L="GPR15LG", GBA="GBA1", SLC9A3R2="NHERF2", MYLPF="MYL11", CERT="CERT1", ARNTL="BMAL1")
 missgenes <- new %>% filter(is.na(ensid)) %>% distinct(hgnc_protein) %>%
   mutate(hgnc2 = as.character(olink2$hgnc[match(hgnc_protein, olink_full$`Gene name`)]),
          hgnc3 = protein_map[hgnc_protein],
@@ -610,7 +618,7 @@ comb <- bind_rows(harm$df1, harm$df2) %>%
   arrange(bxy_pval_exponent, bxy_pval_mantissa)
 
 # Add trait keys
-panukb <- readRDS(file.path(data_raw, "panukb.rds"))
+panukb <- readRDS(file.path(project_root, "data", "panukb.rds"))
 panukb[panukb == "NA"] <- NA
 panukb$trait_code <- sub("\\.tsv\\.bgz$", "", panukb$filename)
 
@@ -622,7 +630,7 @@ comb$outcome_trait_efo2 <- ifelse(is.na(panukb$trait_efos[pos]) | panukb$trait_e
 comb$outcome_trait2 <- ifelse(!is.na(comb$outcome_trait_efo2) & is.na(comb$outcome_trait2),
                               panukb$coding_description[pos], comb$outcome_trait2)
 
-mesh <- fread(file.path(data_dir, "assoc.tsv.gz"))
+mesh <- fread(file.path(minikel_dir, "assoc.tsv.gz"))
 mesh$otg_study <- ""
 mesh$otg_study[mesh$source=="OTG"] <- gsub("https://genetics.opentargets.org/study/", "",
                                            mesh$original_link[mesh$source=="OTG"])
@@ -1031,7 +1039,7 @@ ST5 <- pqtl_launched %>%
 cat(sprintf("  ST5 (Figure1b): %d rows\n", nrow(ST5)))
 
 # --- ST6: Gene family enrichment ---
-gene_list_dir <- file.path(project_root, "genetic_support-main/data/gene_lists")
+gene_list_dir <- file.path(project_root, "data", "gene_lists")
 gene_families <- list.files(gene_list_dir, pattern = "\\.tsv$", full.names = TRUE) %>%
   map_dfr(~ read_tsv(.x, col_names = "gene", show_col_types = FALSE) %>%
             mutate(family = tools::file_path_sans_ext(basename(.x)))) %>%

@@ -42,7 +42,7 @@ suppressPackageStartupMessages({
   library(googlesheets4)
   library(ckbplotr)
   library(grid)
-  library(magick)
+  # library(magick)  # Optional: for PDF to PNG conversion
 })
 
 gs4_deauth()
@@ -51,12 +51,13 @@ gs4_deauth()
 
 project_root <- Sys.getenv(
   "PQTL_ENRICH_ROOT",
-  "/home/mohd/mohd-sandbox/pQTL_enrichment/mrcoloc_paper2025"
+  getwd()
 )
 
 # Directory structure
 fig_dir       <- file.path(project_root, "figures")
-data_dir      <- file.path(project_root, "genetic_support-main", "data")
+data_dir      <- file.path(project_root, "data")
+minikel_dir   <- file.path(project_root, "data", "minikel")
 gene_list_dir <- file.path(data_dir, "gene_lists")
 r_dir         <- project_root
 
@@ -160,9 +161,10 @@ save_figure <- function(plot_obj = NULL, filename, width, height,
            width = width, height = height, units = "in")
   }
   
-  # Convert PDF to PNG using magick
-  img <- image_read_pdf(pdf_path, density = 300)
-  image_write(img, path = png_path, format = "png")
+  # Save PNG directly (no magick dependency)
+  if (!is.null(plot_obj)) {
+    ggsave(png_path, plot = plot_obj, device = "png", width = width, height = height, units = "in", dpi = 300)
+  }
   
   message("   Saved: ", basename(pdf_path))
   message("   Saved: ", basename(png_path))
@@ -179,7 +181,7 @@ pqtl2 <- readRDS(file.path(project_root, "data_raw/pqtl_mrcoloc_2025.rds")) %>%
   filter(bxy_pval <= mr_pval_threshold)
 
 # Merge2 with annotations
-merge2 <- read_tsv(file.path(data_dir, "merge2.tsv.gz"),
+merge2 <- read_tsv(file.path(minikel_dir, "merge2.tsv.gz"),
                    show_col_types = FALSE) %>%
   mutate(
     otg_study = if_else(
@@ -252,9 +254,10 @@ olink2 <- olink %>%
 
 olink_genes <- unique(as.character(olink2$hgnc_protein))
 
-# Other tested genes
-otherttpairs <- readRDS(file.path(project_root, "data_raw/ttpairs_tested.rds"))
-othergenes   <- unique(gsub("_.*", "", otherttpairs))
+# Derive gene list
+df_unfiltered <- readRDS(file.path(project_root, "data_raw", "mr_prot_unfiltered_dataset_v1_v2_without_egger_with_transcoloc.rds"))
+othergenes <- unique(df_unfiltered$hgnc_protein[!is.na(df_unfiltered$hgnc_protein)])
+rm(df_unfiltered); gc(verbose = FALSE)
 pgenes       <- unique(c(olink_genes, othergenes))
 
 message("   Loaded ", nrow(merge3_pqtl), " T-I associations")
@@ -907,7 +910,5 @@ Individual panels (PDF + PNG at 300 DPI):
   - fig1b_upset.pdf/.png             UpSet plot (MR/coloc overlap)
   - fig1c_forest_gene_annot.pdf/.png Gene family forest plot
 
-Combine panels manually in Google Slides, PowerPoint, or Illustrator
-for the final Figure 1.
 
 ")
