@@ -1,5 +1,7 @@
 #!/usr/bin/env Rscript
-  
+  NA, "gene", "HGNC gene symbol",
+  NA, "indication_mesh_id", "MeSH identifier for the indication",
+  NA, "indication_mesh_term", "MeSH term for the indication",
 # ============================================================================
 # Generate Supplementary Tables for Proteogenomics Paper
 # Consolidated script to produce mrcoloc_supplement.xlsx
@@ -1157,17 +1159,17 @@ Key <- tribble(
   
   # COLUMN DEFINITIONS BY SHEET
   "COLUMN DEFINITIONS", "--- ST1: Proteomic_GWAS ---", NA,
-  NA, "proteomic_dataset", "Name of the proteomic GWAS dataset",
-  NA, "platform", "Proteomics platform used (Olink, Somalogic, BioRad)",
-  NA, "sample_size", "Number of samples in the study",
-  NA, "no. of proteins measured", "Number of proteins measured",
-  NA, NA, NA,
-  
-  NA, "--- ST2: Outcome_GWAS ---", NA,
   NA, "outcome_datasets", "Study identifier for outcome GWAS",
   NA, "outcome_data_source", "Source database (GWAS Catalog, FinnGen, pan-UK Biobank)",
   NA, "outcome_trait", "Description of the outcome trait",
   NA, "outcome_trait_efo", "Experimental Factor Ontology (EFO) ID(s) for the trait",
+  NA, NA, NA,
+  
+  NA, "--- ST2: Outcome_GWAS ---", NA,
+  NA, "proteomic_dataset", "Name of the proteomic GWAS dataset",
+  NA, "platform", "Proteomics platform used (Olink, Somalogic, BioRad)",
+  NA, "sample_size", "Number of samples in the study",
+  NA, "no. of proteins measured", "Number of proteins measured",
   NA, NA, NA,
   
   NA, "--- ST3: Excluded_Traits ---", NA,
@@ -1175,12 +1177,12 @@ Key <- tribble(
   NA, NA, NA,
   
   NA, "--- ST4: Figure1a ---", NA,
-  NA, "panel_group", "Grouping of enrichment analysis (by genetic evidence source, L2G share, etc.)",
   NA, "source_label", "Label for the genetic evidence source or analysis type",
   NA, "rs_estimate", "Relative success estimate (ratio of success rates)",
   NA, "rs_lwr_95ci", "Lower bound of 95% confidence interval",
   NA, "rs_upr_95ci", "Upper bound of 95% confidence interval",
   NA, "count_string", "(supported_successes/supported_total)/(unsupported_successes/unsupported_total)",
+  NA, "row_order", "Order for display in figure",
   NA, NA, NA,
   
   NA, "--- ST5: Figure1b ---", NA,
@@ -1420,18 +1422,6 @@ for (sheet_name in names(all_tables_clean)) {
     
     # Auto-width columns (with max width cap)
     setColWidths(wb, sheet_name, cols = 1:ncol(df), widths = "auto")
-    
-    # Special handling for ST16 - limit width of text-heavy columns
-    if (sheet_name == "ST16 - All_MR_pairs") {
-      # Set max widths for columns with long comma-separated lists
-      text_heavy_cols <- c("data_sources", "outcomes", "outcome_trait", "trait_key_term", 
-                          "snp_ciscoloc_all", "snp_transcoloc_all", "trans_coloc_genes_all", 
-                          "pav_terms_all", "triangulation", "mr_coloc_types")
-      col_indices <- which(names(df) %in% text_heavy_cols)
-      if (length(col_indices) > 0) {
-        setColWidths(wb, sheet_name, cols = col_indices, widths = 50)
-      }
-    }
     
     # Freeze panes (title + header)
     freezePane(wb, sheet_name, firstActiveRow = 4, firstActiveCol = 1)

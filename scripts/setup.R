@@ -6,7 +6,7 @@
 # This script sets up the complete analysis environment for:
 #
 #   "Impact of proteogenomic evidence on clinical success"
-#   Karim et al., Nature Genetics (2025)
+#   Karim et al., Manuscript in preparation (2025)
 #
 # Steps:
 #   1. Install required R packages
@@ -27,7 +27,7 @@ cat("
 ================================================================================
 
   Paper: Impact of proteogenomic evidence on clinical success
-  Authors: Karim et al., Nature Genetics (2025)
+  Authors: Karim et al., Manuscript in preparation (2025)
   
   GitHub: https://github.com/mohdkarim/mrcoloc
   Zenodo: https://doi.org/10.5281/zenodo.18451758

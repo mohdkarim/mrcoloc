@@ -6,7 +6,7 @@
 # This script downloads the required data files to reproduce the analyses in:
 #
 #   "Impact of proteogenomic evidence on clinical success"
-#   Karim et al., Nature Genetics (2025)
+#   Karim et al., Manuscript in preparation (2025)
 #
 # Data sources:
 #   1. Zenodo: Primary MR/coloc datasets (DOI: 10.5281/zenodo.18451758)

@@ -6,7 +6,7 @@ Code and data to reproduce analyses from:
 
 > **Impact of proteogenomic evidence on clinical success**  
 > Karim MA*, Hukku A, Ariano B, Holzinger E, Tsepilov Y, Hayhurst J, Buniello A, McDonagh EM, Castel SE, Nelson MR, Maranville J, Yerges-Armstrong L, Ghoussaini M*  
-> *Nature Genetics* (2025)
+> *Manuscript in preparation*
 
 ## Key Findings
 
@@ -131,9 +131,9 @@ BiocManager::install(c("AnnotationDbi", "org.Hs.eg.db"))
 @article{karim2025proteogenomic,
   title={Impact of proteogenomic evidence on clinical success},
   author={Karim, Mohd Anisul and Hukku, Abhay and Ariano, Bruno and others},
-  journal={Nature Genetics},
+  journal={Manuscript in preparation},
   year={2025},
-  doi={pending}
+  doi={}
 }
 ```
 

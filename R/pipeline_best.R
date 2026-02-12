@@ -26,7 +26,7 @@ opt = parse_args(OptionParser(option_list=option_list))
 
 pp = read_tsv('data/pp.tsv', col_types=cols())
 drug_phase_summary = read_tsv('data/drug_phase_summary.tsv', col_types=cols())
-assoc = read_tsv('data/assoc.tsv.gz', col_types=cols())
+assoc = read_tsv('data/minikel/assoc.tsv.gz', col_types=cols())
 indic = read_tsv("data/indic.tsv", col_types=cols())
 indic_topl_match = read_tsv('data/indic_topl_match.tsv', col_types=cols())
 universe = read_tsv('data/universe.tsv', col_types=cols())
