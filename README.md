@@ -146,7 +146,7 @@ BiocManager::install(c("AnnotationDbi", "org.Hs.eg.db"))
 
 ## License
 
-This project is licensed under the GPL-3.0 License - see [LICENSE](LICENSE) for details.
+This project is licensed under the Creative Commons Attribution 4.0 International License - see [LICENSE](LICENSE) for details.
 
 ## Contact
 
