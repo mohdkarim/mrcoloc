@@ -12,7 +12,7 @@
 #   Rscript mrcoloc_paper_2025_figure1.R
 #
 # Environment:
-#   Set PQTL_ENRICH_ROOT to your project directory, or it defaults to:
+#   Set MRCOLOC_ROOT to your project directory, or it defaults to:
 #   /home/mohd/mohd-sandbox/pQTL_enrichment/mrcoloc_paper2025
 #
 # Outputs (in figures/):
@@ -50,7 +50,7 @@ gs4_deauth()
 # --- Configuration -----------------------------------------------------------
 
 project_root <- Sys.getenv(
-  "PQTL_ENRICH_ROOT",
+  "MRCOLOC_ROOT",
   getwd()
 )
 

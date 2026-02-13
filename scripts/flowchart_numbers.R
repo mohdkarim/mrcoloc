@@ -46,7 +46,7 @@ suppressPackageStartupMessages({
 gs4_deauth()
 
 # --- Paths ---
-project_root <- Sys.getenv("PQTL_ENRICH_ROOT", 
+project_root <- Sys.getenv("MRCOLOC_ROOT", 
                            getwd())
 data_raw     <- file.path(project_root, "data_raw")
 data_dir    <- file.path(project_root, "data")

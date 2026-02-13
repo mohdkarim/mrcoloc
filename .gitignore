@@ -12,6 +12,10 @@ genetic_support-main/data/assoc.tsv.gz
 # TopLD API binary and temp files
 topld_api/
 
+# Manuscript
+
+manuscript/
+
 # R session artifacts
 .Rhistory
 .RData

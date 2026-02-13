@@ -44,7 +44,7 @@ gs4_deauth()
 # --- Configuration -----------------------------------------------------------
 
 project_root <- Sys.getenv(
-  "PQTL_ENRICH_ROOT",
+  "MRCOLOC_ROOT",
   getwd()
 )
 
