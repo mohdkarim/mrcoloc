@@ -33,8 +33,6 @@ cat("
 message("[0/10] Loading packages and configuration...")
 
 suppressPackageStartupMessages({
-  library(AnnotationDbi)
-  library(org.Hs.eg.db)
   library(tidyverse)
   library(data.table)
   library(DiagrammeR)
@@ -187,72 +185,19 @@ cat("   Unique proteins with match: ", flowchart$path1_proteins_matched, "\n")
 
 message("[6/10] Loading Pharmaprojects and building enrichment dataset...")
 
-# Load merge2 (Minikel et al data)
-merge2 <- read_tsv(file.path(minikel_dir, "merge2.tsv.gz"),
-                   show_col_types = FALSE)
+# Load pre-computed data (created by create_derived_data.R)
+merge3_pqtl <- readRDS(file.path(data_raw, "merge3_pqtl.rds"))
+pgenes <- readRDS(file.path(data_raw, "pgenes.rds"))
 
+# Load merge2 for Pharmaprojects count
+merge2 <- read_tsv(file.path(minikel_dir, "merge2.tsv.gz"), show_col_types = FALSE)
 flowchart$pharmaprojects_total_ti <- n_distinct(merge2$ti_uid)
 
 # Load indications
-indic <- read_tsv(file.path(data_dir, "indic.tsv"), 
-                  show_col_types = FALSE)
-
-# Build merge3_pqtl for enrichment
-pqtl2 <- readRDS(file.path(data_raw, "pqtl_mrcoloc_2025.rds")) %>%
-  filter(bxy_pval <= BONFERRONI_P)
-
-merge2 <- merge2 %>%
-  mutate(
-    otg_study = if_else(assoc_source == "OTG",
-                        str_remove(original_link, "https://genetics.opentargets.org/study/"),
-                        NA_character_),
-    otg_study = str_remove(otg_study, "FINNGEN_R6_"),
-    key = paste0(gene, "_", otg_study)
-  )
-
-pqtl_cols <- c("nsnps", "cis_trans_mr", "bxy", "bxy_pval",
-               "coloc_cis", "coloc_h4_cis", "snp_ciscoloc",
-               "coloc_trans", "coloc_h4_trans", "snp_transcoloc")
-
-merge2_with_pqtl <- merge2 %>% left_join(pqtl2, by = "key")
-pqtl_rows <- merge2_with_pqtl %>% filter(!is.na(cis_trans_mr)) %>% mutate(original_link = "pqtl")
-merge2_cleaned <- merge2_with_pqtl %>% mutate(across(any_of(pqtl_cols), ~ if_else(!is.na(cis_trans_mr), NA, .)))
-merge3_pqtl <- bind_rows(merge2_cleaned, pqtl_rows)
+indic <- read_tsv(file.path(data_dir, "indic.tsv"), show_col_types = FALSE)
 
 cat("   Pharmaprojects total T-I pairs: ", format(flowchart$pharmaprojects_total_ti, big.mark = ","), "\n")
 
-# ============================================================================
-# SECTION 7: BACKGROUND SET (pgenes)
-# ============================================================================
-
-message("[7/10] Building background gene set (pgenes)...")
-
-olink <- read_tsv(file.path(data_dir, "olink_complete.tsv"), show_col_types = FALSE)
-
-olink2 <- olink %>%
-  separate_rows(`Uniprot ID`, sep = ",") %>%
-  mutate(
-    hgnc_protein = AnnotationDbi::mapIds(
-      org.Hs.eg.db,
-      keys = `Uniprot ID`,
-      column = "SYMBOL",
-      keytype = "UNIPROT",
-      multiVals = "first"
-    )
-  ) %>%
-  filter(!is.na(hgnc_protein))
-
-olink_genes <- unique(as.character(olink2$hgnc_protein))
-
-# Derive gene list from unfiltered dataset
-df_unfiltered <- readRDS(file.path(data_raw, "mr_prot_unfiltered_dataset_v1_v2_without_egger_with_transcoloc.rds"))
-othergenes <- unique(df_unfiltered$hgnc_protein[!is.na(df_unfiltered$hgnc_protein)])
-rm(df_unfiltered); gc(verbose = FALSE)
-
-pgenes <- unique(c(olink_genes, othergenes))
-
-flowchart$pgenes_olink <- length(olink_genes)
-flowchart$pgenes_other <- length(othergenes)
 flowchart$pgenes_total <- length(pgenes)
 
 cat("   Total unique measured proteins (pgenes): ", flowchart$pgenes_total, "\n")

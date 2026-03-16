@@ -196,6 +196,105 @@ if (file.exists(output_file)) {
 }
 
 # ============================================================================
+# CREATE pgenes.rds (background gene set)
+# ============================================================================
+
+cat("--- Creating pgenes.rds ---\n\n")
+
+pgenes_file <- file.path(data_raw, "pgenes.rds")
+
+if (file.exists(pgenes_file)) {
+  cat("  [SKIP] Already exists:", basename(pgenes_file), "\n\n")
+} else {
+  suppressPackageStartupMessages({
+    library(AnnotationDbi)
+    library(org.Hs.eg.db)
+  })
+
+  # Olink genes
+  cat("  Loading Olink panel genes...\n")
+  olink <- read_tsv(file.path(project_root, "data", "olink_complete.tsv"), show_col_types = FALSE)
+  olink2 <- olink %>%
+    separate_rows(`Uniprot ID`, sep = ",") %>%
+    mutate(hgnc_protein = AnnotationDbi::mapIds(org.Hs.eg.db, keys = `Uniprot ID`,
+           column = "SYMBOL", keytype = "UNIPROT", multiVals = "first")) %>%
+    filter(!is.na(hgnc_protein))
+  olink_genes <- unique(as.character(olink2$hgnc_protein))
+
+  # Other genes from unfiltered dataset
+  cat("  Extracting gene list from unfiltered dataset...\n")
+  df_unfiltered <- readRDS(file.path(data_raw,
+    "mr_prot_unfiltered_dataset_v1_v2_without_egger_with_transcoloc.rds"))
+  othergenes <- unique(df_unfiltered$hgnc_protein[!is.na(df_unfiltered$hgnc_protein)])
+  rm(df_unfiltered); gc(verbose = FALSE)
+
+  pgenes <- unique(c(olink_genes, othergenes))
+  saveRDS(pgenes, pgenes_file)
+  cat("    -> Success:", length(pgenes), "genes\n\n")
+  rm(olink, olink2, olink_genes, othergenes, pgenes)
+  gc(verbose = FALSE)
+}
+
+# ============================================================================
+# CREATE merge3_pqtl.rds (merged therapeutic index + pQTL data)
+# ============================================================================
+
+cat("--- Creating merge3_pqtl.rds ---\n\n")
+
+merge3_file <- file.path(data_raw, "merge3_pqtl.rds")
+
+if (file.exists(merge3_file)) {
+  cat("  [SKIP] Already exists:", basename(merge3_file), "\n\n")
+} else {
+  mr_pval_threshold <- 0.05 / 47e6
+
+  cat("  Loading pqtl_mrcoloc_2025.rds and filtering by Bonferroni...\n")
+  pqtl2 <- readRDS(file.path(data_raw, "pqtl_mrcoloc_2025.rds")) %>%
+    filter(bxy_pval <= mr_pval_threshold)
+
+  cat("  Loading merge2.tsv.gz...\n")
+  minikel_dir <- file.path(project_root, "data", "minikel")
+  merge2 <- read_tsv(file.path(minikel_dir, "merge2.tsv.gz"), show_col_types = FALSE) %>%
+    mutate(
+      otg_study = if_else(assoc_source == "OTG",
+        str_remove(original_link, "https://genetics.opentargets.org/study/"), NA_character_),
+      otg_study = str_remove(otg_study, "FINNGEN_R6_"),
+      key = paste0(gene, "_", otg_study)
+    )
+
+  cat("  Merging pQTL data with therapeutic index...\n")
+  pqtl_cols <- c("nsnps", "cis_trans_mr", "bxy", "bxy_pval",
+                 "coloc_cis", "coloc_h4_cis", "snp_ciscoloc",
+                 "coloc_trans", "coloc_h4_trans", "snp_transcoloc")
+
+  merge2_with_pqtl <- merge2 %>% left_join(pqtl2, by = "key")
+  pqtl_rows <- merge2_with_pqtl %>% filter(!is.na(cis_trans_mr)) %>% mutate(original_link = "pqtl")
+  merge2_cleaned <- merge2_with_pqtl %>% mutate(across(all_of(pqtl_cols), ~ if_else(!is.na(cis_trans_mr), NA, .)))
+  merge3_pqtl <- bind_rows(merge2_cleaned, pqtl_rows)
+
+  # Platform annotations
+  merge3_pqtl <- merge3_pqtl %>%
+    mutate(platform = case_when(
+      Data %in% c("UKBPPP_2023", "SCALLOP_2020", "HILLARY_2019", "FOLKERSEN_2017") ~ "Olink",
+      Data %in% c("SUN_2018", "SUHRE_2017", "PIETZNER_2020") ~ "Somascan",
+      Data == "OLLI_2017" ~ "Other",
+      TRUE ~ NA_character_
+    ))
+
+  # Therapeutic area
+  area <- fread(file.path(project_root, "data", "areas.tsv"))
+  topl <- fread(file.path(project_root, "data", "indic_topl_match.tsv"))
+  ta <- merge(area, topl, by = "topl")
+  merge3_pqtl$therapeutic_area <- ta$area[match(merge3_pqtl$indication_mesh_id, ta$indication_mesh_id)]
+
+  saveRDS(merge3_pqtl, merge3_file)
+  file_size <- file.size(merge3_file) / 1e6
+  cat("    -> Success:", format(nrow(merge3_pqtl), big.mark = ","), "rows,", round(file_size, 1), "MB\n\n")
+  rm(pqtl2, merge2, merge2_with_pqtl, pqtl_rows, merge2_cleaned, merge3_pqtl, area, topl, ta)
+  gc(verbose = FALSE)
+}
+
+# ============================================================================
 # SUMMARY
 # ============================================================================
 

@@ -27,8 +27,6 @@ message("
 message("[0/5] Loading packages...")
 
 suppressPackageStartupMessages({
-  library(AnnotationDbi)
-  library(org.Hs.eg.db)
   library(tidyverse)
   library(data.table)
   library(DescTools)
@@ -67,89 +65,23 @@ message("   Output dir:   ", fig_dir)
 
 message("[1/5] Loading data...")
 
-# Check if merge3_pqtl exists, if not load it
-if (!exists("merge3_pqtl")) {
-  
-  # pQTL MR-coloc results
-  pqtl2 <- readRDS(file.path(project_root, "data_raw/pqtl_mrcoloc_2025.rds")) %>%
-    filter(bxy_pval <= mr_pval_threshold)
-  
-  # Merge2 with annotations
-  merge2 <- read_tsv(file.path(minikel_dir, "merge2.tsv.gz"),
-                     show_col_types = FALSE) %>%
-    mutate(
-      otg_study = if_else(
-        assoc_source == "OTG",
-        str_remove(original_link, "https://genetics.opentargets.org/study/"),
-        NA_character_
-      ),
-      otg_study = str_remove(otg_study, "FINNGEN_R6_"),
-      key       = paste0(gene, "_", otg_study)
-    )
-  
-  pqtl_cols <- c("nsnps", "cis_trans_mr", "bxy", "bxy_pval",
-                 "coloc_cis", "coloc_h4_cis", "snp_ciscoloc",
-                 "coloc_trans", "coloc_h4_trans", "snp_transcoloc")
-  
-  merge2_with_pqtl <- merge2 %>%
-    left_join(pqtl2, by = "key")
-  
-  pqtl_rows <- merge2_with_pqtl %>%
-    filter(!is.na(cis_trans_mr)) %>%
-    mutate(original_link = "pqtl")
-  
-  merge2_cleaned <- merge2_with_pqtl %>%
-    mutate(across(all_of(pqtl_cols),
-                  ~ if_else(!is.na(cis_trans_mr), NA, .)))
-  
-  merge3_pqtl <- bind_rows(merge2_cleaned, pqtl_rows)
-  
-  # Platform and therapeutic area annotations
-  merge3_pqtl <- merge3_pqtl %>%
-    mutate(
-      platform = case_when(
-        Data %in% c("UKBPPP_2023", "SCALLOP_2020",
-                    "HILLARY_2019", "FOLKERSEN_2017") ~ "Olink",
-        Data %in% c("SUN_2018", "SUHRE_2017", "PIETZNER_2020") ~ "Somascan",
-        Data == "OLLI_2017" ~ "Other",
-        TRUE ~ NA_character_
-      )
-    )
-  
-  area <- fread(file.path(data_dir, "areas.tsv"))
-  topl <- fread(file.path(data_dir, "indic_topl_match.tsv"))
-  ta   <- merge(area, topl, by = "topl")
-  pos  <- match(merge3_pqtl$indication_mesh_id, ta$indication_mesh_id)
-  merge3_pqtl$therapeutic_area <- ta$area[pos]
-}
+# Load pre-computed data (created by create_derived_data.R)
+merge3_pqtl <- readRDS(file.path(project_root, "data_raw/merge3_pqtl.rds"))
 
-# Load indications
+# Also load merge2 for full Minikel universe comparison (Figure S4)
+merge2 <- read_tsv(file.path(minikel_dir, "merge2.tsv.gz"), show_col_types = FALSE) %>%
+  mutate(
+    otg_study = if_else(assoc_source == "OTG",
+      str_remove(original_link, "https://genetics.opentargets.org/study/"), NA_character_),
+    otg_study = str_remove(otg_study, "FINNGEN_R6_"),
+    key = paste0(gene, "_", otg_study)
+  )
+
+# Indications
 indic <- read_tsv(file.path(data_dir, "indic.tsv"), show_col_types = FALSE)
 
-# Load proteomics background genes if not present
-if (!exists("pgenes")) {
-  olink <- read_tsv(file.path(data_dir, "olink_complete.tsv"), show_col_types = FALSE)
-  
-  olink2 <- olink %>%
-    separate_rows(`Uniprot ID`, sep = ",") %>%
-    mutate(
-      hgnc_protein = AnnotationDbi::mapIds(
-        org.Hs.eg.db,
-        keys      = `Uniprot ID`,
-        column    = "SYMBOL",
-        keytype   = "UNIPROT",
-        multiVals = "first"
-      )
-    ) %>%
-    filter(!is.na(hgnc_protein))
-  
-  olink_genes <- unique(as.character(olink2$hgnc_protein))
-  # Derive gene list from unfiltered dataset
-  df_unfiltered <- readRDS(file.path(project_root, "data_raw", "mr_prot_unfiltered_dataset_v1_v2_without_egger_with_transcoloc.rds"))
-  othergenes <- unique(df_unfiltered$hgnc_protein[!is.na(df_unfiltered$hgnc_protein)])
-  rm(df_unfiltered); gc(verbose = FALSE)
-  pgenes       <- unique(c(olink_genes, othergenes))
-}
+# Background gene set
+pgenes <- readRDS(file.path(project_root, "data_raw/pgenes.rds"))
 
 message("   Data loaded successfully")
 message("   Background gene set (pgenes): ", length(pgenes), " genes")

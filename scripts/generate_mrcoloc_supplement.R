@@ -257,11 +257,11 @@ cat("  Helper functions loaded.\n")
 
 message("[2/12] Loading and preparing data...")
 
-# Load pQTL data
-pqtl2 <- readRDS(file.path(data_raw, "pqtl_mrcoloc_2025.rds")) %>%
-  filter(bxy_pval <= BONFERRONI_P)
+# Load pre-computed data (created by create_derived_data.R)
+merge3_pqtl <- readRDS(file.path(data_raw, "merge3_pqtl.rds"))
+pgenes <- readRDS(file.path(data_raw, "pgenes.rds"))
 
-# Load merge2 (genetic support data)
+# Also load merge2 (needed for L2G-only enrichment and drug target matching)
 merge2 <- read_tsv(file.path(minikel_dir, "merge2.tsv.gz"), show_col_types = FALSE) %>%
   mutate(
     otg_study = if_else(assoc_source == "OTG",
@@ -273,43 +273,6 @@ merge2 <- read_tsv(file.path(minikel_dir, "merge2.tsv.gz"), show_col_types = FAL
 
 # Load indications
 indic <- read_tsv(file.path(data_dir, "indic.tsv"), show_col_types = FALSE)
-
-# Merge pQTL data with genetic support data
-pqtl_cols <- c("nsnps", "cis_trans_mr", "bxy", "bxy_pval", "coloc_cis", "coloc_h4_cis",
-               "snp_ciscoloc", "coloc_trans", "coloc_h4_trans", "snp_transcoloc")
-
-merge2_with_pqtl <- merge2 %>% left_join(pqtl2, by = "key")
-
-# Create separate pQTL rows
-pqtl_rows <- merge2_with_pqtl %>%
-  filter(!is.na(cis_trans_mr)) %>%
-  mutate(original_link = "pqtl")
-
-# Clean merged data
-merge2_clean <- merge2_with_pqtl %>%
-  mutate(across(all_of(pqtl_cols), ~ if_else(!is.na(cis_trans_mr), NA, .)))
-
-# Combine
-merge3_pqtl <- bind_rows(merge2_clean, pqtl_rows)
-
-# Add therapeutic area annotation
-area <- fread(file.path(data_dir, "areas.tsv"))
-topl <- fread(file.path(data_dir, "indic_topl_match.tsv"))
-ta_map <- merge(area, topl, by = "topl")
-merge3_pqtl$therapeutic_area <- ta_map$area[match(merge3_pqtl$indication_mesh_id, ta_map$indication_mesh_id)]
-
-# Load background genes (pgenes)
-olink <- read_tsv(file.path(data_dir, "olink_complete.tsv"), show_col_types = FALSE)
-olink_genes <- olink %>%
-  separate_rows(`Uniprot ID`, sep = ",") %>%
-  mutate(hgnc_protein = mapIds(org.Hs.eg.db, keys = `Uniprot ID`, column = "SYMBOL",
-                               keytype = "UNIPROT", multiVals = "first")) %>%
-  filter(!is.na(hgnc_protein)) %>% pull(hgnc_protein) %>% unique()
-# Derive gene list from unfiltered dataset
-df_unfiltered <- readRDS(file.path(data_raw, "mr_prot_unfiltered_dataset_v1_v2_without_egger_with_transcoloc.rds"))
-othergenes <- unique(df_unfiltered$hgnc_protein[!is.na(df_unfiltered$hgnc_protein)])
-rm(df_unfiltered); gc(verbose = FALSE)
-pgenes <- unique(c(olink_genes, othergenes))
 
 cat(sprintf("  Background genes: %d\n", length(pgenes)))
 
