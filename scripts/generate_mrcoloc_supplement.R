@@ -837,24 +837,29 @@ extract_pav_summary <- function(ld_data) {
 topld_dir <- file.path(project_root, "topld_api")
 topld_bin <- file.path(topld_dir, "topld_api")
 
-cis_snps <- comb %>% filter(cis_trans_mr=="Cis", !is.na(snp_ciscoloc), snp_ciscoloc!="", !grepl("mapp", snp_ciscoloc)) %>%
-  distinct(snp_ciscoloc) %>% pull()
+if (file.exists(topld_bin)) {
+  cis_snps <- comb %>% filter(cis_trans_mr=="Cis", !is.na(snp_ciscoloc), snp_ciscoloc!="", !grepl("mapp", snp_ciscoloc)) %>%
+    distinct(snp_ciscoloc) %>% pull()
 
-cis_snp_map <- tibble(index_snp_internal = cis_snps) %>%
-  mutate(index_snp_topld = map_chr(index_snp_internal, to_topld_id)) %>%
-  filter(!is.na(index_snp_topld))
+  cis_snp_map <- tibble(index_snp_internal = cis_snps) %>%
+    mutate(index_snp_topld = map_chr(index_snp_internal, to_topld_id)) %>%
+    filter(!is.na(index_snp_topld))
 
-if (nrow(cis_snp_map) > 0) {
-  ld_all <- run_topld_chunks(unique(cis_snp_map$index_snp_topld), topld_bin, topld_dir)
-  cis_pav_summary <- extract_pav_summary(ld_all)
-  
-  if (!is.null(cis_pav_summary)) {
-    comb2 <- comb2 %>%
-      left_join(cis_snp_map, by = c("snp_ciscoloc" = "index_snp_internal")) %>%
-      left_join(cis_pav_summary, by = c("index_snp_topld" = "index_snp", "hgnc_protein" = "gene")) %>%
-      mutate(pav_cismr = case_when(cis_trans_mr=="Cis" & !is.na(pav_flag) & pav_flag ~ "yes",
-                                   cis_trans_mr=="Cis" ~ "no", TRUE ~ NA_character_))
+  if (nrow(cis_snp_map) > 0) {
+    ld_all <- run_topld_chunks(unique(cis_snp_map$index_snp_topld), topld_bin, topld_dir)
+    cis_pav_summary <- extract_pav_summary(ld_all)
+
+    if (!is.null(cis_pav_summary)) {
+      comb2 <- comb2 %>%
+        left_join(cis_snp_map, by = c("snp_ciscoloc" = "index_snp_internal")) %>%
+        left_join(cis_pav_summary, by = c("index_snp_topld" = "index_snp", "hgnc_protein" = "gene")) %>%
+        mutate(pav_cismr = case_when(cis_trans_mr=="Cis" & !is.na(pav_flag) & pav_flag ~ "yes",
+                                     cis_trans_mr=="Cis" ~ "no", TRUE ~ NA_character_))
+    }
   }
+} else {
+  message("   TOP-LD binary not found at: ", topld_bin)
+  message("   Skipping PAV annotation (PAV columns will be NA)")
 }
 
 # Ensure columns exist even if no PAV data
