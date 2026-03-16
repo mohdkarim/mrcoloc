@@ -86,9 +86,14 @@ sources <- c(
 message("   Project root: ", project_root)
 message("   Output dir:   ", fig_dir)
 
+t0 <- Sys.time()
+t_step <- Sys.time()
+
 # --- 1. Helper Functions -----------------------------------------------------
 
+if (exists("t_step")) message("   done (", round(difftime(Sys.time(), t_step, units="secs")), "s)")
 message("[1/7] Defining helper functions...")
+t_step <- Sys.time()
 
 #' Compute relative risk with confidence interval
 compute_rr <- function(succ_gs, total_gs, succ_nogs, total_nogs,
@@ -168,7 +173,9 @@ save_figure <- function(plot_obj = NULL, filename, width, height,
 
 # --- 2. Load and Prepare Data ------------------------------------------------
 
+if (exists("t_step")) message("   done (", round(difftime(Sys.time(), t_step, units="secs")), "s)")
 message("[2/7] Loading data...")
+t_step <- Sys.time()
 
 # pQTL MR-coloc results
 # Load pre-computed merge3_pqtl (created by create_derived_data.R)
@@ -198,7 +205,9 @@ message("   ", length(pgenes), " genes in proteomics background")
 
 # --- 3. Compute Enrichment Metrics -------------------------------------------
 
+if (exists("t_step")) message("   done (", round(difftime(Sys.time(), t_step, units="secs")), "s)")
 message("[3/7] Computing enrichment metrics...")
+t_step <- Sys.time()
 
 # Define pQTL-supported TI pairs
 df_pqtl_support <- merge3_pqtl %>%
@@ -526,7 +535,9 @@ message("   Computed enrichment for ", length(l2g_thresholds), " L2G thresholds"
 
 # --- 4. Figure 1a: Main Forest Plot ------------------------------------------
 
+if (exists("t_step")) message("   done (", round(difftime(Sys.time(), t_step, units="secs")), "s)")
 message("[4/7] Generating Figure 1a (main forest plot)...")
+t_step <- Sys.time()
 
 # Combine all enrichment results
 en1 <- bind_rows(enrichment_overall, pqtl_enrichment) %>%
@@ -574,7 +585,9 @@ save_figure(fig1a$plot, "fig1a_forest_main", width = 8, height = 8)
 
 # --- 5. Figure 1b: UpSet Plot ------------------------------------------------
 
+if (exists("t_step")) message("   done (", round(difftime(Sys.time(), t_step, units="secs")), "s)")
 message("[5/7] Generating Figure 1b (UpSet plot)...")
+t_step <- Sys.time()
 
 pqtl_supported <- merge3_pqtl %>%
   filter(
@@ -632,7 +645,9 @@ message("   Saved: fig1b_upset.png")
 
 # --- 6. Figure 1c: Gene Family Forest Plot -----------------------------------
 
+if (exists("t_step")) message("   done (", round(difftime(Sys.time(), t_step, units="secs")), "s)")
 message("[6/7] Generating Figure 1c (gene family forest plot)...")
+t_step <- Sys.time()
 
 # Load gene families
 gene_list_files <- list.files(gene_list_dir, pattern = "\\.tsv$", full.names = TRUE)
@@ -830,6 +845,7 @@ save_figure(fig1c$plot, "fig1c_forest_gene_annot", width = 10, height = 4)
 
 # --- 7. Summary --------------------------------------------------------------
 
+if (exists("t_step")) message("   done (", round(difftime(Sys.time(), t_step, units="secs")), "s)")
 message("[7/7] Complete!")
 message("
 ================================================================================
@@ -845,3 +861,5 @@ Individual panels (PDF + PNG at 300 DPI):
 
 
 ")
+
+message("\nTotal time: ", round(difftime(Sys.time(), t0, units="mins"), 1), " minutes")

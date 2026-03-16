@@ -61,9 +61,14 @@ min_l2g_share        <- 0.5
 message("   Project root: ", project_root)
 message("   Output dir:   ", fig_dir)
 
+t0 <- Sys.time()
+t_step <- Sys.time()
+
 # --- 1. Load Data (if not already in environment) ----------------------------
 
+if (exists("t_step")) message("   done (", round(difftime(Sys.time(), t_step, units="secs")), "s)")
 message("[1/5] Loading data...")
+t_step <- Sys.time()
 
 # Load pre-computed data (created by create_derived_data.R)
 merge3_pqtl <- readRDS(file.path(project_root, "data_raw/merge3_pqtl.rds"))
@@ -89,7 +94,9 @@ message("   Background gene set (pgenes): ", length(pgenes), " genes")
 
 # --- 2. Define pQTL-supported TIs (restricted to measured proteins) ----------
 
+if (exists("t_step")) message("   done (", round(difftime(Sys.time(), t_step, units="secs")), "s)")
 message("[2/5] Defining pQTL-supported T-I pairs...")
+t_step <- Sys.time()
 
 df_pqtl_support <- merge3_pqtl %>%
   filter(
@@ -105,7 +112,9 @@ message("   pQTL-supported T-I pairs: ", nrow(df_pqtl_support))
 
 # --- 3. Figure S2: Enrichment by Therapeutic Area ----------------------------
 
+if (exists("t_step")) message("   done (", round(difftime(Sys.time(), t_step, units="secs")), "s)")
 message("[3/5] Generating Figure S2 (enrichment by therapeutic area)...")
+t_step <- Sys.time()
 
 # Get all therapeutic areas (restricted to measured proteins)
 tas <- merge3_pqtl %>%
@@ -230,7 +239,9 @@ message("         supported successes (neurology, oncology, signs/symptoms)")
 
 # --- 4. Figure S3: Enrichment by Phase Transition ----------------------------
 
+if (exists("t_step")) message("   done (", round(difftime(Sys.time(), t_step, units="secs")), "s)")
 message("[4/5] Generating Figure S3 (enrichment by phase transition)...")
+t_step <- Sys.time()
 
 # Phase mapping - include cumulative transitions
 phase_map <- tibble(
@@ -358,6 +369,7 @@ message("   Saved: figS3_enrichment_by_phase.pdf")
 
 # --- 5. Summary --------------------------------------------------------------
 
+if (exists("t_step")) message("   done (", round(difftime(Sys.time(), t_step, units="secs")), "s)")
 message("[5/5] Complete!")
 message("
 ================================================================================
@@ -384,7 +396,9 @@ Notes:
 # 2. Full Minikel T-I pairs background (no pgenes restriction)
 # ==============================================================================
 
+if (exists("t_step")) message("   done (", round(difftime(Sys.time(), t_step, units="secs")), "s)")
 message("[S4] Generating Figure S4 (pQTL enrichment - background comparison)...")
+t_step <- Sys.time()
 
 # pQTL-supported TI pairs (same as main analysis)
 df_pqtl_support <- merge3_pqtl %>%
@@ -489,3 +503,6 @@ message("   Measured proteins: RS = ", round(rs_pgenes$est, 2),
         " (95% CI: ", round(rs_pgenes$lwr.ci, 2), "-", round(rs_pgenes$upr.ci, 2), ")")
 message("   Full Minikel:      RS = ", round(rs_full$est, 2),
         " (95% CI: ", round(rs_full$lwr.ci, 2), "-", round(rs_full$upr.ci, 2), ")")
+if (exists("t_step")) message("   done (", round(difftime(Sys.time(), t_step, units="secs")), "s)")
+
+message("\nTotal time: ", round(difftime(Sys.time(), t0, units="mins"), 1), " minutes")

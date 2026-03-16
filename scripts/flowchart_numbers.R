@@ -58,11 +58,16 @@ COLOC_H4_THR   <- 0.8
 # Initialize results list
 flowchart <- list()
 
+t0 <- Sys.time()
+t_step <- Sys.time()
+
 # ============================================================================
 # SECTION 1: pQTL DATA SOURCES
 # ============================================================================
 
+if (exists("t_step")) message("   done (", round(difftime(Sys.time(), t_step, units="secs")), "s)")
 message("[1/10] pQTL data sources...")
+t_step <- Sys.time()
 
 pqtl_datasets <- tribble(
   ~dataset, ~platform, ~n_proteins, ~sample_size,
@@ -88,7 +93,9 @@ cat("   pQTL datasets: ", flowchart$pqtl_n_datasets, "\n")
 # SECTION 2: OUTCOME GWAS SOURCES
 # ============================================================================
 
+if (exists("t_step")) message("   done (", round(difftime(Sys.time(), t_step, units="secs")), "s)")
 message("[2/10] outcome GWAS sources...")
+t_step <- Sys.time()
 
 flowchart$gwas_total <- 8762
 flowchart$gwas_catalog <- 754
@@ -101,7 +108,9 @@ cat("   Total outcome GWAS: ", flowchart$gwas_total, "\n")
 # SECTION 3: MR-COLOC ANALYSIS NUMBERS
 # ============================================================================
 
+if (exists("t_step")) message("   done (", round(difftime(Sys.time(), t_step, units="secs")), "s)")
 message("[3/10] Setting MR-coloc analysis parameters...")
+t_step <- Sys.time()
 
 flowchart$mr_total_tests <- 47.2e6
 flowchart$mr_bonferroni_threshold <- BONFERRONI_P
@@ -113,7 +122,9 @@ cat("   Bonferroni threshold: ", format(BONFERRONI_P, scientific = TRUE), "\n")
 # SECTION 4: LOAD ST7 FOR TARGET-TRAIT PAIR COUNTS
 # ============================================================================
 
+if (exists("t_step")) message("   done (", round(difftime(Sys.time(), t_step, units="secs")), "s)")
 message("[4/10] Loading ST7 for target-trait pair statistics...")
+t_step <- Sys.time()
 
 st7_path <- file.path(output_dir, "ST7_all_MR_pairs.rds")
 if (!file.exists(st7_path)) {
@@ -149,7 +160,9 @@ cat("   With any coloc (H4>=0.8): ", format(flowchart$ttpairs_with_any_coloc, bi
 # SECTION 5: PATH 1 - DRUG TARGET ANNOTATION (317/93/62 from comb2)
 # ============================================================================
 
+if (exists("t_step")) message("   done (", round(difftime(Sys.time(), t_step, units="secs")), "s)")
 message("[5/10] Loading Path 1 numbers from drug_target_stats.rds...")
+t_step <- Sys.time()
 
 # These numbers are calculated in generate_all_supp_tables.R from comb2
 # and saved to drug_target_stats.rds
@@ -183,7 +196,9 @@ cat("   Unique proteins with match: ", flowchart$path1_proteins_matched, "\n")
 # SECTION 6: LOAD PHARMAPROJECTS AND BUILD ENRICHMENT DATA
 # ============================================================================
 
+if (exists("t_step")) message("   done (", round(difftime(Sys.time(), t_step, units="secs")), "s)")
 message("[6/10] Loading Pharmaprojects and building enrichment dataset...")
+t_step <- Sys.time()
 
 # Load pre-computed data (created by create_derived_data.R)
 merge3_pqtl <- readRDS(file.path(data_raw, "merge3_pqtl.rds"))
@@ -206,7 +221,9 @@ cat("   Total unique measured proteins (pgenes): ", flowchart$pgenes_total, "\n"
 # SECTION 8: PATH 2 - ENRICHMENT ANALYSIS NUMBERS
 # ============================================================================
 
+if (exists("t_step")) message("   done (", round(difftime(Sys.time(), t_step, units="secs")), "s)")
 message("[8/10] Computing Path 2: Enrichment analysis statistics...")
+t_step <- Sys.time()
 
 # Define pQTL-supported T-I pairs (with all filters)
 df_pqtl_support <- merge3_pqtl %>%
@@ -284,7 +301,9 @@ cat("   RS estimate: ", flowchart$rs_estimate, "\n")
 # SECTION 9: EXPORT NUMBERS TO CSV
 # ============================================================================
 
+if (exists("t_step")) message("   done (", round(difftime(Sys.time(), t_step, units="secs")), "s)")
 message("[9/10] Exporting flowchart numbers to CSV...")
+t_step <- Sys.time()
 
 flowchart_df <- tibble(
   category = names(flowchart),
@@ -315,7 +334,9 @@ cat("   Flowchart numbers saved to:", csv_path, "\n")
 # SECTION 10: GENERATE FLOWCHART USING DiagrammeR
 # ============================================================================
 
+if (exists("t_step")) message("   done (", round(difftime(Sys.time(), t_step, units="secs")), "s)")
 message("[10/10] Generating flowchart figure...")
+t_step <- Sys.time()
 
 # Read numbers back from CSV
 nums <- read_csv(csv_path, show_col_types = FALSE) %>%
@@ -621,3 +642,6 @@ MANUSCRIPT TEXT VERIFICATION:
 
 ================================================================================
 \n")
+
+if (exists("t_step")) message("   done (", round(difftime(Sys.time(), t_step, units="secs")), "s)")
+message("\nTotal time: ", round(difftime(Sys.time(), t0, units="mins"), 1), " minutes")

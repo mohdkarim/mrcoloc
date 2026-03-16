@@ -21,29 +21,34 @@ Code and data to reproduce analyses from:
 Browse all MR results (FDR < 0.05): **https://mk31.shinyapps.io/pqtl_mr_fdr05/**
 
 ## Quick Start
+
+Total pipeline time is approximately **15 minutes** (excluding data download).
+
 ```bash
 # Clone the repository
 git clone https://github.com/mohdkarim/mrcoloc.git
 cd mrcoloc
 
-# Download all data (~1 GB)
+# Step 1: Download all data (~1 GB, ~1 min)
 Rscript scripts/download_data.R
 
-# Create derived datasets
+# Step 2: Create derived datasets (~3.5 min)
 Rscript scripts/create_derived_data.R
 
-# Generate main figures (Figure 1a-c)
+# Step 3: Generate main figures - Figure 1a-c (~3 min)
 Rscript scripts/mrcoloc_paper_2025_main_figures.R
 
-# Generate supplementary figures (Figures S2-S4)
+# Step 4: Generate supplementary figures - Figures S2-S4 (~1 min)
 Rscript scripts/mrcoloc_paper_2025_supp_figures.R
 
-# Generate supplementary tables (ST1-ST17)
+# Step 5: Generate supplementary tables ST1-ST17 (~6 min)
 Rscript scripts/generate_mrcoloc_supplement.R
 
-# Generate flowchart numbers (requires supplement output)
+# Step 6: Generate flowchart numbers (~0.5 min, requires Step 5 output)
 Rscript scripts/flowchart_numbers.R
 ```
+
+Each script prints step-level progress with elapsed time as it runs.
 
 Or run the full setup in one command:
 ```bash

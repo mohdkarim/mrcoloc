@@ -57,6 +57,9 @@ data_raw <- file.path(project_root, "data_raw")
 cat("Project root:", project_root, "\n")
 cat("Data directory:", data_raw, "\n\n")
 
+t0 <- Sys.time()
+t_step <- Sys.time()
+
 # ============================================================================
 # CHECK REQUIRED FILES
 # ============================================================================
@@ -90,7 +93,9 @@ cat("\n")
 # CREATE pqtl_mrcoloc_2025.rds
 # ============================================================================
 
+if (exists("t_step")) message("   done (", round(difftime(Sys.time(), t_step, units="secs")), "s)")
 cat("--- Creating pqtl_mrcoloc_2025.rds ---\n\n")
+t_step <- Sys.time()
 
 output_file <- file.path(data_raw, "pqtl_mrcoloc_2025.rds")
 
@@ -199,7 +204,9 @@ if (file.exists(output_file)) {
 # CREATE pgenes.rds (background gene set)
 # ============================================================================
 
+if (exists("t_step")) message("   done (", round(difftime(Sys.time(), t_step, units="secs")), "s)")
 cat("--- Creating pgenes.rds ---\n\n")
+t_step <- Sys.time()
 
 pgenes_file <- file.path(data_raw, "pgenes.rds")
 
@@ -239,7 +246,9 @@ if (file.exists(pgenes_file)) {
 # CREATE merge3_pqtl.rds (merged therapeutic index + pQTL data)
 # ============================================================================
 
+if (exists("t_step")) message("   done (", round(difftime(Sys.time(), t_step, units="secs")), "s)")
 cat("--- Creating merge3_pqtl.rds ---\n\n")
+t_step <- Sys.time()
 
 merge3_file <- file.path(data_raw, "merge3_pqtl.rds")
 
@@ -317,3 +326,6 @@ cat("You can now run the analysis scripts:\n")
 cat("  Rscript scripts/mrcoloc_paper_2025_main_figures.R\n")
 cat("  Rscript scripts/generate_mrcoloc_supplement.R\n\n")
 cat("================================================================================\n")
+
+if (exists("t_step")) message("   done (", round(difftime(Sys.time(), t_step, units="secs")), "s)")
+message("\nTotal time: ", round(difftime(Sys.time(), t0, units="mins"), 1), " minutes")

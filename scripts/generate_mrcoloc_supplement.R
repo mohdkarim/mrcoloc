@@ -78,11 +78,16 @@ COLOC_H4_THR     <- 0.8
 # --- Source helpers ---
 source(file.path(project_root, "R/genes_tbl.R"))
 
+t0 <- Sys.time()
+t_step <- Sys.time()
+
 # ============================================================================
 # SECTION 1: HELPER FUNCTIONS
 # ============================================================================
 
+if (exists("t_step")) message("   done (", round(difftime(Sys.time(), t_step, units="secs")), "s)")
 message("[1/12] Setting up helper functions...")
+t_step <- Sys.time()
 
 # Clean dataframe for export (remove list columns)
 clean_for_export <- function(df) {
@@ -255,7 +260,9 @@ cat("  Helper functions loaded.\n")
 # SECTION 2: LOAD AND PREPARE DATA
 # ============================================================================
 
+if (exists("t_step")) message("   done (", round(difftime(Sys.time(), t_step, units="secs")), "s)")
 message("[2/12] Loading and preparing data...")
+t_step <- Sys.time()
 
 # Load pre-computed data (created by create_derived_data.R)
 merge3_pqtl <- readRDS(file.path(data_raw, "merge3_pqtl.rds"))
@@ -280,7 +287,9 @@ cat(sprintf("  Background genes: %d\n", length(pgenes)))
 # SECTION 3: DEFINE SUPPORT SETS
 # ============================================================================
 
+if (exists("t_step")) message("   done (", round(difftime(Sys.time(), t_step, units="secs")), "s)")
 message("[3/12] Defining support sets...")
+t_step <- Sys.time()
 
 # pQTL support
 df_pqtl_support <- merge3_pqtl %>%
@@ -307,7 +316,9 @@ cat(sprintf("  Any genetic support TIs: %d\n", nrow(df_any_genetic_support)))
 # SECTION 4: BUILD TI_BEST_BASE
 # ============================================================================
 
+if (exists("t_step")) message("   done (", round(difftime(Sys.time(), t_step, units="secs")), "s)")
 message("[4/12] Building ti_best_base...")
+t_step <- Sys.time()
 
 ti_best_base <- merge3_pqtl %>%
   filter(!is.na(gene), gene != "", !is.na(indication_mesh_id), indication_mesh_id != "",
@@ -323,7 +334,9 @@ cat(sprintf("  ti_best_base: %d TIs\n", nrow(ti_best_base)))
 # SECTION 5: THERAPEUTIC AREA HETEROGENEITY ANALYSIS (ST7-ST15, ST17)
 # ============================================================================
 
+if (exists("t_step")) message("   done (", round(difftime(Sys.time(), t_step, units="secs")), "s)")
 message("[5/12] Running therapeutic area heterogeneity analysis...")
+t_step <- Sys.time()
 
 run_full_analysis <- function(ti_best, pqtl_uids, universe_label) {
   
@@ -466,7 +479,9 @@ cat("  ST7-ST15, ST17 complete.\n")
 # SECTION 6: BUILD ST16 - ALL MR TARGET-TRAIT PAIRS
 # ============================================================================
 
+if (exists("t_step")) message("   done (", round(difftime(Sys.time(), t_step, units="secs")), "s)")
 message("[6/12] Building ST16 (All MR target-trait pairs)...")
+t_step <- Sys.time()
 
 # Load new UKBPPP MR-coloc results
 new <- readRDS(file.path(data_raw, "ukb_ppp_mr_coloc_results.rds")) %>%
@@ -870,7 +885,9 @@ message("   Saved drug_target_stats.rds (", drug_target_stats$path1_drug_targets
 # SECTION 7: BUILD ST1-ST3 (Simple tables)
 # ============================================================================
 
+if (exists("t_step")) message("   done (", round(difftime(Sys.time(), t_step, units="secs")), "s)")
 message("[7/12] Building ST1-ST3...")
+t_step <- Sys.time()
 
 # --- ST1: Proteomic GWAS ---
 old_st2 <- read_tsv(file.path(data_dir, "outcome_gwas_old.tsv"), show_col_types = FALSE) %>%
@@ -911,7 +928,9 @@ cat(sprintf("  ST3 (Excluded Traits): %d rows\n", nrow(ST3)))
 # SECTION 8: BUILD ST4-ST6 (Enrichment tables)
 # ============================================================================
 
+if (exists("t_step")) message("   done (", round(difftime(Sys.time(), t_step, units="secs")), "s)")
 message("[8/12] Computing ST4-ST6 (enrichment tables)...")
+t_step <- Sys.time()
 
 # --- ST4: Enrichment by source ---
 # pQTL support
@@ -1133,7 +1152,9 @@ cat(sprintf("  ST6 (Figure1c): %d rows\n", nrow(ST6)))
 # SECTION 9: BUILD KEY SHEET (Definitions + Column Descriptions)
 # ============================================================================
 
+if (exists("t_step")) message("   done (", round(difftime(Sys.time(), t_step, units="secs")), "s)")
 message("[9/12] Building Key sheet...")
+t_step <- Sys.time()
 
 # Create Key sheet with definitions, universes, formulas, and column definitions
 Key <- tribble(
@@ -1319,7 +1340,9 @@ message("  Key sheet built with ", nrow(Key), " rows")
 # SECTION 11: CREATE EXCEL WORKBOOK
 # ============================================================================
 
+if (exists("t_step")) message("   done (", round(difftime(Sys.time(), t_step, units="secs")), "s)")
 message("[11/12] Creating Excel workbook...")
+t_step <- Sys.time()
 
 # Prepare all tables
 all_tables <- list(
@@ -1457,7 +1480,9 @@ for (sheet_name in names(all_tables_clean)) {
 # SECTION 12: SAVE WORKBOOK
 # ============================================================================
 
+if (exists("t_step")) message("   done (", round(difftime(Sys.time(), t_step, units="secs")), "s)")
 message("[12/12] Saving workbook...")
+t_step <- Sys.time()
 
 output_file <- file.path(output_dir, "mrcoloc_supplement.xlsx")
 saveWorkbook(wb, output_file, overwrite = TRUE)
@@ -1505,3 +1530,6 @@ Key statistics:
 
 ================================================================================
 ")
+
+if (exists("t_step")) message("   done (", round(difftime(Sys.time(), t_step, units="secs")), "s)")
+message("\nTotal time: ", round(difftime(Sys.time(), t0, units="mins"), 1), " minutes")
