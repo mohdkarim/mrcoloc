@@ -32,14 +32,12 @@ suppressPackageStartupMessages({
   library(tidyverse)
   library(data.table)
   library(DescTools)
-  library(googlesheets4)
+
   library(ckbplotr)
   library(grid)
   library(fuzzyjoin)
   library(scales)
 })
-
-gs4_deauth()
 
 # --- Configuration -----------------------------------------------------------
 
@@ -130,10 +128,7 @@ indic <- read_tsv(file.path(data_dir, "indic.tsv"), show_col_types = FALSE)
 
 # Load proteomics background genes if not present
 if (!exists("pgenes")) {
-  olink <- read_sheet(
-    "https://docs.google.com/spreadsheets/d/1DBHpr_Y3pFja4tMju3ZDJV8Gv-oTLq6wEuS0HtYjGbQ",
-    sheet = "olink_complete"
-  )
+  olink <- read_tsv(file.path(data_dir, "olink_complete.tsv"), show_col_types = FALSE)
   
   olink2 <- olink %>%
     separate_rows(`Uniprot ID`, sep = ",") %>%

@@ -1,56 +1,53 @@
-# Large data files (too big for GitHub)
-*.rds
+# Large downloaded data (use scripts/download_data.R)
 data_raw/
 data_cache/
+data/minikel/
+data/*.gz
 
-# Minikel et al data (users download from their supplement)
-genetic_support-main/data/merge2.tsv.gz
-genetic_support-main/data/pp.tsv
-genetic_support-main/data/sim.tsv.gz
-genetic_support-main/data/assoc.tsv.gz
+# Downloaded TSV in data/ (from download_data.R)
+data/*.tsv
+# But keep cached external data (from cache_external_data.R)
+!data/olink_complete.tsv
+!data/olink_complete_extended.tsv
+!data/excluded_traits.tsv
+!data/outcome_gwas_old.tsv
+!data/outcome_gwas_new.tsv
+!data/ot_genes.tsv
+!data/gene_coords.tsv
+
+# Keep cached RDS files needed for reproducibility
+!data/panukb.rds
+!data/ot_triangulation.rds
+
+# Minikel et al data (downloaded by scripts)
+genetic_support-main/
 
 # TopLD API binary and temp files
 topld_api/
 
-# Manuscript
-
+# Manuscript (not part of code repo)
 manuscript/
+
+# Generated outputs (reproducible from scripts)
+output/
 
 # R session artifacts
 .Rhistory
 .RData
 .Rproj.user/
 *.Rproj
-
-# Generated outputs (can be regenerated)
-output/*.xlsx
-output/*.html
-output/*_files/
+Rplots.pdf
 
 # OS files
 .DS_Store
 Thumbs.db
 
-# Temporary files
+# Temporary files and backups
 *~
 *.tmp
 *.bak
-# Downloaded data (use scripts/download_data.R to get these)
-data/*.tsv
-data/*.gz
-data/minikel/
-data_raw/*.rds
-
-# Generated outputs (reproducible from scripts)
-output/*.xlsx
-figures/*.pdf
-figures/*.png
-
-# R artifacts
-Rplots.pdf
-.RData
-.Rhistory
-
-# Backups
 *_backup/
-*.bak
+
+# Claude Code
+CLAUDE.md
+.claude/

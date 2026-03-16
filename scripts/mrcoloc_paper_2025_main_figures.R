@@ -12,8 +12,7 @@
 #   Rscript mrcoloc_paper_2025_figure1.R
 #
 # Environment:
-#   Set MRCOLOC_ROOT to your project directory, or it defaults to:
-#   /home/mohd/mohd-sandbox/pQTL_enrichment/mrcoloc_paper2025
+#   Set MRCOLOC_ROOT to your project directory, or it defaults to getwd()
 #
 # Outputs (in figures/):
 #   - fig1a_forest_main.pdf/.png
@@ -39,13 +38,10 @@ suppressPackageStartupMessages({
   library(data.table)
   library(DescTools)
   library(UpSetR)
-  library(googlesheets4)
   library(ckbplotr)
   library(grid)
   # library(magick)  # Optional: for PDF to PNG conversion
 })
-
-gs4_deauth()
 
 # --- Configuration -----------------------------------------------------------
 
@@ -234,10 +230,7 @@ merge3_pqtl$therapeutic_area <- ta$area[pos]
 indic <- read_tsv(file.path(data_dir, "indic.tsv"), show_col_types = FALSE)
 
 # Olink panel genes
-olink <- read_sheet(
-  "https://docs.google.com/spreadsheets/d/1DBHpr_Y3pFja4tMju3ZDJV8Gv-oTLq6wEuS0HtYjGbQ",
-  sheet = "olink_complete"
-)
+olink <- read_tsv(file.path(data_dir, "olink_complete.tsv"), show_col_types = FALSE)
 
 olink2 <- olink %>%
   separate_rows(`Uniprot ID`, sep = ",") %>%

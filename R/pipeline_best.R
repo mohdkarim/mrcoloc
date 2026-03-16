@@ -14,7 +14,7 @@ suppressMessages(library(openxlsx))
 suppressMessages(library(optparse))
 suppressMessages(library(MASS)); summarize=dplyr::summarize; select=dplyr::select; rename=dplyr::rename; slice=dplyr::slice
 if(interactive()) {
-  setwd('/home/mohd/mohd-sandbox/pQTL_enrichment/mrcoloc_paper2025/genetic_support-main')
+  setwd(Sys.getenv("MRCOLOC_ROOT", getwd()))
 }
 
 

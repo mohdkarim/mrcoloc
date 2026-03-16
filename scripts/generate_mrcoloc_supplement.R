@@ -6,7 +6,7 @@
 # ============================================================================
 #
 # This script generates all supplementary tables matching the structure of
-# mrcoloc_supplement_v3.xlsx:
+# mrcoloc_supplement.xlsx:
 #
 #   Key           - Definitions and column descriptions
 #   ST1           - Proteomic GWAS datasets
@@ -58,10 +58,7 @@ suppressPackageStartupMessages({
   library(stringr)
   library(openxlsx)
   library(DescTools)
-  library(googlesheets4)
 })
-
-gs4_deauth()
 
 # --- Paths ---
 project_root <- Sys.getenv("MRCOLOC_ROOT", 
@@ -302,9 +299,7 @@ ta_map <- merge(area, topl, by = "topl")
 merge3_pqtl$therapeutic_area <- ta_map$area[match(merge3_pqtl$indication_mesh_id, ta_map$indication_mesh_id)]
 
 # Load background genes (pgenes)
-olink <- suppressMessages(read_sheet(
-  "https://docs.google.com/spreadsheets/d/1DBHpr_Y3pFja4tMju3ZDJV8Gv-oTLq6wEuS0HtYjGbQ",
-  sheet = "olink_complete"))
+olink <- read_tsv(file.path(data_dir, "olink_complete.tsv"), show_col_types = FALSE)
 olink_genes <- olink %>%
   separate_rows(`Uniprot ID`, sep = ",") %>%
   mutate(hgnc_protein = mapIds(org.Hs.eg.db, keys = `Uniprot ID`, column = "SYMBOL",
@@ -534,8 +529,7 @@ new <- readRDS(file.path(data_raw, "ukb_ppp_mr_coloc_results.rds")) %>%
 new$pav_cismr <- NA
 new$ensid <- genes$id[match(new$hgnc_protein, genes$approvedSymbol)]
 
-olink_full <- read_sheet("https://docs.google.com/spreadsheets/d/1DBHpr_Y3pFja4tMju3ZDJV8Gv-oTLq6wEuS0HtYjGbQ", 
-                         sheet = "olink_complete_with_more_fields")
+olink_full <- read_tsv(file.path(data_dir, "olink_complete_extended.tsv"), show_col_types = FALSE)
 
 olink2 <- olink_full %>%
   separate_rows(`UniProt ID`, sep = ",") %>%
@@ -649,8 +643,8 @@ comb$trait_key <- coalesce(comb$mesh_id, comb$outcome_trait_efo, comb$outcome_tr
 comb$ttpair <- paste(comb$hgnc_protein, comb$trait_key, sep = "_")
 
 # Remove irrelevant traits
-toremove <- read_sheet("https://docs.google.com/spreadsheets/d/1TDz8oRI5H-DMHOTs0bZgm2dcisYeuvdSCybn4NcHESw", 
-                       sheet = "v4") %>% filter(to_remove == "Y")
+toremove <- read_tsv(file.path(data_dir, "excluded_traits.tsv"), show_col_types = FALSE) %>%
+  filter(to_remove == "Y")
 comb <- comb[!comb$trait_key_term %in% toremove$trait_key_term, ]
 
 cat(sprintf("  Unique target-trait pairs: %d\n", n_distinct(comb$ttpair)))
@@ -726,14 +720,25 @@ hla_chr <- "6"
 hla_start <- 25000000
 hla_end <- 34000000
 
-ensembl <- useEnsembl(biomart = "genes", dataset = "hsapiens_gene_ensembl")
-
-gene_coords <- getBM(
-  attributes = c("hgnc_symbol", "chromosome_name", "start_position", "end_position"),
-  filters = "hgnc_symbol",
-  values = unique(comb2$hgnc_protein),
-  mart = ensembl
-)
+gene_coords_cache <- file.path(data_dir, "gene_coords.tsv")
+if (file.exists(gene_coords_cache)) {
+  gene_coords <- read_tsv(gene_coords_cache, show_col_types = FALSE)
+  message("   Loaded gene coordinates from cache: ", gene_coords_cache)
+} else {
+  message("   Cache not found, querying Ensembl BioMart...")
+  ensembl <- tryCatch(
+    useEnsembl(biomart = "genes", dataset = "hsapiens_gene_ensembl"),
+    error = function(e) useEnsembl(biomart = "genes", dataset = "hsapiens_gene_ensembl", mirror = "useast")
+  )
+  gene_coords <- getBM(
+    attributes = c("hgnc_symbol", "chromosome_name", "start_position", "end_position"),
+    filters = "hgnc_symbol",
+    values = unique(comb2$hgnc_protein),
+    mart = ensembl
+  )
+  write_tsv(as_tibble(gene_coords), gene_coords_cache)
+  message("   Saved gene coordinates cache to: ", gene_coords_cache)
+}
 
 gene_coords$hla <- with(gene_coords, 
                         ifelse(chromosome_name == hla_chr & 
@@ -750,7 +755,32 @@ comb2 <- comb2 %>%
   left_join(hla_lookup, by = c("hgnc_protein" = "hgnc_symbol")) %>%
   mutate(hla = ifelse(is.na(hla), "no", hla))
 
-# --- TOP-LD Functions ---
+# --- TOP-LD Protein-Altering Variant (PAV) Annotation ---
+#
+# This section annotates cis-MR index SNPs with protein-altering variants
+# using the TOP-LD tool (Huang et al. 2022, AJHG). If the TOP-LD binary
+# and pre-computed output files are not present, PAV columns will be NA
+# and the pipeline will still complete successfully.
+#
+# To reproduce the PAV annotation:
+#
+#   1. Clone and build the TOP-LD binary:
+#        git clone https://github.com/linnabrown/topld_api.git topld_api
+#        cd topld_api && chmod +x topld_api
+#
+#   2. The binary requires pre-downloaded LD reference data from LDlink
+#      (https://ldlink.nih.gov/?tab=apiaccess). Request an API token,
+#      then follow the TOP-LD README to download the reference panel.
+#
+#   3. Place the topld_api binary in the topld_api/ directory at the
+#      project root. The script will automatically:
+#        - Split cis-MR index SNPs into chunks of 200
+#        - Run TOP-LD per chunk (EUR population, r² ≥ 0.6, MAF ≥ 0.01)
+#        - Cache results as outputLD_chunk_*.txt files
+#        - On subsequent runs, cached results are reused automatically
+#
+#   4. Re-run this script. PAV columns will be populated.
+#
 to_topld_id <- function(x) {
   x <- str_trim(x)
   if (str_detect(x, "^chr[0-9XYM]+:[0-9]+:[ACGT]+:[ACGT]+$")) return(x)
@@ -852,6 +882,22 @@ ST16 <- comb2 %>%
                 positive_control, repositioning_opportunity)
 
 cat(sprintf("  ST16 (All MR pairs): %d rows\n", nrow(ST16)))
+
+# Save intermediate files needed by flowchart_numbers.R
+saveRDS(ST16, file.path(output_dir, "ST7_all_MR_pairs.rds"))
+message("   Saved ST7_all_MR_pairs.rds for flowchart_numbers.R")
+
+# Save drug target stats from comb2
+drug_target_stats <- list(
+  path1_drug_targets = n_distinct(comb2$hgnc_protein[comb2$drug_target_pp == "yes"]),
+  path1_ti_matched = n_distinct(paste(comb2$hgnc_protein[!is.na(comb2$drug_target_pp_indication_match)],
+                                       comb2$drug_target_pp_indication_match[!is.na(comb2$drug_target_pp_indication_match)])),
+  path1_proteins_matched = n_distinct(comb2$hgnc_protein[!is.na(comb2$drug_target_pp_indication_match)])
+)
+saveRDS(drug_target_stats, file.path(output_dir, "drug_target_stats.rds"))
+message("   Saved drug_target_stats.rds (", drug_target_stats$path1_drug_targets, "/",
+        drug_target_stats$path1_ti_matched, "/", drug_target_stats$path1_proteins_matched, ")")
+
 # ============================================================================
 # SECTION 7: BUILD ST1-ST3 (Simple tables)
 # ============================================================================
@@ -859,12 +905,11 @@ cat(sprintf("  ST16 (All MR pairs): %d rows\n", nrow(ST16)))
 message("[7/12] Building ST1-ST3...")
 
 # --- ST1: Proteomic GWAS ---
-old_st2 <- read_sheet("https://docs.google.com/spreadsheets/d/1xQ9ojspUea7stOTXSO_vZbNPPg_BU_y2pyM2SigV7UI", 
-                      sheet = "ST1 - Outcome_GWAS", skip = 1) %>%
+old_st2 <- read_tsv(file.path(data_dir, "outcome_gwas_old.tsv"), show_col_types = FALSE) %>%
   transmute(outcome_datasets = as.character(outcome_datasets), outcome_trait = as.character(outcome_trait),
             outcome_trait_efo = as.character(outcome_trait_efo), outcome_data_source = as.character(outcome_data_source))
 
-new_st2 <- read_sheet("https://docs.google.com/spreadsheets/d/1aRTkoyPUrV9jOrUQAhvXl-38QYS4CE0G0aHlhry9LKg") %>%
+new_st2 <- read_tsv(file.path(data_dir, "outcome_gwas_new.tsv"), show_col_types = FALSE) %>%
   filter(!is.na(outcome_datasets)) %>%
   mutate(outcome_data_source = case_when(str_detect(outcome_datasets, "^GCST") ~ "GWAS Catalog",
                                          str_detect(outcome_datasets, "^FINNGEN") ~ "FinnGen", TRUE ~ "pan-UK Biobank"))

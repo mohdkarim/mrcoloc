@@ -1,0 +1,4546 @@
+trait_key_term	to_remove
+""Alzheimer disease, including avohilmo""	NA
+""AlzheimerÕs disease, wide definition""	NA
+""AlzheimerÕs disease, wide definition"" (more controls excluded)	NA
+""Ankylosing spondylitis, strict definition""	NA
+""Any mental disorder, or suicide (or attempt), or psychic disorders complicating pregnancy, partum or puerperum or nerve system disorders""	NA
+""Atherosclerosis, excluding cerebral, coronary and PAD""	NA
+""Atherosclerosis, excluding cerebral, coronary and PAD"" (no controls excluded)	NA
+""Atopic  dermatitis, strict definition""	NA
+""Atopic dermatitis, strict definition with reimbursement""	NA
+""Cardiomyopathies, Primary/intrinsic""	NA
+""Cardiomyopathies, Primary/intrinsic"" (no controls excluded)	NA
+""Cholangitis (primary sclerosing, PSC), with reimbursement 202""	NA
+""Cholelithiasis, broad definition with cholecystitis""	NA
+""Crohn disease (strict definition, require KELA, min 2 HDR)""	NA
+""Crohn's disease patients in KELA-register (KELA code 209, or 208 with ICD K50)""	NA
+""Delirium, not induced by alcohol and other psychoactive substances""	NA
+""Dementia, including avohilmo""	NA
+""Diabetes, insuline treatment (Kela reimbursement)""	NA
+""Diabetes, insuline treatment (Kela reimbursement)"" (more controls excluded)	NA
+""Diabetes, several complications""	NA
+""Diabetes, varying definitions""	NA
+""Diseases of arteries, arterioles and capillaries (FINNGEN)""	NA
+""Diseases of arteries, arterioles and capillaries""	NA
+""Diseases of veins, lymphatic vessels and lymph nodes, not elsewhere classified (FINNGEN)""	NA
+""Diseases of veins, lymphatic vessels and lymph nodes, not elsewhere classified""	NA
+""Disorders of gallbladder, biliary tract and pancreas""	NA
+""Disorders of plasma-protein metabolism, not elsewhere classified""	NA
+""Disorders of sclera, cornea, iris and ciliary body""	NA
+""Disorders of thyroid, IBD co-morbidities""	NA
+""Endocrine, nutritional and metabolic diseases""	NA
+""Hyperlipidaemia, other/unspecified""	NA
+""Hypertension complicating pregnancy, childbirth, and the puerperium""	NA
+""Hypertension, essential"" (no controls excluded)	NA
+""Hypoglycaemia, other or unspecified""	NA
+""Hypothyroidism,  other/unspecified""	NA
+""Hypothyroidism, drug reimbursement""	NA
+""Hypothyroidism, levothyroxin purchases""	NA
+""Hypothyroidism, strict autoimmune, 3 medication purchases required""	NA
+""Hypothyroidism, strict autoimmune""	NA
+""Inflammatory bowel disease, strict (require KELA)""	NA
+""Intrahepatic Cholestasis of Pregnancy (ICP)Ê, incl. ICD-8""	NA
+""Ischaemic heart disease, wide definition""	NA
+""Lactose intolerance, other/unspecified""	NA
+""Myocardial infarction, strict""	NA
+""Myocardial infarction, strict"" (no controls excluded)	NA
+""Oedema, proteinuria and hypertensive disorders in pregnancy, childbirth and the puerperium""	NA
+""Organic, including symptomatic, mental disorders""	NA
+""Other diabetes, wide definition""	NA
+""Pneumonia, organism unsepcified""	NA
+""Psoriasis (vulgaris), strict definition""	NA
+""Psoriatic arthropathies, ICD10""	NA
+""Pulmonary heart disease, diseases of pulmonary circulation""	NA
+""Reactive arthropathies, FINNGEN""	NA
+""Sacroiliitis, not elsewhere classified""	NA
+""Seropositive rheumatoid arthritis, strict definition""	NA
+""Seropositive rheumatoid arthritis, wide""	NA
+""SLE, strict definition""	NA
+""Symptoms and signs involving cognition, perception, emotional state and behaviour""	NA
+""Thyrotoxicosis, other and/or unspecified""	NA
+""Type 1 diabetes, strict (exclude DM2)""	NA
+""Type 1 diabetes, strict definition, subgroup 1""	NA
+""Type 1 diabetes, strict definition""	NA
+""Type 1 diabetes, wide definition, subgroup 1""	NA
+""Type 1 diabetes, wide definition""	NA
+""Type 2 diabetes, definitions combined, including avohilmo""	NA
+""Type 2 diabetes, definitions combined""	NA
+""Type 2 diabetes, strict (exclude DM1)""	NA
+""UC patients in KELA-register ( KELA 208 prior to 1994, or ICD K51)""	NA
+""Ulcerative colitis (strict definition, require KELA, min 2 HDR)""	NA
+""Ulcerative colitis (strict definition, require KELA)""	NA
+3mm asymmetry angle (left)	Y
+3mm asymmetry index (left)	Y
+3mm asymmetry index (right)	Y
+3mm cylindrical power (left)	Y
+3mm cylindrical power (right)	Y
+3mm cylindrical power angle (right)	Y
+3mm index of best keratometry results (left)	NA
+3mm regularity index (left)	NA
+3mm regularity index (right)	NA
+3mm strong meridian (left)	Y
+3mm strong meridian (right)	Y
+3mm strong meridian angle (left)	Y
+3mm strong meridian angle (right)	Y
+3mm weak meridian (left)	Y
+3mm weak meridian (right)	Y
+3mm weak meridian angle (right)	Y
+5-alpha reductase inhibitor|BPH|benign prostatic hyperplasia	NA
+6mm asymmetry angle (left)	Y
+6mm asymmetry index (left)	Y
+6mm asymmetry index (right)	Y
+6mm cylindrical power (left)	Y
+6mm cylindrical power (right)	Y
+6mm cylindrical power angle (right)	Y
+6mm index of best keratometry results (right)	NA
+6mm regularity index (left)	NA
+6mm regularity index (right)	NA
+6mm strong meridian (left)	Y
+6mm strong meridian (right)	Y
+6mm strong meridian angle (left)	Y
+6mm strong meridian angle (right)	Y
+6mm weak meridian (left)	Y
+6mm weak meridian (right)	Y
+6mm weak meridian angle (right)	Y
+A levels/as levels or equivalent | qualifications	Y
+A04 Other bacterial intestinal infections	NA
+A41 Other septicaemia	NA
+A63 Other predominantly sexually transmitted diseases, not elsewhere classified	NA
+Abdominal aortic aneurysm	NA
+Abdominal aortic aneurysm (AAA)	NA
+Abdominal hernia	NA
+Abdominal MRI measurement completed	NA
+Abdominal MRI measuring method	NA
+Abdominal pain	NA
+Abdominal subcutaneous adipose tissue volume (ASAT)	NA
+Able to confide	Y
+Able to pay rent/mortgage as an adult	Y
+Abnormal findings on examination of urine	NA
+Abnormal findings on mammogram or breast exam	NA
+Abnormal glucose	NA
+Abnormal granulation tissue	NA
+Abnormal heart sounds	NA
+Abnormal results of function study of kidney	NA
+Abnormal results of function study of liver	NA
+Abnormal sputum	NA
+Abnormalities of ear ossicles	NA
+Abnormalities of forces of labour	NA
+Abrasion of teeth	NA
+Abscess of anal and rectal regions	NA
+Abscess of tendon sheath	NA
+Acceptance of an invitation to participate in a mental health questionnaire	Y
+ACE inhibitor|anti-hypertensive	NA
+Acetaminophen	NA
+acetylcholinesterase inhibitor|Alzheimer's	NA
+Achalasia of cardia	NA
+Achievement	Y
+Achilles tendinitis	NA
+Acne Vulgaris	NA
+Acquired absence of breast	NA
+Acquired acanthosis nigricans	NA
+Acquired foot deformities	NA
+Acquired haemolytic anaemia	NA
+Acquired hypothyroidism	NA
+Acquired spondylolisthesis	NA
+Actinic keratosis	NA
+Actions taken following self-harm	NA
+Activities undertaken to treat anxiety	NA
+Activities undertaken to treat depression	NA
+Acute alcohol intoxication	NA
+Acute alcohol intoxication, ICD10	NA
+Acute and subacute iridocyclitis	NA
+Acute appendicitis	NA
+Acute appendicitis, no complications	NA
+Acute appendicitis, with complications	NA
+Acute bronchiolitis	NA
+Acute bronchitis	NA
+Acute epiglottitis	NA
+Acute Kidney Injury	NA
+Acute laryngitis and tracheitis	NA
+Acute lymphadenitis	NA
+Acute nasopharyngitis (common cold)	NA
+Acute otitis externa, noninfective	NA
+Acute pancreatitis	NA
+Acute pericarditis	NA
+Acute peritonitis	NA
+Acute pharyngitis	NA
+Acute posthaemorrhagic anaemia	NA
+Acute pulmonary heart disease	NA
+Acute reaction to stress	NA
+Acute renal failure	NA
+Acute suppurative otitis media	NA
+Acute tubulo-interstitial nephritis	NA
+Acute upper respiratory infections of multiple and unspecified sites	NA
+Acute upper respiratory infections of multiple or unspecified sites	NA
+Acute vascular insufficiency of intestine	NA
+acyclovir	NA
+adamantane|Parkinson's|anti-viral	NA
+Added milk to espresso	Y
+Added milk to rooibos tea	Y
+Added milk to standard tea	Y
+Adenocarcinoma and ductal carcinoma of pancreas, excluding all cancers (controls excluding all cancers)	NA
+Adenocarcinoma and Papillary adenocarcinoma of kidney, excluding all cancers (controls excluding all cancers)	NA
+Adenocarcinoma and papillary adenocarcinoma of stomach, excluding all cancers (controls excluding all cancers)	NA
+Adenocarcinoma and papilloma adenocarcinoma of rectum	NA
+Adenocarcinoma of small intestine, excluding all cancers (controls excluding all cancers)	NA
+Adenocarcinoma, papilloma adenocarcinoma and mucinous carcinomas of rectum, excluding all cancers (controls excluding all cancers)	NA
+Adenomyosis (Endometriosis of uterus)	NA
+Adenosine Deaminase	NA
+Adjustment reaction	Y
+Administrative and legal statuses	Y
+Adrenal Gland Diseases	NA
+Adrenal hypofunction	NA
+Adrenocortical Hyperfunction	NA
+adrenocortical insufficiency	NA
+Adrenocortical insufficiency	NA
+Adrenocortical insufficiency/addison's disease | non-cancer illness code, self-reported	NA
+Adrenogenital disorders	NA
+Adrenomedullin	Y
+Adult-onset Still disease	NA
+Adverse drug events and drug allergies	NA
+aerochamber	Y
+Age asthma diagnosed	NA
+Age asthma diagnosed by doctor	NA
+Age at death	NA
+Age at first episode of depression	NA
+Age at first live birth	Y
+Age at hysterectomy	NA
+Age at last episode of depression	NA
+Age at last live birth	Y
+Age at menopause (last menstrual period)	NA
+Age at recruitment	Y
+Age cataract diagnosed	NA
+Age completed full time education	Y
+Age diabetes diagnosed	NA
+Age emphysema/chronic bronchitis diagnosed	NA
+Age first had sexual intercourse	NA
+Age hay fever, rhinitis or eczema diagnosed	NA
+Age hayfever or allergic rhinitis diagnosed by doctor	NA
+Age high blood pressure diagnosed	NA
+Age last used hormone-replacement therapy (HRT)	NA
+Age of primiparous women at birth of child	NA
+Age of stopping smoking	NA
+Age started hormone-replacement therapy (HRT)	NA
+Age started oral contraceptive pill	Y
+Age started smoking in current smokers	NA
+Age started smoking in former smokers	NA
+Age started wearing glasses or contact lenses	NA
+Age stopped smoking	NA
+Age stroke diagnosed	NA
+Age when first had unusual or psychotic experience	NA
+Age when known person last commented about drinking habits	Y
+Age when last used oral contraceptive pill	NA
+Age when periods started (menarche)	NA
+age-related macular degeneration	NA
+Age-related macular degeneration (whether dry or wet)	NA
+Aging	NA
+Agorophobia, social phobia, and panic disorder	NA
+Agouti-Related Protein	Y
+Agranulocytosis	NA
+Alanine aminotransferase	NA
+Alanine transaminase levels	NA
+Albumin	NA
+Albumin/Globulin ratio	NA
+Albuminuria	NA
+albuterol	NA
+Alcohol	NA
+Alcohol abuse, main dg (more control exclusions)	NA
+Alcohol consumed	NA
+alcohol consumption measurement	NA
+alcohol dependence	NA
+Alcohol intake frequency.	NA
+Alcohol intake versus 10 years previously	NA
+Alcohol related diseases, tilastokeskus definition, death only	NA
+Alcohol use disorder, ICD-based	NA
+Alcohol use disorder, Swedish definition	NA
+Alcohol usually taken with meals	NA
+Alcohol-related disorders	NA
+Alcoholic gastritis	NA
+Alcoholic liver damage	NA
+Alcoholism	NA
+alendronic acid	NA
+Algoneurodystrophy	NA
+alkali metal|anti-manic agent	NA
+Alkaline phosphatase	NA
+All dysplastic lesions of the cervix uteri	NA
+All dysplastic lesions of the cervix uteri, vagina or vulva	NA
+All dysplastic lesions of the vagina	NA
+All dysplastic lesions of the vulva	NA
+All influenza	NA
+All pneumoniae	NA
+Allergic asthma (mode)	NA
+Allergic conjunctivitis	NA
+Allergic contact dermatitis	NA
+Allergic contact dermatitis due to drugs in contact with skin	NA
+Allergic purpura	NA
+Allergic reaction to food	NA
+Allergic urticaria	NA
+Allergies, other	NA
+Allergy/adverse effect of penicillin	NA
+allopurinol	NA
+Alopecia areata	NA
+alpha1-antagonist|alpha blocker	NA
+Altered mental status	NA
+alverine	NA
+Alzheimer Disease	NA
+Alzheimer disease	NA
+Alzheimer disease (more controls excluded)	NA
+Alzheimer disease,dementia	NA
+Alzheimer's disease	NA
+Alzheimer’s disease (Late onset) (more control exclusions)	NA
+Alzheimer's disease or family history of Alzheimer's disease	NA
+Alzheimer’s disease, wide definition	NA
+AlzheimerÕs disease (Atypical or mixed)	NA
+AlzheimerÕs disease (Atypical or mixed) (more controls excluded)	NA
+AlzheimerÕs disease (Early onset)	NA
+AlzheimerÕs disease (Early onset) (more controls excluded)	NA
+AlzheimerÕs disease (Late onset)	NA
+AlzheimerÕs disease (Late onset) (more controls excluded)	NA
+AlzheimerÕs disease (undefined)	NA
+AlzheimerÕs disease (undefined) (more controls excluded)	NA
+amantadine	NA
+amblyopia (disease)	NA
+Amblyopia ex anopsia	NA
+Amino-terminal enhancer of split measurement	Y
+aminoglycoside antibiotic|corticosteroid|antibiotic	NA
+aminoglycoside antibiotic|dihydrofolate reductase inhibitor|antibiotic	NA
+aminosalicylates|anti-inflammatory|IBD	NA
+amiodarone	NA
+amitriptyline	NA
+amlodipine	NA
+Amnesia, Transient Global	NA
+amorolfine	NA
+Amount of alcohol drunk on a typical drinking day	NA
+amoxicillin	NA
+amoxicillin/clavulanic acid	NA
+Amyloidosis	NA
+Amyloidosis, other/unspecified	NA
+Amyotrophic Lateral Sclerosis	NA
+Anaemias	NA
+Anal and rectal conditions	NA
+Anal and rectal polyp	NA
+Anankastic personality disorder	NA
+Anaphylactic shock due to adverse effect of correct drug or medication properly administered	NA
+anastrozole	NA
+Anatomical abnormatilies of kidney and ureters	NA
+Anemia	NA
+anemia (phenotype)	NA
+Anemia, Aplastic	NA
+Anemia, Iron-Deficiency	NA
+Anemia, Pernicious	NA
+Aneurysm of artery of lower extremity	NA
+Aneurysms, operations, SAH	NA
+Angina pectoris	NA
+angina pectoris	NA
+Angina Pectoris	NA
+Angina pectoris (no controls excluded)	NA
+Angina, Unstable	NA
+Angioplasty	NA
+angiotensin receptor blocker|anti-hypertensive|ARB	NA
+angiotensin receptor blocker|ARB|anti-hypertensive	NA
+Anisometropia and aniseikonia	NA
+Ankle spacing width	NA
+Ankle spacing width (left)	NA
+Ankle spacing width (right)	NA
+ankylosing spondylitis	NA
+Ankylosing spondylitis	NA
+Ankylosing spondylitis, strict definition	NA
+Anomalies of dental arch relationship, including avohilmo	NA
+Anomalies of pupillary function	NA
+Anorexia	NA
+Anorexia (incl.atypical)	NA
+Anosmia	NA
+Answered sexual history questions	NA
+Antepartum haemorrhage, not elsewhere classified	NA
+Anterior Iridocyclitis	NA
+Anterior thigh lean muscle volume (left)	NA
+anti-anginal agent|Nitrate|potassium channel agonist	NA
+anti-arrhythmic	NA
+anti-arrhythmic|non-selective beta-blocker|beta blocker	NA
+anti-coagulant|factor X inhibitor	NA
+anti-coagulant|vitamin K epoxide reductase inhibitor	NA
+Anti-Epstein-Barr virus nuclear antigen (EBNA) IgG levels	NA
+anti-fibrinolytic	NA
+anti-fungal	NA
+anti-fungal|corticosteroid	NA
+anti-gout agent|microtuble polymerization inhibitor	NA
+anti-inflammatory	NA
+anti-malarial	NA
+anti-metabolite	NA
+anti-migraine agent|serotonin receptor antagonist	NA
+Anticoagulants causing adverse effects	NA
+anticonvulsant|sodium channel blocker	NA
+anticonvulsant|voltage-gated calcium channel inhibitor|neuropathy	NA
+Antihypertensive medication - note that there are other indications	NA
+antipyretic	NA
+antiseptic|aminoglycoside antibiotic	NA
+Antisocial/borderline personality disorder	NA
+antispasmodic	NA
+Antithrombin-III measurement	Y
+Antiviral	NA
+Anxiety	NA
+anxiety	NA
+Anxiety disorder	NA
+Anxiety Disorders	NA
+anxiety,panic disorder	NA
+Any dementia	NA
+Any dementia (more controls excluded)	NA
+Any mental disorder	NA
+Any mental disorder, or suicide (or attempt), or psychic disorders complicating pregnancy, partum or puerperium or nerve system disorders (more control exclusions)	NA
+Aortic Aneurysm	NA
+Aortic aneurysm	NA
+Aortic valve disease	NA
+Aphakia	NA
+Aphakia and other disorders of lens	NA
+Apolipoprotein A	NA
+Apolipoprotein B	NA
+Appendectomy	NA
+Appendiceal conditions	NA
+Appendicitis	NA
+appendicitis	NA
+Apple intake	Y
+Arm fat mass (left)	NA
+Arm fat mass (right)	NA
+Arm fat percentage (left)	NA
+Arm fat percentage (right)	NA
+Arm fat-free mass (left)	NA
+Arm fat-free mass (right)	NA
+Arm predicted mass (left)	NA
+Arm predicted mass (right)	NA
+aromatase inhibitor|breast cancer	NA
+Arrhythmias, Cardiac	NA
+Arterial embolism and thrombosis	NA
+Arterial embolism and thrombosis of lower extremity artery	NA
+arthralgia	NA
+Arthritis	NA
+arthritis	NA
+Arthritis, Juvenile	NA
+Arthritis, Psoriatic	NA
+Arthritis, Reactive	NA
+Arthritis, Rheumatoid	NA
+Arthropathic psoriasis	NA
+Arthropathies in other diseases classified elsewhere	NA
+Arthropathy associated with infections	NA
+Arthropathy associated with other disorders classified elsewhere	NA
+Arthropathy in Crohn disease	NA
+Arthropathy in ulcerative colitis	NA
+Arthropathy NOS	NA
+Arthrosis	NA
+Artrosis, including avohilmo	NA
+Ascites (non malignant)	NA
+Aspartate aminotransferase	NA
+Aspartate Aminotransferases	NA
+aspirin	NA
+Aspirin	NA
+Asthma	NA
+asthma	NA
+Asthma (only as main-diagnosis)	NA
+Asthma (only as main-diagnosis) (more controls excluded)	NA
+Asthma and allergy	NA
+Asthma mixed form (mode) (more control exclusions)	NA
+Asthma-related acute respiratory infections	NA
+Asthma-related infections	NA
+Asthma-related pneumonia	NA
+Asthma, unspecified (mode)	NA
+Asthma/COPD (KELA code 203)	NA
+Astigmatism	NA
+astigmatism	NA
+Astigmatism angle (left)	NA
+Asymmetry of jaw	NA
+atenolol	NA
+Atenolol	NA
+atenolol/chlorthalidone	NA
+Atherosclerosis	NA
+Atherosclerosis of aorta	NA
+Atherosclerosis of the extremities	NA
+Atherosclerosis, excluding cerebral and coronary sclerosis	NA
+Atlantoaxial subluxation	NA
+Atopic dermatitis	NA
+Atopic/contact dermatitis due to other or unspecified	NA
+atorvastatin	NA
+Atorvastatin	NA
+atovaquone/proguanil	NA
+Atrial Fibrillation	NA
+atrial fibrillation	NA
+Atrial fibrillation and flutter	NA
+Atrial fibrillation and flutter (no controls excluded)	NA
+Atrial fibrillation and flutter with reimbursement	NA
+Atrial septal defect	NA
+Atrioventricular [AV] block	NA
+Atrophic disorders of skin	NA
+Atrophy of female genital tract	NA
+Attempted fluid intelligence (FI) test.	NA
+Attendance/disability/mobility allowance	NA
+Atypical mycobacterium lung infection	NA
+auditory system disease	NA
+autism spectrum disorder	NA
+Autoimmune Diseases	NA
+Autoimmune diseases	NA
+Autoimmune diseases excluding thyroid diseases	NA
+Autoimmune hepatitis	NA
+Autoimmune hyperthyroidism	NA
+Autoimmune polyglandular failure	NA
+AV-block	NA
+Average 16-hour sound level of noise pollution	Y
+Average 24-hour sound level of noise pollution	Y
+Average daytime sound level of noise pollution	Y
+Average evening sound level of noise pollution	Y
+Average monthly beer plus cider intake	NA
+Average monthly champagne plus white wine intake	NA
+Average monthly fortified wine intake	Y
+Average monthly intake of other alcoholic drinks	NA
+Average monthly spirits intake	Y
+Average night-time sound level of noise pollution	NA
+Average total household income before tax	NA
+Average weekly beer plus cider intake	Y
+Average weekly champagne plus white wine intake	Y
+Average weekly fortified wine intake	Y
+Average weekly red wine intake	Y
+Average weekly spirits intake	Y
+Avocado intake	Y
+Avoided activities or situations because of previous stressful experience in past month	NA
+Axin-1 levels	NA
+azathioprine	NA
+B18 Chronic viral hepatitis	NA
+B95 Streptococcus and staphylococcus as the cause of diseases classified to other chapters	NA
+B96 Other bacterial agents as the cause of diseases classified to other chapters	NA
+B98 Other specified infectious agents as the cause of diseases classified to other chapters	NA
+Back Pain	NA
+back pain	NA
+Back pain	NA
+Background diabetic retinopathy	NA
+baclofen	NA
+Bacon intake	Y
+Bacterial infection, other or unspecified	NA
+Bacterial Infections	NA
+Bacterial pneumonia	NA
+Bacterial pneumoniae	NA
+Bacterial sepsis of newborn	NA
+bacteriostatic antibiotic|antibiotic	NA
+bacteriostatic antibiotic|corticosteroid	NA
+Baguette intake	Y
+Baked bean intake	Y
+Banana intake	Y
+Barrett oesophagus	NA
+Barrett's esophagus,Esophagitis	NA
+basal cell carcinoma	NA
+Basal cell carcinoma, excluding all cancers (controls excluding all cancers)	NA
+Basal cell carcinoma, including avohilmo, excluding all cancers (controls excluding all cancers)	NA
+Basal metabolic rate	NA
+Basal Metabolism	NA
+Basophill count	NA
+Basophill percentage	NA
+beclometasone	NA
+beclometasone dipropionate	NA
+Beclomethasone	NA
+beclomethasone dipropionate	NA
+Beef intake	Y
+Been in a confiding relationship as an adult	Y
+Beer/cider intake	NA
+Beetroot intake	Y
+Behavior	Y
+Behavioural and miscellaneous addictions	Y
+Belief that own life is meaningful	Y
+Believed safe to perform brain MRI scan	Y
+Belittlement by partner or ex-partner as an adult	Y
+Bell's palsy	NA
+bendrofluazide	NA
+bendroflumethiazide	NA
+Bendroflumethiazide	NA
+Benign leiomyoma with endometriosis (controls excluding all cancers)	NA
+Benign lipomatous neoplasm	NA
+Benign lipomatous neoplasm of skin and subcutaneous tissue of head, face and neck	NA
+Benign lipomatous neoplasm of skin and subcutaneous tissue of limbs	NA
+Benign lipomatous neoplasm of skin and subcutaneous tissue of other and unspecified sites	NA
+Benign lipomatous neoplasm of skin and subcutaneous tissue of trunk	NA
+Benign mammary dysplasia	NA
+Benign mammary dysplasias	NA
+Benign neoplasm of bone and articular cartilage	NA
+Benign neoplasm of brain and other parts of central nervous system	NA
+Benign neoplasm of brain, cranial nerves, meninges	NA
+Benign neoplasm of breast	NA
+Benign neoplasm of colon	NA
+Benign neoplasm of colon, rectum, anus and anal canal	NA
+Benign neoplasm of eye	NA
+Benign neoplasm of eye and adnexa	NA
+Benign neoplasm of kidney and other urinary organs	NA
+Benign neoplasm of major salivary glands	NA
+Benign neoplasm of other and unspecified endocrine glands	NA
+Benign neoplasm of other and unspecified sites	NA
+Benign neoplasm of other parts of digestive system	NA
+Benign neoplasm of ovary	NA
+Benign neoplasm of parathyroid gland	NA
+Benign neoplasm of skin	NA
+Benign neoplasm of thyroid gland	NA
+Benign neoplasm of unspecified sites	NA
+Benign neoplasm of urinary organs	NA
+Benign neoplasm of uterus	NA
+Benign neoplasm: Adrenal gland	NA
+Benign neoplasm: Appendix	NA
+Benign neoplasm: Ascending colon	NA
+Benign neoplasm: Caecum	NA
+Benign neoplasm: Central nervous system, other parts/unspecified	NA
+Benign neoplasm: Cerebral meninges	NA
+Benign neoplasm: Choroid	NA
+Benign neoplasm: Colon	NA
+Benign neoplasm: Colon, unspecified	NA
+Benign neoplasm: Connective and other soft tissue of thorax	NA
+Benign neoplasm: Connective and other soft tissue of upper limb, including shoulder	NA
+Benign neoplasm: Cranial nerves	NA
+Benign neoplasm: Descending colon	NA
+Benign neoplasm: Duodenum	NA
+Benign neoplasm: Endocrine pancreas	NA
+Benign neoplasm: Ill-defined sites within the digestive system	NA
+Benign neoplasm: Larynx	NA
+Benign neoplasm: Lip	NA
+Benign neoplasm: Liver/bile ducts	NA
+Benign neoplasm: Long bones of lower limb	NA
+Benign neoplasm: Middle ear, nasal cavity and accessory sinuses	NA
+Benign neoplasm: Other and unspecified parts of mouth	NA
+Benign neoplasm: Other and unspecified parts of small intestine	NA
+Benign neoplasm: Other/unspecified site	NA
+Benign neoplasm: Parathyroid gland	NA
+Benign neoplasm: Parotid gland	NA
+Benign neoplasm: Pituitary gland, craniopharyngeal duct	NA
+Benign neoplasm: Rectosigmoid junction	NA
+Benign neoplasm: Rectum	NA
+Benign neoplasm: Rectum, anus and anal canal	NA
+Benign neoplasm: Retina	NA
+Benign neoplasm: salivary glands, exclude unknown (D119)	NA
+Benign neoplasm: Scapula and long bones of upper limb	NA
+Benign neoplasm: Short bones of lower limb	NA
+Benign neoplasm: Short bones of upper limb	NA
+Benign neoplasm: Sigmoid colon	NA
+Benign neoplasm: Spinal cord	NA
+Benign neoplasm: Stomach	NA
+Benign neoplasm: Transverse colon	NA
+Benign neoplasm: Vagina	NA
+Benign neoplasm: Vulva	NA
+Benign neoplasms	NA
+Benign neoplasms (all cancers excluded)	NA
+benzodiazepine|sedative|anxiety	NA
+Berry intake	Y
+beta-lactam antibiotic|antibiotic	NA
+beta-lactam antibiotic|beta-lactamase inhibitor|antibiotic	NA
+beta-lactam antibiotic|first generation cephalasporin|antibiotic	NA
+beta2-agonist|beta blocker|asthma	NA
+beta2-agonist|bronchodilator|asthma	NA
+beta2-agonist|corticosteroid|beta agonist|asthma	NA
+betahistine	NA
+betamethasone	NA
+bezafibrate	NA
+Bezafibrate	NA
+Bicipital tendinitis	NA
+Bicuspidal aortic valve syndrome	NA
+biguanides|diabetes	NA
+Bilateral oophorectomy (both ovaries removed)	NA
+Biliary cirrhosis, NAS	NA
+binge eating	NA
+Biological medication for rheuma	NA
+Biological medicines for asthma	NA
+Biomarkers	Y
+Biomechanical lesions, not elsewhere classified	NA
+Bipolar affective disorders	NA
+Bipolar and major depression status	NA
+Bipolar Disorder	NA
+bipolar disorder	NA
+Birth asphyxia	NA
+Birth weight	Y
+Birth Weight	NA
+Birth weight known	NA
+Birth weight of first child	Y
+bisoprolol	NA
+bisphosphanate|osteoporosis	NA
+bladder disease	NA
+Bladder neck obstruction	NA
+Bleeding	NA
+Blepharochalasis	NA
+Blood clot in the leg (dvt) | blood clot, dvt, bronchitis, emphysema, asthma, rhinitis, eczema, allergy diagnosed by doctor	NA
+Blood clot, DVT, bronchitis, emphysema, asthma, rhinitis, eczema, allergy diagnosed by doctor	NA
+blood coagulation disease	NA
+Blood Coagulation Disorders	NA
+Blood Coagulation Disorders, Inherited	NA
+Blood Platelet Disorders	NA
+blood pressure	NA
+Blood Pressure	NA
+Blood pressure medication | medication for cholesterol, blood pressure or diabetes	NA
+Blood pressure medication | medication for cholesterol, blood pressure, diabetes, or take exogenous hormones	NA
+Body Composition	NA
+Body fat percentage	NA
+Body Height	NA
+Body Mass Index	NA
+Body mass index (BMI)	NA
+Body Size	NA
+Body Weights and Measures	NA
+Body-mass index, inverse-rank normalized	NA
+Boiled/baked potatoes intake	Y
+Bone Demineralization, Pathologic	NA
+Bone Density	NA
+Bone disorder	NA
+bone fracture	NA
+brain aneurysm	NA
+Brain glioblastoma and astrocytoma, excluding all cancers (controls excluding all cancers)	NA
+Brain glioblastoma, excluding all cancers (controls excluding all cancers)	NA
+Brain meningioma, excluding all cancers (controls excluding all cancers)	NA
+Brain MRI measuring method	NA
+Bran cereal intake	Y
+Bread intake	Y
+Breaded fish intake	Y
+Breast cancer	NA
+Breast cancer [female]	NA
+breast carcinoma	NA
+Breast conditions, congenital or relating to hormones	NA
+Breast Cyst	NA
+Breast Diseases	NA
+Breast Neoplasms	NA
+Breastfed as a baby	Y
+Breathing problems during period of job	NA
+Breathing problems improved/stopped away from workplace or on holiday	NA
+Breathing problems responsible for leaving job	NA
+brimonidine	NA
+Bring up phlegm/sputum/mucus on most days	NA
+brinzolamide	NA
+Broad bean intake	Y
+bronchial disease	NA
+Bronchiectasis	NA
+Bronchitis	NA
+Bronchitis, not specified as acute or chronic	NA
+Brown rice intake	Y
+budesonide/formoterol	NA
+bulimia nervosa	NA
+Bullous disorders	NA
+bumetanide	NA
+Bundle branch block	NA
+Bundle-Branch Block	NA
+Bunion	NA
+Bursitis	NA
+Bursitis of shoulder	NA
+Butter	Y
+C-C motif chemokine 20 levels	Y
+C-reactive protein	NA
+C-reactive protein measurement	NA
+C15 Malignant neoplasm of oesophagus	NA
+C18 Malignant neoplasm of colon	NA
+C21 Malignant neoplasm of anus and anal canal	NA
+C22 Malignant neoplasm of liver and intrahepatic bile ducts	NA
+C25 Malignant neoplasm of pancreas	NA
+C34 Malignant neoplasm of bronchus and lung	NA
+C43 Malignant melanoma of skin	NA
+C44 Other malignant neoplasms of skin	NA
+C50 Malignant neoplasm of breast	NA
+C53 Malignant neoplasm of cervix uteri	NA
+C57 Malignant neoplasm of other and unspecified female genital organs	NA
+C67 Malignant neoplasm of bladder	NA
+C71 Malignant neoplasm of brain	NA
+C76 Malignant neoplasm of other and ill-defined sites	NA
+C78 Secondary malignant neoplasm of respiratory and digestive organs	NA
+C80 Malignant neoplasm without specification of site	NA
+C82 Follicular [nodular] non-Hodgkin's lymphoma	NA
+C83 Diffuse non-Hodgkin's lymphoma	NA
+C85 Other and unspecified types of non-Hodgkin's lymphoma	NA
+C90 Multiple myeloma and malignant plasma cell neoplasms	NA
+C91 Lymphoid leukaemia	NA
+C92 Myeloid leukaemia	NA
+Cabbage/kale intake	Y
+cadherin 5	Y
+Caffeine drink within last hour	NA
+Cake intake	Y
+Calcific aortic valvular stenosis, operated	NA
+Calcific tendinitis of shoulder	NA
+calcipotriene	NA
+calcipotriol	NA
+Calcium	NA
+calcium carbonate/sodium alginate/sodium bicarbonate	NA
+calcium carbonate/vitamin D3	NA
+calcium channel blocker|anti-hypertensive|dihydropyridine	NA
+calcium channel blocker|dihydropyridine|anti-hypertensive	NA
+Calculus of bile duct	NA
+Calculus of kidney	NA
+Calculus of kidney and ureter	NA
+Calculus of lower urinary tract	NA
+Calculus of ureter	NA
+Campylobacter enteritis	NA
+Cancer diagnosed by doctor	NA
+Cancer of bladder	NA
+Cancer of brain	NA
+Cancer of brain and nervous system	NA
+Cancer of bronchus; lung	NA
+Cancer of esophagus	NA
+Cancer of eye	NA
+Cancer of larynx, pharynx, nasal cavities	NA
+Cancer of liver and intrahepatic bile duct	NA
+Cancer of other female genital organs (excluding uterus and ovary)	NA
+Cancer of other lymphoid, histiocytic tissue	NA
+Cancer of other male genital organs	NA
+Cancer of prostate	NA
+Cancer of urinary organs (incl. kidney and bladder)	NA
+Cancer within the respiratory system	NA
+Cancer, suspected or other	NA
+candesartan	NA
+Canned soup intake	Y
+carbimazole	NA
+Carbimazole	NA
+carbocisteine	NA
+Carbohydrate	NA
+carbomer	NA
+carbonic anhydrase inhibitor	NA
+Carbuncle and furuncle	NA
+Carcinoid syndrome	NA
+Carcinoma in situ of breast, intraductal (controls excluding all cancers)	NA
+Carcinoma in situ of cervix uteri (controls excluding all cancers)	NA
+Carcinoma in situ of prostate (controls excluding all cancers)	NA
+Carcinoma in situ of skin	NA
+Carcinoma in situ of skin (controls excluding all cancers)	NA
+Carcinoma in situ of vulva (controls excluding all cancers)	NA
+Carcinoma in situ, bladder (controls excluding all cancers)	NA
+Carcinoma, Basal Cell	NA
+Carcinoma, Non-Small-Cell Lung	NA
+Cardiac and circulatory congenital anomalies	NA
+Cardiac arrest	NA
+Cardiac arrest and ventricular fibrillation	NA
+cardiac arrhythmia	NA
+Cardiac arrhythmias	NA
+Cardiac arrhytmias	NA
+Cardiac conduction disorders	NA
+Cardiac congenital anomalies	NA
+Cardiac dysrhythmias	NA
+Cardiac pacemaker in situ	NA
+Cardiac pacemaker/device in situ	NA
+Cardiac shunt/ heart septal defect	NA
+Cardiomegaly	NA
+Cardiomyopathies	NA
+Cardiomyopathies, Secondary/extrinsic	NA
+Cardiomyopathy	NA
+cardiomyopathy	NA
+Cardiomyopathy (excluding other)	NA
+Cardiomyopathy (no controls excluded)	NA
+Cardiomyopathy in other diseases	NA
+Cardiomyopathy, Hypertrophic	NA
+Cardiomyopathy, Hypertrophic obstructive	NA
+Cardiomyopathy, other and unspecified	NA
+cardiovascular disease	NA
+Cardiovascular Diseases	NA
+Cardiovascular diseases (excluding rheumatic etc)	NA
+Carditis	NA
+Caries in Clefts patients	NA
+Carotene	NA
+Carpal Tunnel Syndrome	NA
+carpal tunnel syndrome	NA
+Caspase 8	Y
+Cataract	NA
+cataract	NA
+Catechol O-Methyltransferase	Y
+Catechol O-methyltransferase measurement	Y
+Cathepsin D	Y
+Cauliflower intake	Y
+Causalgia	NA
+CCL23 levels	Y
+CCL25 levels	Y
+CD6 levels	NA
+cefalexin	NA
+celecoxib	NA
+Celery intake	Y
+Celiac Disease	NA
+Celiac disease	NA
+Cellulitis	NA
+Cellulitis and abscess of arm/hand	NA
+Cellulitis and abscess of fingers/toes	NA
+Cellulitis and abscess of oral soft tissues	NA
+Cellulitis and abscess of trunk	NA
+Central retinal artery occlusion	NA
+Ceramide_42:1_[M-H]1- levels	Y
+Ceramide_42:1_[M+H-H2O]1+ levels	NA
+Ceramide_42:1_[M+H]1+ levels	NA
+Cereal bar intake	Y
+Cereal intake	Y
+Cerebral amyloid angiopathy	NA
+Cerebral aneurysm	NA
+Cerebral aneurysm, nonruptured	NA
+Certain early complications of trauma or procedure	NA
+Cervical cancer	NA
+Cervical cancer and dysplasia	NA
+Cervical disc disorders	NA
+Cervical intraepithelial neoplasia [CIN] [Cervical dysplasia]	NA
+Cervicobrachial syndrome	NA
+cetirizine	NA
+Chalazion	NA
+Charcot foot	NA
+Cheese intake	Y
+Chemokine CCL8	NA
+Chemotherapy	NA
+Cherry intake	Y
+Chest pain felt during physical activity	NA
+Chest pain or discomfort	NA
+Chest pain or discomfort when walking uphill or hurrying	NA
+Childhood asthma (age<16)	NA
+Childhood asthma (age<16) (more control exclusions)	NA
+Childhood asthma (age<16) (more controls excluded)	NA
+Childhood sunburn occasions	NA
+Chitinase-3-Like Protein 1	Y
+chloramphenicol	NA
+chlorhexidine/neomycin	NA
+chlorphenamine	NA
+Chocolate bar intake	Y
+Chocolate biscuits intake	Y
+Chocolate-covered biscuits intake	Y
+Cholangitis	NA
+Cholangitis (primary sclerosing, PSC)	NA
+Cholangitis (primary sclerosing, PSC), with reimbursement 202	NA
+Cholecystectomy	NA
+Cholecystitis	NA
+cholecystitis	NA
+Cholecystitis without cholelithiasis	NA
+Cholelithiasis	NA
+Cholelithiasis and cholecystitis	NA
+Cholelithiasis with acute cholecystitis	NA
+Cholelithiasis with other cholecystitis	NA
+cholelithiasis,gallstones	NA
+Cholera	NA
+Cholesteatoma of middle ear	NA
+Cholesterol	NA
+cholesterol absorption inhibitor|anti-cholesterol agent	NA
+Cholesterol lowering medication | medication for cholesterol, blood pressure or diabetes	NA
+Cholesterol lowering medication | medication for cholesterol, blood pressure, diabetes, or take exogenous hormones	NA
+Cholesterol_[M+H-H2O]1+ levels	Y
+Cholesterol, LDL	NA
+Cholesterolosis of gallbladder	NA
+Cholesteryl ester_16:0_[M+NH4]1+ levels	Y
+Cholesteryl ester_16:1_[M+NH4]1+ levels	Y
+Cholesteryl ester_17:1_[M+NH4]1+ levels	Y
+Cholesteryl ester_18:0_[M+NH4]1+ levels	Y
+Cholesteryl ester_18:1_[M+NH4]1+ levels	Y
+Cholesteryl ester_18:2_[M+NH4]1+ levels	Y
+Cholesteryl ester_18:3_[M+NH4]1+ levels	Y
+Cholesteryl ester_20:3_[M+NH4]1+ levels	Y
+Cholesteryl ester_20:5_[M+NH4]1+ levels	Y
+Chorioretinal inflammations, scars, and other disorders of choroid	NA
+Chromosomal abnormalities, not elsewhere classified	NA
+Chronic airway obstruction	NA
+Chronic bronchitis	NA
+Chronic conjunctivitis	NA
+Chronic cystitis	NA
+Chronic dermatitis due to solar radiation	NA
+Chronic diseases of tonsils and adenoids	NA
+Chronic gastritis	NA
+Chronic glomerulonephritis, NOS	NA
+Chronic hepatitis	NA
+Chronic hepatitis NAS	NA
+Chronic hepatitis, not elsewhere classified	NA
+Chronic laryngitis	NA
+Chronic laryngitis and laryngotracheitis	NA
+Chronic liver disease and cirrhosis	NA
+Chronic lymphocytic leukaemia and small lyphocytis leukaemia, excluding all cancers (controls excluding all cancers)	NA
+Chronic myeloid leukaemia [CML], BCR/ABL-positive	NA
+Chronic myeloid leukaemia, excluding all cancers (controls excluding all cancers)	NA
+Chronic myeloproliferative disease	NA
+Chronic nephritic syndrome	NA
+chronic obstructive pulmonary disease	NA
+Chronic pain	NA
+Chronic periodontitis	NA
+Chronic prostatitis	NA
+Chronic renal failure [CKD]	NA
+Chronic rhinitis, nasopharyngitis and pharyngitis	NA
+Chronic sinusitis	NA
+Chronic thyroiditis	NA
+Chronic tonsillitis and adenoiditis	NA
+Chronic ulcer of skin, not elsewhere classified	NA
+Chronobiology Disorders	NA
+chymotrypsin C	Y
+Cicatricial alopecia [scarring hair loss]	NA
+Cicatrix, Hypertrophic	NA
+cimetidine	NA
+ciprofloxacin	NA
+Circulatory disease NEC	NA
+Circumscribed brain atrophy	NA
+Cirrhosis of liver, NAS	NA
+Cirrhosis, broad definition used in the article https://doi.org/10.1101/594523	NA
+citalopram	NA
+clarithromycin	NA
+clavicle fracture	NA
+Clear cell adenocarcinoma of kidney, excluding all cancers (controls excluding all cancers)	NA
+Cleft lip, lip and palate or palate	NA
+Cleft Palate	NA
+clobetasol	NA
+clobetasone butyrate	NA
+clonazepam	NA
+clonidine	NA
+clopidogrel	NA
+Clopidogrel	NA
+Close to major road	NA
+clotrimazole	NA
+clotrimazole/hydrocortisone	NA
+Coagulation defects	NA
+Coagulation defects, purpura and other haemorrhagic conditions	NA
+Coagulation factor VII measurement	Y
+Coagulation factor XIII B chain measurement	Y
+Coagulation factor XIII measurement	Y
+codeine	NA
+Codeine or tramadol medication	NA
+codeine/paracetamol	NA
+codine/paracetamol	NA
+Coeliac disease	NA
+Coffee consumed	NA
+coffee consumption	NA
+Coffee intake	Y
+Cognition	NA
+colchicine	NA
+colecalciferol	NA
+Coleslaw intake	Y
+Colitis, primary sclerosing, strict definition	NA
+Colitis, Ulcerative	NA
+College or university degree | qualifications	Y
+Colon adenocarcinoma, excluding all cancers (controls excluding all cancers)	NA
+Colon cancer	NA
+Colonic Neoplasms	NA
+Colonic or urogenital fistula	NA
+Colorectal adenocarcinoma, excluding all cancers (controls excluding all cancers)	NA
+Colorectal cancer	NA
+Colorectal Neoplasms	NA
+combination anti-hypertensive|anti-hypertensive|beta blocker|diuretic|thiazide diuretic	NA
+combination anti-malarial|anti-malarial	NA
+Common variable immunodeficiency	NA
+Comparative body size at age 10	NA
+Comparative height size at age 10	NA
+Complement component C8 measurement	Y
+Complement factor H measurement	Y
+Completion status of test	NA
+Complication due to other implant and internal device	NA
+Complication of amputation stump	NA
+Complication of internal orthopedic device	NA
+Complications following abortion and ectopic and molar pregnancy	NA
+Complications of anaesthesia during labour and delivery	NA
+Complications of cardiac/vascular device, implant, and graft	NA
+Complications of surgical and medical procedures	NA
+Complications of the puerperium, not elsewhere classified	NA
+Complications of transplants and reattached limbs	NA
+Concussion	NA
+Conduction disorders	NA
+Conductive and sensorineural hearing loss	NA
+Conductive hearing loss	NA
+Congenital anomalies of female genital organs	NA
+Congenital anomalies of great vessels	NA
+Congenital anomalies of urinary system	NA
+Congenital coagulation defects	NA
+Congenital deficiency of other clotting factors (including factor VII)	NA
+Congenital deficiency of other clotting factors (including factor vii)	NA
+Congenital deformities of feet	NA
+Congenital Hypothyroidism	NA
+Congenital ichthyosis	NA
+Congenital lactase deficiency	NA
+Congenital malformations and deformations of the musculoskeletal system	NA
+Congenital malformations of anterior segment of eye	NA
+Congenital malformations of gallbladder, bile ducts and liver	NA
+Congenital malformations of genital organs	NA
+Congenital malformations of great arteries	NA
+Congenital malformations of heart and great arteries	NA
+Congenital malformations of ovaries, fallopian tubes and broad ligaments	NA
+Congenital malformations of posterior segment of eye	NA
+Congenital malformations of pulmonary and tricuspid valves	NA
+Congenital malformations of the circulatory system	NA
+Congenital malformations of the musculoskeletal system, not elsewhere classified	NA
+Congenital malformations of the nervous system	NA
+Congenital malformations of the urinary system	NA
+Congenital malformations of trachea and bronchus	NA
+Congestive heart failure; nonhypertensive	NA
+conjugated estrogen	NA
+Conjunctivitis	NA
+Conjunctivitis, Allergic	NA
+Connective Tissue Diseases	NA
+Conotruncal defects	NA
+Consecutive night shifts during mixed shift periods	Y
+Constipation	NA
+Continuous positive airway pressure	NA
+Contracture of palmar fascia [Dupuytren's disease]	NA
+Contracture of tendon (sheath)	NA
+Cooked vegetable intake	Y
+COPD related to chronic (opportunist) infections	NA
+COPD-related respiratory insufficiency	NA
+COPD/asthma related infections	NA
+COPD/asthma related pneumonia or pneumonia derived septichaemia	NA
+COPD/asthma/ILD related infections	NA
+COPD/asthma/ILD related pneumonia or pneumonia derived septichaemia	NA
+Coprococcus comes	NA
+Cornea	NA
+Cornea replaced by transplant	NA
+Corneal degeneration	NA
+Corneal Diseases	NA
+Corneal Dystrophies, Hereditary	NA
+Corneal dystrophy	NA
+Corneal hysteresis (left)	NA
+Corneal hysteresis (right)	NA
+Corneal opacity and other disorders of cornea	NA
+Corneal resistance factor (left)	NA
+Corneal resistance factor (right)	NA
+Corneal Ulcer	NA
+Corns and callosities	NA
+Coronary angiopasty	NA
+Coronary Artery Bypass	NA
+Coronary artery bypass grafting	NA
+Coronary artery bypass grafting (no controls excluded)	NA
+Coronary Artery Disease	NA
+coronary artery disease	NA
+Coronary atherosclerosis	NA
+Coronary atherosclerosis (no controls excluded)	NA
+Coronary Disease	NA
+Coronary revascularization (ANGIO or CABG)	NA
+Coronary revascularization (ANGIO or CABG) (no controls excluded)	NA
+corticosteroid	NA
+corticosteroid|aminoglycoside antibiotic|antibiotic	NA
+corticosteroid|long-acting beta-2 agonist|LABA	NA
+Cough	NA
+Cough on most days	NA
+Country of Birth (non-UK origin)	NA
+Country of birth (UK/elsewhere)	NA
+COVID-19	NA
+Covid-19 confirmed case	NA
+COVID-19 positive (controls include untested)	NA
+COVID-19 positive (controls include untested), only patients from centers in England	NA
+COVID-19 positive (controls only COVID-19 negative)	NA
+Coxarthrosis	NA
+Coxarthrosis, primary	NA
+Coxarthrosis, primary, with hip surgery	NA
+Coxsackie and Adenovirus Receptor-Like Membrane Protein	Y
+Craniofacial Abnormalities	NA
+Creatine kinase M-type:Creatine kinase B-type heterodimer measurement	Y
+Creatinine	NA
+Creatinine (enzymatic) in urine	NA
+CREST Syndrome	NA
+Crisp intake	Y
+Crispbread intake	Y
+Crohn Disease	NA
+Crohn disease	NA
+Crohn disease (strict definition, require KELA, min 2 HDR)	NA
+crohn's disease	NA
+Crohn's disease of small interstine	NA
+Croissant intake	Y
+Crumbed or deep-fried poultry intake	Y
+Crumble intake	Y
+Crushing or internal injury to organs	NA
+Cucumber intake	Y
+Current employment status	NA
+Current eye infection	NA
+Current smoker	NA
+Current tobacco smoking	NA
+Cushing syndrome	NA
+Cutaneous abscess, furuncle and carbuncle	NA
+Cutaneous lupus erythematosus	NA
+CX3CL1 levels	Y
+CXCL6 levels	Y
+cyclizine	NA
+Cylindrical power (left)	NA
+Cylindrical power (right)	NA
+Cyst of kidney	NA
+Cystatin C	NA
+Cystitis	NA
+cystitis	NA
+Cystitis and urethritis	NA
+Cysts of the jaws	NA
+Cytokine TWEAK	NA
+Cytomegaloviral hepatitis	NA
+D04 Carcinoma in situ of skin	NA
+D05 Carcinoma in situ of breast	NA
+D12 Benign neoplasm of colon, rectum, anus and anal canal	NA
+D16 Benign neoplasm of bone and articular cartilage	NA
+D17 Benign lipomatous neoplasm	NA
+D22 Melanocytic naevi	NA
+D25 Leiomyoma of uterus	NA
+D30 Benign neoplasm of urinary organs	NA
+D32 Benign neoplasm of meninges	NA
+D33 Benign neoplasm of brain and other parts of central nervous system	NA
+D36 Benign neoplasm of other and unspecified sites	NA
+D38 Neoplasm of uncertain or unknown behaviour of middle ear and respiratory and intrathoracic organs	NA
+D41 Neoplasm of uncertain or unknown behaviour of urinary organs	NA
+D47 Other neoplasms of uncertain or unknown behaviour of lymphoid, haematopoietic and related tissue	NA
+D48 Neoplasm of uncertain or unknown behaviour of other and unspecified sites	NA
+D50 Iron deficiency anaemia	NA
+D51 Vitamin B12 deficiency anaemia	NA
+D52 Folate deficiency anaemia	NA
+D64 Other anaemias	NA
+D68 Other coagulation defects	NA
+D69 Purpura and other haemorrhagic conditions	NA
+D72 Other disorders of white blood cells	NA
+D75 Other diseases of blood and blood-forming organs	NA
+D86 Sarcoidosis	NA
+D89 Other disorders involving the immune mechanism, not elsewhere classified	NA
+Dark chocolate intake	Y
+Day shifts worked	NA
+Day-of-week questionnaire completed	NA
+Day-of-week questionnaire completion requested	NA
+Daytime dozing / sleeping (narcolepsy)	NA
+dCTP pyrophosphatase 1 measurement	Y
+Deaf mutism, not elsewhere classified	NA
+Death record format	NA
+Decaffeinated tea	NA
+Decubitus ulcer and pressure area	NA
+Deep bite	Y
+Deep bite that required surgery	NA
+deep vein thrombosis	NA
+Defects in the complement system	NA
+Defibrination syndrome	NA
+Deficiency of other B group vitamins	NA
+Deforming dorsopathies	NA
+Degeneration of intervertebral disc	NA
+Degeneration of macula and posterior pole	NA
+Degeneration of macula and posterior pole of retina	NA
+Degeneration of the brain due to alcohol	NA
+Degenerative disease of the spinal cord	NA
+Degenerative macular diseases	NA
+Degenerative myopia	NA
+Degenerative skin conditions and other dermatoses	NA
+Delirium dementia and amnestic and other cognitive disorders	NA
+Delirium due to conditions classified elsewhere	NA
+Delirium, not induced by alcohol and other psychoactive substances	NA
+Delivery methods	NA
+delivery system	NA
+Dementia	NA
+Dementia due to Parkinson's disease (more control exclusions)	NA
+Dementia in Alzheimer disease	NA
+Dementia in other diseases classified elsewhere	NA
+Dementia, including avohilmo	NA
+Dementia, Vascular	NA
+dementia,Alzheimer disease,cognitive impairment	NA
+Dementias	NA
+Demyelenating diseases of the central nervous system	NA
+Dental caries	NA
+Dentofacial anomalies [including malocclusion]	NA
+Dentures	Y
+Depressed affect	NA
+Depression	NA
+Depression medications	NA
+Depression or dysthymia	NA
+Depression possibly related to stressful or traumatic event	NA
+Depressive Disorder, Major	NA
+Dermatitis	NA
+Dermatitis and eczema	NA
+Dermatitis due to ingested food	NA
+Dermatitis due to solar radiation	NA
+Dermatitis due to substances taken internally	NA
+Dermatitis Herpetiformis	NA
+Dermatitis herpetiformis	NA
+Dermatitis, Atopic	NA
+Dermatitis, Contact	NA
+Dermatographic urticaria	NA
+Dermatologic disease	NA
+Dermatopolymyositis (FG)	NA
+Desogestrel	NA
+Destinations on discharge from hospital (recoded)	NA
+Detention categories	NA
+Deviated nasal septum	NA
+dexamethasone/acetic acid/neomycin	NA
+dextropropoxyphene/paracetamol	NA
+Diabetes diagnosed by doctor	NA
+diabetes mellitus	NA
+Diabetes mellitus	NA
+Diabetes Mellitus	NA
+Diabetes Mellitus, Type 1	NA
+Diabetes Mellitus, Type 2	NA
+Diabetes or abnormal glucose tolerance complicating pregnancy	NA
+Diabetes or endocrine disease	NA
+Diabetes related eye disease | eye problems/disorders	NA
+Diabetes-related co-morbidities/complications (more controls excluded)	NA
+Diabetes, Gestational	NA
+Diabetes, insulin treatment (Kela reimbursement) (more control exclusions)	NA
+Diabethic neuropathy	NA
+Diabetic background retinopathy	NA
+diabetic eye disease	NA
+Diabetic hypoglycemia	NA
+Diabetic ketoacidosis	NA
+Diabetic Ketoacidosis	NA
+Diabetic maculopathy	NA
+Diabetic maculopathy (more controls excluded)	NA
+Diabetic Nephropathies	NA
+Diabetic nephropathy	NA
+Diabetic nephropathy (more controls excluded)	NA
+Diabetic Neuropathies	NA
+Diabetic neuropathy	NA
+Diabetic Retinopathy	NA
+Diabetic retinopathy	NA
+Diabetic retinopathy (more controls excluded)	NA
+Diabetic retinopathy, strict definition	NA
+Diacylglycerol_32:2_[M+H-H2O]1+ levels	Y
+Diacylglycerol_33:1_[M+H-H2O]1+ levels	Y
+Diacylglycerol_34:0_[M+H-H2O]1+ levels	Y
+Diacylglycerol_34:1_[M+H-H2O]1+ levels	Y
+Diacylglycerol_34:2_[M+H-H2O]1+ levels	Y
+Diacylglycerol_34:2_[M+NH4]1+ levels	Y
+Diacylglycerol_36:1_[M+H-H2O]1+ levels	Y
+Diacylglycerol_36:2_[M+H-H2O]1+ levels	Y
+Diacylglycerol_36:2_[M+NH4]1+ levels	Y
+Diacylglycerol_36:3_[M+H-H2O]1+ levels	Y
+Diacylglycerol_36:3_[M+NH4]1+ levels	Y
+Diacylglycerol_36:4_[M+H-H2O]1+ levels	Y
+Diacylglycerol_36:5_[M+H-H2O]1+ levels	Y
+Diacylglycerol_39:2_[M+NH4]1+ levels	NA
+Diacylglycerol_42:7_[M+H-H2O]1+ levels	Y
+Diacylglycerol_44:6_[M+H-H2O]1+ levels	Y
+Diacylglycerol_44:7_[M+H-H2O]1+ levels	Y
+Diagnostic Self Evaluation	NA
+Dialysis	NA
+Diaphragmatic hernia	NA
+Diarrhea	NA
+Diarrhoea and gastroenteritis of presumed infectious origin	NA
+Diastasis of muscle	NA
+Diastolic blood pressure, automated reading	NA
+Diastolic blood pressure, automated reading, adjusted by medication	NA
+Diastolic blood pressure, combined automated + manual reading	NA
+Diastolic blood pressure, combined automated + manual reading, adjusted by medication	NA
+Diastolic blood pressure, manual reading	NA
+Diastolic blood pressure, manual reading, adjusted by medication	NA
+diazepam	NA
+diclofenac	NA
+Did your sleep change?	NA
+diet measurement	Y
+Difficulty not smoking for 1 day	NA
+Diffuse diseases of connective tissue	NA
+Diffuse large B-cell lymphoma, excluding all cancers (controls excluding all cancers)	NA
+Digestive congenital anomalies	NA
+digestive system disease	NA
+Digestive System Diseases	NA
+digoxin	NA
+dihydrocodeine	NA
+dihydrocodeine/paracetamol	NA
+Dihydropteridine Reductase	Y
+Diplopia and disorders of binocular vision	NA
+Direct bilirubin	NA
+Diseases of arteries, arterioles and capillaries (FINNGEN)	NA
+Diseases of esophagus	NA
+Diseases of external ear	NA
+Diseases of hair and hair follicles	NA
+Diseases of male genital organs	NA
+Diseases of middle ear and mastoid	NA
+Diseases of oesophagus, stomach and duodenum	NA
+Diseases of pancreas	NA
+Diseases of sebaceous glands	NA
+Diseases of the ear and mastoid process	NA
+Diseases of the eye and adnexa	NA
+Diseases of the oral soft tissues, excluding lesions specific for gingiva and tongue	NA
+Diseases of the salivary glands	NA
+Diseases of veins, lymphatic vessels and lymph nodes, not elsewhere classified	NA
+Diseases of vocal cords and larynx+other diseases of upper respiratory tract, no elsewhere classified	NA
+Diseases of white blood cells	NA
+Dislocation	NA
+Disorder of lipoprotein metabolism, unspecified	NA
+Disorder of skin and subcutaneous tissue NOS	NA
+Disorders of adrenal glands	NA
+Disorders of bilirubin excretion	NA
+Disorders of calcium/phosphorus metabolism	NA
+Disorders of carbohydrate transport and metabolism	NA
+Disorders of choroid and retina	NA
+Disorders of conjunctiva	NA
+Disorders of esophageal motility	NA
+Disorders of eyelid, lacrimal system and orbit	NA
+Disorders of function of stomach	NA
+Disorders of iris and ciliary body	NA
+Disorders of iron metabolism	NA
+Disorders of lacrimal system	NA
+Disorders of lipoid metabolism	NA
+Disorders of lipoprotein metabolism and other lipidaemias	NA
+Disorders of magnesium metabolism	NA
+Disorders of menstruation and other abnormal bleeding from female genital tract	NA
+Disorders of mineral metabolism	NA
+Disorders of muscle, ligament, and fascia	NA
+Disorders of muscles	NA
+Disorders of myoneural junction and muscle in diseases classified elsewhere	NA
+Disorders of ocular muscles, binocular movement, accommodation and refraction	NA
+Disorders of oesophagus in diseases classified elsewhere	NA
+Disorders of optic nerve and visual pathways	NA
+Disorders of orbit	NA
+Disorders of parathyroid gland	NA
+Disorders of parathyroid gland, other and/or unspecified	NA
+Disorders of penis	NA
+Disorders of pituitary gland, other and/or unspecified	NA
+Disorders of plasma protein metabolism	NA
+Disorders of plasma-protein metabolism, not elsewhere classified	NA
+Disorders of porphyrin and bilirubin metabolism	NA
+Disorders of protein plasma/amino-acid transport and metabolism	NA
+Disorders of puberty	NA
+Disorders of sclera, cornea, iris and ciliary body	NA
+Disorders of skin appendages	NA
+Disorders of sphingolipid metabolism and other lipid storage disorders	NA
+Disorders of synovium and tendon	NA
+Disorders of the orbit	NA
+Disorders of the thyroid gland	NA
+Disorders of tooth development	NA
+Disorders of uterus, NEC	NA
+Disorders of vestibular function (Vertigo)	NA
+Disorders of vitreous body	NA
+Disorders related to short gestation and low birth weight, not elsewhere classified	NA
+Disorders resulting from impaired renal function	NA
+Dissection of aorta	NA
+Dissociative [conversion] disorders	NA
+Distance between home and job workplace	NA
+Distress caused by unusual or psychotic experiences	NA
+Disturbances in tooth eruption	NA
+Diverticular Diseases	NA
+Diverticulitis	NA
+diverticulitis	NA
+Diverticulosis	NA
+Diverticulosis and diverticulitis	NA
+Diverticulum	NA
+Dizziness	NA
+Dizziness and giddiness (Light-headedness and vertigo)	NA
+Doctor diagnosed asthma	NA
+Doctor diagnosed chronic bronchitis	NA
+Doctor diagnosed COPD (chronic obstructive pulmonary disease)	NA
+Doctor diagnosed hayfever or allergic rhinitis	NA
+Doctor diagnosed idiopathic pulmonary fibrosis	NA
+Doctor diagnosed sarcoidosis	NA
+Doctor diagnosed tuberculosis	NA
+docusate	NA
+donepezil	NA
+dopamine pro-drug / decarboxylase inhibitor|Parkinson's	NA
+dorzolamide	NA
+Double crust pastry intake	Y
+Dovonex 50micrograms/g cream | treatment/medication code	NA
+doxazosin	NA
+DPP-4 inhibitor|diabetes	NA
+Dried fruit added to cereal	Y
+Dried fruit intake	Y
+Drinking	NA
+Drinking water intake	Y
+Drive faster than motorway speed limit	NA
+drug allergy	NA
+Drug Resistance	NA
+drug use measurement	NA
+Drug-induced cataract	NA
+Drug-induced hypoglycaemia without coma	NA
+Drug-induced myopathy	NA
+Drug-induced neutropenia	NA
+Drug-induced systemic lupus erythematosus	NA
+Dry age-related macular degeneration (includes geographic atrophy)	NA
+duloxetine	NA
+Duodenal Ulcer	NA
+Duodenal ulcer	NA
+duodenal ulcer	NA
+Duodenitis	NA
+Dupuytren Contracture	NA
+dupuytren contracture	NA
+Duration of fitness test	NA
+Duration of heavy DIY	NA
+Duration of moderate activity	NA
+Duration of questionnaire	Y
+Duration of vigorous activity	NA
+Duration of walks	Y
+Duration screen displayed	Y
+Duration to first press of snap-button in each round	Y
+Duration walking for pleasure	Y
+dutasteride	NA
+DVT of lower extremities	NA
+DVT of lower extremities (no controls excluded)	NA
+DVT of lower extremities and pulmonary embolism	NA
+DXA measuring method	NA
+Dyschromia and Vitiligo	NA
+Dyslipidemias	NA
+Dystonia	NA
+Dysuria	NA
+E-Selectin	Y
+E. coli	NA
+E03 Other hypothyroidism	NA
+E04 Other non-toxic goitre	NA
+E05 Thyrotoxicosis [hyperthyroidism]	NA
+E10 Insulin-dependent diabetes mellitus	NA
+E11 Non-insulin-dependent diabetes mellitus	NA
+E14 Unspecified diabetes mellitus	NA
+E16 Other disorders of pancreatic internal secretion	NA
+E21 Hyperparathyroidism and other disorders of parathyroid gland	NA
+E27 Other disorders of adrenal gland	NA
+E29 Testicular dysfunction	NA
+E53 Deficiency of other B group vitamins	NA
+E66 Obesity	NA
+E78 Disorders of lipoprotein metabolism and other lipidaemias	NA
+E80 Disorders of porphyrin and bilirubin metabolism	NA
+E83 Disorders of mineral metabolism	NA
+E85 Amyloidosis	NA
+E88 Other metabolic disorders	NA
+E89 Postprocedural endocrine and metabolic disorders, not elsewhere classified	NA
+Ear Diseases	NA
+Early lumbar disc prolapse, operated	NA
+Early or threatened labor; hemorrhage in early pregnancy	NA
+Ease of skin tanning	Y
+Eating disorder (more control exclusions)	NA
+Ecg, heart rate	NA
+ECG, heart rate	NA
+ECG, load	NA
+ECG, number of stages in a phase	NA
+ECG/bike method for fitness test	NA
+Ectopic pregnancy	NA
+Ectropion of eyelid	NA
+Eczema	NA
+Eczema or dermatitis	NA
+Edible Grain	Y
+Effects of heat, cold and air pressure	NA
+Effects of other external causes	NA
+Eggs in sandwiches intake	Y
+Ehlers-Danlos syndrome	NA
+Electrolyte imbalance	NA
+Elevated blood pressure reading without diagnosis of hypertension	NA
+Elevated white blood cell count	NA
+Embedded and impacted teeth	NA
+Embolic stroke	NA
+Emergency coronary revascularization (for ACS) (no controls excluded)	NA
+emollient	Y
+Emotional disorders and disorders of social functioning with onset specific to childhood	NA
+Emotional disorders starting during childhood or adolescence (more control exclusions)	NA
+Emotionally unstable personality disorder	NA
+Emotions	Y
+Emphysema	NA
+emphysema	NA
+enalapril	NA
+Endocarditis	NA
+Endocrine System Diseases	NA
+Endometrial hyperplasia	NA
+Endometrial Neoplasms	NA
+Endometriosis	NA
+Endometriosis ASRM stages 3,4	NA
+Endometriosis diagnosis and infertility diagnosis occurring together	NA
+Endometriosis of intestine	NA
+Endometriosis of rectovaginal septum and vagina	NA
+Endothelial cell-specific molecule 1 levels	Y
+Enduring personality changes	NA
+Englyst dietary fibre	Y
+Enteritis due to Yersinia enterocolitica	NA
+Enterobiasis	NA
+Enterocolitis due to Clostridium difficile	NA
+Enthesopathies of lower limb, excluding foot	NA
+Enthesopathy	NA
+Entropion and trichiasis of eyelid	NA
+Eosinophilia	NA
+Eosinophill count	NA
+Eosinophill percentage	NA
+Epidermal Cyst	NA
+Epidermal Growth Factor	Y
+Epilepsy	NA
+Epilepsy, recurrent seizures, convulsions	NA
+Epiphora	NA
+Epiretinal Membrane	NA
+Episcleritis	NA
+Episodal and paroxysmal disorders	NA
+Epistaxis or throat hemorrhage	NA
+Erectile Dysfunction	NA
+Erectile dysfunction [ED]	NA
+Erosion and ectropion of cervix uteri	NA
+Erosion of teeth	NA
+Erysipelas	NA
+Erythema nodosum	NA
+Erythematous conditions	NA
+Erythrocyte Count	NA
+Erythrocyte Indices	NA
+erythromycin	NA
+escitalopram	NA
+Esophageal and Gastric Varices	NA
+Esophageal bleeding (varices/hemorrhage)	NA
+Esophageal Diseases	NA
+Esophagitis, GERD and related diseases	NA
+Espresso intake	Y
+Essential (haemorrhagic) thrombocythaemia	NA
+Essential hypertension	NA
+Essential Hypertension	NA
+essential hypertension	NA
+essential tremor	NA
+Essential tremor	NA
+Estimated glomerular filtration rate, cystain C	NA
+Estimated glomerular filtration rate, serum creatinine	NA
+Estimated glomerular filtration rate, serum creatinine + cystain C	NA
+estriol	NA
+estrogen/medroxyprogesterone	NA
+ethinylestradiol/levonorgestrel	NA
+Ethnic background	NA
+etoricoxib	NA
+Eukaryotic translation initiation factor 4E type 2 measurement	Y
+Eustachian salpingitis and obstruction	NA
+Eustachian tube disorders	NA
+Ever addicted to a behaviour or miscellanous	NA
+Ever addicted to alcohol	NA
+Ever been injured or injured someone else through drinking alcohol	NA
+Ever contemplated self-harm	NA
+Ever depressed for a whole week	NA
+Ever had bowel cancer screening	NA
+Ever had cataract surgery	NA
+Ever had eye surgery	NA
+Ever had hysterectomy (womb removed)	NA
+Ever had known person concerned about, or recommend reduction of, alcohol consumption	NA
+Ever had period extreme irritability	NA
+Ever had prolonged feelings of sadness or depression	NA
+Ever had prostate specific antigen (PSA) test	NA
+Ever had same-sex intercourse	NA
+Ever heard an un-real voice	NA
+Ever highly irritable/argumentative for 2 days	NA
+Ever manic/hyper for 2 days	NA
+Ever physically dependent on alcohol	NA
+Ever prescribed a medication for unusual or psychotic experiences	NA
+Ever seen an un-real vision	NA
+Ever smoked	NA
+Ever smoker	NA
+Ever sought or received professional help for mental distress	NA
+Ever stopped smoking for 6+ months	NA
+Ever suffered mental distress preventing usual activities	NA
+Ever taken cannabis	Y
+Ever talked to a health professional about unusual or psychotic experiences	NA
+Ever thought that life not worth living	Y
+Ever tried to stop smoking	NA
+Ever unenthusiastic/disinterested for a whole week	NA
+Ever used hormone-replacement therapy (HRT)	NA
+Ever worried more than most people would in similar situation	NA
+Excessive or frequent menstruation	NA
+Excessive vomiting in pregnancy	NA
+Excessive, frequent and irregular menstruation	NA
+Exercise	NA
+Exfoliative dermatitis	NA
+Exophthalmic conditions	NA
+Exophthalmos	NA
+Exposure to tobacco smoke at home	NA
+Exposure to tobacco smoke outside home	NA
+Extrapyramidal and movement disorders	NA
+Extrapyramidal disease and abnormal movement disorders	NA
+Extrinsic allergic alveolitis	NA
+eye disease	NA
+Eye Pain	NA
+Eye problems/disorders	NA
+Eyelid Diseases	NA
+ezetimibe	NA
+Ezetimibe	NA
+F00 Dementia in Alzheimer's disease	NA
+F01 Vascular dementia	NA
+F02 Dementia in other diseases classified elsewhere	NA
+F05 Delirium, not induced by alcohol and other psychoactive substances	NA
+F06 Other mental disorders due to brain damage and dysfunction and to physical disease	NA
+F10 Mental and behavioural disorders due to use of alcohol	NA
+F11 Mental and behavioural disorders due to use of opioids	NA
+F17 Mental and behavioural disorders due to use of tobacco	NA
+F20 Schizophrenia	NA
+F30 Manic episode	NA
+F32 Depressive episode	NA
+F33 Recurrent depressive disorder	NA
+F41 Other anxiety disorders	NA
+F60 Specific personality disorders	NA
+Facial ageing	NA
+Failed induction of labour	NA
+Falls in the last year	NA
+Falls/tendency to fall	NA
+False labour	Y
+Familial hypercholesterolemia	NA
+Familial hypercholesterolemia, with ischemic heart disease	NA
+Family relationship satisfaction	NA
+Fasciitis	NA
+Father still alive	Y
+Father's age	Y
+Father's age at death	NA
+Fed-up feelings	NA
+Feelings of worthlessness during worst period of depression	NA
+Felt distant from other people in past month	NA
+Felt hated by family member as a child	NA
+Felt irritable or had angry outbursts in past month	NA
+Felt loved as a child	Y
+Felt very upset when reminded of stressful experience in past month	NA
+Felty syndrome	NA
+Female infertility, associated with anovulation	NA
+Female infertility, cervigal, vaginal, other or unspecified origin	NA
+Female infertility, tubal origin	NA
+Femoral hernia	NA
+Fenofibrate	NA
+Ferritins	NA
+ferrous fumarate	NA
+FEV1/FVC ratio	NA
+Fever of unknown origin	NA
+FI10 : arithmetic sequence recognition	NA
+FI12 : square sequence recognition	NA
+FI3 : word interpolation	NA
+FI4 : positional arithmetic	NA
+FI6 : conditional arithmetic	NA
+FI7 : synonym	NA
+FI8 : chained arithmetic	NA
+FI9 : concept interpolation	NA
+fibrate|anti-cholesterol agent	NA
+Fibrinogen gamma chain measurement	Y
+fibroblast growth factor 23	Y
+Fibroblast Growth Factor 5	NA
+Fibroblasts	NA
+Filtered coffee intake	Y
+Final attempt correct	NA
+Financial situation satisfaction	NA
+finasteride	NA
+Finngen Rheumatological endpoints	NA
+First degree AV block	NA
+First line medication for Crohns disease	NA
+first-generation anti-psychotic|anti-emetic	NA
+Fizzy drink intake	Y
+Flat foot	NA
+Flatfoot	NA
+Flavoured milk intake	Y
+flecainide	NA
+flucloxacillin	NA
+fluconazole	NA
+Fludrocortisone	NA
+Fluid intelligence score	NA
+fluoroquinolone antibiotic|antibiotic	NA
+Fluoxetine	NA
+fluticasone	NA
+fluticasone/salmeterol	NA
+Folate-deficiency anemia	NA
+folic acid	NA
+Folic acid product | treatment/medication code	NA
+folic acid supplement|Food Supplement	Y
+Follicular adenocarcinoma of thyroid gland, excluding all cancers (controls excluding all cancers)	NA
+Follicular Cyst	NA
+Follistatin	Y
+food allergy	NA
+Food weight	Y
+Forced Expiratory Volume	NA
+Forced expiratory volume in 1-second (FEV1)	NA
+Forced expiratory volume in 1-second (FEV1), Best measure	NA
+Forced expiratory volume in 1-second (FEV1), predicted	NA
+Forced expiratory volume in 1-second (FEV1), predicted percentage	NA
+Forced vital capacity (FVC)	NA
+Forced vital capacity (FVC), Best measure	NA
+Former alcohol drinker	NA
+Fourth [trochlear] nerve palsy	NA
+Fraction of day affected during worst episode of depression	NA
+Fracture at wrist and hand level	NA
+Fracture of clavicle or scapula	NA
+Fracture of femur	NA
+Fracture of foot, except ankle	NA
+Fracture of forearm	NA
+Fracture of hand or wrist	NA
+Fracture of humerus	NA
+Fracture of lower leg, including ankle	NA
+Fracture of lower limb	NA
+Fracture of lumbar spine and pelvis	NA
+Fracture of neck	NA
+Fracture of neck of femur	NA
+Fracture of pelvis	NA
+Fracture of radius and ulna	NA
+Fracture of rib(s), sternum and thoracic spine	NA
+Fracture of ribs	NA
+Fracture of shoulder and upper arm	NA
+Fracture of unspecified part of femur	NA
+Fracture of upper limb	NA
+Fracture resulting from simple fall	NA
+Fractured bone site(s)	NA
+Fractured/broken bones in last 5 years	NA
+Fractures, Bone	NA
+Frailty	NA
+Frequency of consuming six or more units of alcohol	NA
+Frequency of depressed mood in last 2 weeks	NA
+Frequency of difficulty controlling worry during worst period of anxiety	NA
+Frequency of drinking alcohol	NA
+Frequency of failure to fulfil normal expectations due to drinking alcohol in last year	NA
+Frequency of feeling guilt or remorse after drinking alcohol in last year	NA
+Frequency of friend/family visits	Y
+Frequency of heavy DIY in last 4 weeks	Y
+Frequency of inability to cease drinking in last year	NA
+Frequency of light DIY in last 4 weeks	Y
+Frequency of memory loss due to drinking alcohol in last year	NA
+Frequency of other exercises in last 4 weeks	NA
+Frequency of solarium/sunlamp use	Y
+Frequency of stair climbing in last 4 weeks	Y
+Frequency of strenuous sports in last 4 weeks	NA
+Frequency of tenseness / restlessness in last 2 weeks	NA
+Frequency of tiredness / lethargy in last 2 weeks	NA
+Frequency of travelling from home to job workplace	Y
+Frequency of unenthusiasm / disinterest in last 2 weeks	NA
+Frequency of unusual or psychotic experiences in past year	NA
+Frequency of walking for pleasure in last 4 weeks	Y
+Fresh fruit intake	Y
+Fresh tomato intake	Y
+Fried potatoes intake	Y
+Friendships satisfaction	Y
+Frontotemporal dementia	NA
+Fruit consumers	Y
+Fruitcake intake	Y
+Frustration	Y
+Full cream | milk type used	Y
+Functional digestive disorders	NA
+Functional disorders of bladder	NA
+Functional dyspepsia	NA
+Functional Laterality	Y
+functional laterality	Y
+fusidic acid	NA
+fusidic acid/betamethasone	NA
+G25 Other extrapyramidal and movement disorders	NA
+G30 Alzheimer's disease	NA
+G31 Other degenerative diseases of nervous system, not elsewhere classified	NA
+G37 Other demyelinating diseases of central nervous system	NA
+G40 Epilepsy	NA
+G47 Sleep disorders	NA
+G50 Disorders of trigeminal nerve	NA
+G55 Nerve root and plexus compressions in diseases classified elsewhere	NA
+G56 Mononeuropathies of upper limb	NA
+G57 Mononeuropathies of lower limb	NA
+G63 Polyneuropathy in diseases classified elsewhere	NA
+G71 Primary disorders of muscles	NA
+G72 Other myopathies	NA
+G81 Hemiplegia	NA
+G93 Other disorders of brain	NA
+G96 Other disorders of central nervous system	NA
+G99 Other disorders of nervous system in diseases classified elsewhere	NA
+GABA agonist|muscle relaxant	NA
+GABA agonist|sedative	NA
+gabapentin	NA
+Galactorrhea	NA
+Galectin 3	Y
+Galectin-3-binding protein measurement	Y
+gallbladder disease	NA
+Gallbladder Diseases	NA
+Gallstones	NA
+Gamma glutamyltransferase	NA
+Gamma-glutamyl hydrolase measurement	Y
+gamolenic acid	NA
+Ganglion	NA
+Ganglion and cyst of synovium, tendon, and bursa	NA
+Gap coding	Y
+Garlic bread intake	Y
+Garlic intake	Y
+Gas or solid-fuel cooking/heating	NA
+Gastritis	NA
+gastritis	NA
+Gastritis and duodenitis	NA
+Gastro-oesophageal reflux disease	NA
+Gastroesophageal laceration-hemorrhage syndrome	NA
+Gastroesophageal Reflux	NA
+gastroesophageal reflux disease	NA
+Gastrointestinal hemorrhage	NA
+gastrointestinal obstruction	NA
+General happiness	Y
+General happiness with own health	Y
+Generalized anxiety disorder	NA
+Generalized convulsive epilepsy	NA
+Generalized epilepsy	NA
+Generalized epilepsy, mode (most common among epilepsy diagnosis)	NA
+Generalized skin eruption due to drugs and medicaments	NA
+Genetic ethnic grouping	NA
+Genetic kinship to other participants	NA
+Genital Diseases, Female	NA
+Genital prolapse	NA
+Genitourinary diseases	NA
+gentamicin/hydrocortisone	NA
+GERD	NA
+Gestational [pregnancy-induced] hypertension	NA
+Gestational [pregnancy-induced] oedema and proteinuria without hypertension	NA
+Getting up in morning	Y
+Giant cell arteritis	NA
+Gigantomastia	NA
+Gilbert Disease	NA
+Gilbert syndrome	NA
+Gingival and periodontal diseases	NA
+Gingival hyperplasia	NA
+Gingivitis and periodontal diseases	NA
+Glaucoma	NA
+glaucoma	NA
+Glaucoma secondary to eye inflammation	NA
+Glaucoma, exfoliation	NA
+gliclazide	NA
+Glomerular diseases	NA
+Glomerular disorders in diseases classified elsewhere	NA
+Glomerular Filtration Rate	NA
+Glomerular filtration rate in diabetics (creatinine)	NA
+Glomerular filtration rate in non diabetics (creatinine)	NA
+Glomerulonephritis	NA
+Glomerulonephritis, Membranous	NA
+Glossitis	NA
+Glucocorticoid deficiency	NA
+Glucosamine medication	NA
+Glucose	NA
+Glucose Metabolism Disorders	NA
+Gluten-free | type of special diet followed	Y
+Glycated haemoglobin (HbA1c)	NA
+glyceryl trinitrate	NA
+goiter	NA
+Goiter, Nodular	NA
+Gonarthrosis, primary, with knee surgery	NA
+Gout	NA
+gout	NA
+Gout and other crystal arthropathies	NA
+Gout, strict definition	NA
+Gout, unspecified	NA
+Gouty arthropathy	NA
+Gram negative septicemia	NA
+Gram positive septicemia	NA
+Granuloma annulare	NA
+Granulomatous disorders of skin and subcutaneous tissue	NA
+Grape intake	Y
+Graves Disease	NA
+Graves disease, strict definition	NA
+Graves ophthalmopathy	NA
+Graves ophthalmopathy, strict	NA
+Graves' disease	NA
+Growth	NA
+Growth Differentiation Factor 15	Y
+Guillain-Barre syndrome	NA
+Guilt	Y
+Guilty feelings	Y
+Guttate psoriasis	NA
+H00 Hordeolum and chalazion	NA
+H02 Other disorders of eyelid	NA
+H04 Disorders of lachrymal system	NA
+H05 Disorders of orbit	NA
+H06 Disorders of lachrymal system and orbit in diseases classified elsewhere	NA
+H1-receptor agonist|anti-vertigo agent|antihistamine	NA
+H18 Other disorders of cornea	NA
+H20 Iridocyclitis	NA
+H21 Other disorders of iris and ciliary body	NA
+H25 Senile cataract	NA
+H26 Other cataract	NA
+H31 Other disorders of choroid	NA
+H33 Retinal detachments and breaks	NA
+H35 Other retinal disorders	NA
+H36 Retinal disorders in diseases classified elsewhere	NA
+H40 Glaucoma	NA
+H47 Other disorders of optic [2nd] nerve and visual pathways	NA
+H60 Otitis externa	NA
+H65 Nonsuppurative otitis media	NA
+H66 Suppurative and unspecified otitis media	NA
+H69 Other disorders of Eustachian tube	NA
+H72 Perforation of tympanic membrane	NA
+H80 Otosclerosis	NA
+H81 Disorders of vestibular function	NA
+H83 Other diseases of inner ear	NA
+Habit and impulse disorders	NA
+Had major operations	NA
+Had menopause	NA
+Had other major operations	NA
+Haematocrit percentage	NA
+Haemoglobin concentration	NA
+Haemorrhoids and perianal venous thrombosis	NA
+hair color	Y
+Hair Color	Y
+hair shape measurement	Y
+Hallucinations	NA
+Hallux rigidus	NA
+Hallux valgus (Bunion)	NA
+Ham intake	Y
+Hammer toe (acquired)	NA
+Hand grip strength (left)	NA
+Hand grip strength (right)	NA
+Hand Strength	NA
+Hands-free device/speakerphone use with mobile phone in last 3 month	NA
+Happiness	Y
+Hard cheese intake	Y
+HDL cholesterol	NA
+head injury	NA
+Headache	NA
+Headaches for 3+ months	NA
+Health	Y
+Health satisfaction	NA
+Hearing aid user	NA
+Hearing difficulty/problems with background noise	NA
+Hearing Loss	NA
+hearing loss	NA
+Hearing Loss, Sensorineural	NA
+Hearing test done	NA
+Heart Arrest	NA
+Heart Diseases	NA
+Heart Failure	NA
+Heart failure and bmi 25plus	NA
+Heart failure and hypertrophic cardiomyopathy	NA
+Heart failure NOS	NA
+Heart failure, strict	NA
+Heart Rate	NA
+Heart valve disorders	NA
+Heart valve replaced	NA
+Heartburn	NA
+Heating type(s) in home	NA
+Heel bone mineral density (BMD)	NA
+Heel bone mineral density (BMD) (left)	NA
+Heel bone mineral density (bmd) (left)	NA
+Heel bone mineral density (BMD) (right)	NA
+Heel bone mineral density (bmd) (right)	NA
+Heel bone mineral density (BMD) T-score, automated	NA
+Heel bone mineral density (bmd) t-score, automated	NA
+Heel bone mineral density (BMD) T-score, automated (left)	NA
+Heel bone mineral density (BMD) T-score, automated (right)	NA
+Heel broadband ultrasound attenuation (left)	NA
+Heel broadband ultrasound attenuation (right)	NA
+Heel Broadband ultrasound attenuation, direct entry	NA
+Heel broadband ultrasound attenuation, direct entry	NA
+Heel quantitative ultrasound index (QUI), direct entry	NA
+Heel quantitative ultrasound index (qui), direct entry	NA
+Heel quantitative ultrasound index (QUI), direct entry (left)	NA
+Heel quantitative ultrasound index (qui), direct entry (left)	NA
+Heel quantitative ultrasound index (QUI), direct entry (right)	NA
+Heel quantitative ultrasound index (qui), direct entry (right)	NA
+Height, inverse-rank normalized	NA
+hematologic disease	NA
+Hematologic Diseases	NA
+Hematological or dermatological disease	NA
+Hematuria	NA
+Heme oxygenase 1 measurement	Y
+Hemiplegia	NA
+Hemoptysis	NA
+Hemorrhage during pregnancy; childbirth and postpartum	NA
+Hemorrhage NOS	NA
+Hemorrhage of rectum and anus	NA
+Hemorrhage or hematoma complicating a procedure	NA
+Hemorrhoids	NA
+Henoch-Schönlein purpura nephritis (HSPN)	NA
+hepatitis	NA
+hepatitis A	NA
+Hepatitis NOS	NA
+Hepatocellular carcinoma, excluding all cancers (controls excluding all cancers)	NA
+Herbal tea intake	Y
+Hereditary hypogammaglobulinemia	NA
+Hereditary retinal dystrophies	NA
+Hereditary Sensory and Motor Neuropathy	NA
+Hernia	NA
+Hernia of abdominal wall, postoperative	NA
+Hernia, Abdominal	NA
+Hernia, Diaphragmatic	NA
+Hernia, Inguinal	NA
+Hernia, Umbilical	NA
+Hernia, Ventral	NA
+Herpes simplex infection	NA
+Herpes Zoster	NA
+Herpes zoster with nervous system complications	NA
+Herpesviral [herpes simplex] infections	NA
+Heterophoria	NA
+hiatus hernia	NA
+Hidradenitis Suppurativa	NA
+High light scatter reticulocyte count	NA
+High light scatter reticulocyte percentage	NA
+Hip circumference	NA
+hip fracture,femur fracture	NA
+hip pain	NA
+Hirsutism	NA
+histamine H1 antagonist|antihistamine	NA
+hl.rand_norm(mean=pop_dict[mt.pop], seed=42)	Y
+hl.rand_norm(seed=42)	Y
+HLA-D Antigens	NA
+HMG CoA reductase inhibitor|statin	NA
+Hodgkin lymphoma, hilmo (controls excluding all cancers)	NA
+hodgkins lymphoma	NA
+Home area population density - urban or rural	NA
+Home location - east co-ordinate (rounded)	NA
+Home location - north co-ordinate (rounded)	Y
+Home location at assessment - east co-ordinate (rounded)	Y
+Home location at assessment - north co-ordinate (rounded)	NA
+Homemade soup intake	Y
+hormone	NA
+hormone replacement therapy	NA
+Hospital episode type	NA
+Hospitalized vs non-hospitalized (controls include untested)	NA
+Hot chocolate intake	Y
+Hot drink temperature	Y
+How are people in household related to participant	NA
+HSIL lesion of the cervix uteri	NA
+HSIL lesion of the cervix uteri, vagina or vulva	NA
+HSIL lesion of the vulva	NA
+humerus fracture	NA
+Hydrocele	NA
+Hydrocephalus	NA
+Hydrocephalus, Normal Pressure	NA
+hydrocortisone	NA
+hydrocortisone/clotrimazole	NA
+Hydronephrosis	NA
+hydroxocobalamin	NA
+hydroxychloroquine	NA
+hydroxyzine	NA
+Hyoscine butylbromide	NA
+Hyperaldosteronism	NA
+Hypercholesterolemia	NA
+hypercholesterolemia	NA
+Hyperemesis Gravidarum	NA
+Hyperglycemia	NA
+Hyperinsulinism	NA
+Hyperlipidaemia, other/unspecified	NA
+Hyperlipidemia	NA
+Hyperlipidemias	NA
+Hypermetropia	NA
+Hypermobility syndrome	NA
+hyperopia	NA
+Hyperparathyroidism	NA
+Hyperplasia of prostate	NA
+Hypersensitivity	NA
+Hypersomnia	NA
+hypertension	NA
+Hypertension	NA
+Hypertension (no controls excluded)	NA
+Hypertension complicating pregnancy, childbirth, and the puerperium	NA
+Hypertension, essential	NA
+Hypertension, Pregnancy-Induced	NA
+Hypertensive diseases	NA
+Hypertensive diseases (excluding secondary)	NA
+Hypertensive Heart Disease	NA
+Hypertensive Renal Disease	NA
+Hyperthyroidism	NA
+Hypertriglyceridemia	NA
+Hypertrophic obstructive cardiomyopathy	NA
+Hypertrophy of (infrapatellar) fat pad	NA
+Hypertrophy of breast in women and men	NA
+Hypertrophy of tongue papillae	NA
+Hypertrophy, Left Ventricular	NA
+Hyphaema and other vascular disorders of iris and ciliary body	NA
+Hypo-osmolality and hyponatraemia	NA
+Hypoalphalipoproteinemias	NA
+Hypoglycemia	NA
+Hypokalemia	NA
+Hypoparathyroidism	NA
+Hypophosphatasia	NA
+Hypopigmentation	NA
+Hypoplasia of dental enamel , including avohilmo	NA
+Hypoplasia of dental enamel, including avohilmo	NA
+Hypoplasia of dental enamel, prenatal , including avohilmo	NA
+Hypopotassemia	NA
+Hyposmolality and/or hyponatremia	NA
+Hypothermia/Chills	NA
+Hypothyroidism	NA
+Hypothyroidism (congenital or acquired)	NA
+Hypothyroidism and >3 levothyroxin purchases	NA
+Hypothyroidism NOS	NA
+Hypothyroidism, drug reimbursement	NA
+Hypothyroidism, strict autoimmune	NA
+Hypovolemia	NA
+hypromellose	NA
+Hysterectomy	NA
+I07 Rheumatic tricuspid valve diseases	NA
+I20 Angina pectoris	NA
+I21 Acute myocardial infarction	NA
+I22 Subsequent myocardial infarction	NA
+I24 Other acute ischaemic heart diseases	NA
+I25 Chronic ischaemic heart disease	NA
+I26 Pulmonary embolism	NA
+I27 Other pulmonary heart diseases	NA
+I30 Acute pericarditis	NA
+I31 Other diseases of pericardium	NA
+I35 Nonrheumatic aortic valve disorders	NA
+I42 Cardiomyopathy	NA
+I44 Atrioventricular and left bundle-branch block	NA
+I45 Other conduction disorders	NA
+I46 Cardiac arrest	NA
+I48 Atrial fibrillation and flutter	NA
+I50 Heart failure	NA
+I62 Other nontraumatic intracranial haemorrhage	NA
+I65 Occlusion and stenosis of precerebral arteries, not resulting in cerebral infarction	NA
+I66 Occlusion and stenosis of cerebral arteries, not resulting in cerebral infarction	NA
+I71 Aortic aneurysm and dissection	NA
+I73 Other peripheral vascular diseases	NA
+I77 Other disorders of arteries and arterioles	NA
+I79 Disorders of arteries, arterioles and capillaries in diseases classified elsewhere	NA
+I80 Phlebitis and thrombophlebitis	NA
+I82 Other venous embolism and thrombosis	NA
+I83 Varicose veins of lower extremities	NA
+I84 Haemorrhoids	NA
+I85 Oesophageal varices	NA
+I86 Varicose veins of other sites	NA
+I87 Other disorders of veins	NA
+I98 Other disorders of circulatory system in diseases classified elsewhere	NA
+Iatrogenic hypotension	NA
+IBD (strict) with PSC	NA
+IBD patients in KELA-register	NA
+ibuprofen	NA
+Ice-cream intake	Y
+IgA Deficiency	NA
+IgA nephropathy (IgA glomerulonephritis)	NA
+IGF-1	NA
+ILD-related respiratory insufficiency	NA
+Ileostomy status	NA
+Iliotibial band syndrome	NA
+Illness, injury, bereavement, stress in last 2 years	NA
+Illnesses of father	NA
+Illnesses of mother	NA
+Illnesses of siblings	NA
+imipramine	NA
+Immature reticulocyte fraction	NA
+Immunodeficiency with predominantly antibody defects	NA
+Immunoglobulin G measurement	Y
+immunosupressant|Rheumatoid arthritis	NA
+Impact on normal roles during worst period of anxiety	NA
+Impacted maxillary canine	NA
+Impedance of arm (left)	NA
+Impedance of arm (right)	NA
+Impedance of leg (left)	NA
+Impedance of leg (right)	NA
+Impedance of whole body	NA
+Impingement syndrome of shoulder	NA
+Inactivation, Metabolic	NA
+Increased muscle tone	NA
+indapamide	NA
+Indirect bilirubin	NA
+indomethacin	NA
+inert viscoelastic polymer	Y
+Infection due to other mycobacteria	NA
+Infection of intervertebral disc (pyogenic)	NA
+Infection of the eye	NA
+Infections of genitourinary tract during pregnancy	NA
+Infections of genitourinary tract in pregnancy	NA
+Infections of the skin and subcutaneous tissue	NA
+Infections with a predominantly sexual mode of transmission	NA
+Infectious mononucleosis	NA
+infectious mononucleosis,Epstein-Barr virus infection	NA
+Infective connective tissue disorders	NA
+Infective dermatitis	NA
+Infertility, Female	NA
+Infertility, female	NA
+Inflammation	NA
+Inflammation of eyelids	NA
+Inflammation of lacrimal passages (acute and unspecified)	NA
+Inflammation of the eye	NA
+Inflammatory bowel disease	NA
+inflammatory bowel disease	NA
+Inflammatory bowel disease and other gastroenteritis and colitis	NA
+Inflammatory bowel disease, strict (require KELA)	NA
+Inflammatory Bowel Diseases	NA
+Inflammatory disease of breast	NA
+Inflammatory disease of cervix, vagina, and vulva	NA
+Inflammatory diseases of female pelvic organs	NA
+Inflammatory diseases of the central nervous system	NA
+Inflammatory diseases of uterus, except cervix	NA
+Inflammatory disorders of breast	NA
+Influenza and pneumonia	NA
+Ingredients in canned soup	NA
+Ingredients in homemade soup	NA
+Ingrowing nail	NA
+Inguinal hernia	NA
+inguinal hernia	NA
+Inguinal hernia, bilateral	NA
+inorganic salt|dietary supplement	Y
+inorganic salt|vitamin D|dietary supplement	Y
+Inpatient record format	Y
+Instant coffee intake	Y
+Insulin	NA
+Insulin | medication for cholesterol, blood pressure or diabetes	NA
+insulin aspart	NA
+insulin glargine	NA
+Insulin product | treatment/medication code	NA
+Insulin Resistance	NA
+Insulin-degrading enzyme measurement	Y
+Intake of artificial sweetener added to cereal	Y
+Intake of artificial sweetener added to coffee	Y
+Intake of artificial sweetener added to tea	Y
+Intake of sugar added to cereal	Y
+Intake of sugar added to coffee	Y
+Intake of sugar added to tea	Y
+Intelligence	NA
+Intended management of patient (recoded)	NA
+Intercellular Signaling Peptides and Proteins	NA
+Interleukin-1 receptor antagonist protein measurement	Y
+Interleukin-1 receptor-like 1 measurement	Y
+Interleukin-10 receptor B levels	Y
+Interleukin-27	Y
+Interleukin-7 receptor subunit alpha measurement	Y
+Internal derangement of knee	NA
+Internuclear ophthalmoplegia	NA
+Interpolated Age of participant when cancer first diagnosed	NA
+Interpolated Age of participant when non-cancer illness first diagnosed	NA
+Interpolated Age of participant when operation took place	NA
+Interpolated Year when non-cancer illness first diagnosed	NA
+Interpolated Year when operation took place	NA
+Interstitial cystitis (chronic), drug-induced	NA
+Interstitial lung disease endpoints	NA
+Intervertebral disc disorder with myelopathy	NA
+Intervertebral disc disorders	NA
+intestinal cancer	NA
+Intestinal helminthiases	NA
+Intestinal infectious diseases	NA
+Intestinal malabsorbtion	NA
+Intestinal malabsorption	NA
+Intestinal malabsorption (non-celiac)	NA
+Intestinal obstruction without mention of hernia	NA
+Intra-ocular pressure, corneal-compensated (left)	NA
+Intra-ocular pressure, corneal-compensated (right)	NA
+Intra-ocular pressure, Goldmann-correlated (left)	NA
+Intra-ocular pressure, goldmann-correlated (left)	NA
+Intra-ocular pressure, Goldmann-correlated (right)	NA
+Intracerebral haemorrhage	NA
+Intrahepatic Cholestasis of Pregnancy	NA
+Intrahepatic Cholestasis of Pregnancy (ICP) , incl. ICD-8	NA
+Intrahepatic Cholestasis of Pregnancy (ICP) , incl. ICD-8 (more control exclusions)	NA
+Intrahepatic Cholestasis of Pregnancy (ICP)Ê	NA
+Intrahepatic Cholestasis of Pregnancy (ICP)Ê (more controls excluded)	NA
+Intraocular Pressure	NA
+Invasive ventilation	NA
+Inverse distance to the nearest major road	NA
+Invitation to complete online 24-hour recall dietary questionnaire, acceptance	NA
+ipratropium bromide	NA
+Iridocyclitis	NA
+Iridocyclitis in diseases classified elsewhere	NA
+iritis	NA
+Iron	NA
+Iron deficiency	NA
+Iron deficiency anaemia secondary to blood loss (chronic)	NA
+Iron deficiency anemia	NA
+Iron deficiency anemias	NA
+Iron deficiency anemias, unspecified or not due to blood loss	NA
+Iron Metabolism Disorders	NA
+iron supplement	Y
+Irregular menstrual cycle/bleeding	NA
+Irritability	NA
+irritable bowel syndrome	NA
+Irritable Bowel Syndrome	NA
+Irritable Mood	NA
+Ischaemic heart disease, wide definition	NA
+Ischemic Heart Disease	NA
+Ischemic heart diseases	NA
+isosorbide mononitrate	NA
+ispaghula husk	Y
+J02 Acute pharyngitis	NA
+J10 Influenza due to identified influenza virus	NA
+J18 Pneumonia, organism unspecified	NA
+J32 Chronic sinusitis	NA
+J33 Nasal polyp	NA
+J34 Other disorders of nose and nasal sinuses	NA
+J38 Diseases of vocal cords and larynx, not elsewhere classified	NA
+J43 Emphysema	NA
+J44 Other chronic obstructive pulmonary disease	NA
+J45 Asthma	NA
+J84 Other interstitial pulmonary diseases	NA
+J92 Pleural plaque	NA
+J95 Postprocedural respiratory disorders, not elsewhere classified	NA
+J96 Respiratory failure, not elsewhere classified	NA
+J98 Other respiratory disorders	NA
+Jaundice	NA
+Jaundice (not of newborn)	NA
+Jaw disease NOS	NA
+Job involved shift work	NA
+Job involves heavy manual or physical work	Y
+Job involves mainly walking or standing	NA
+Job involves night shift work	NA
+Job involves shift work	Y
+joint disease	NA
+Joint Diseases	NA
+Joint effusions	NA
+Juvenile osteochondrosis	NA
+Juvenile rheumatoid arthirtis	NA
+K02 Dental caries	NA
+K10 Other diseases of jaws	NA
+K11 Diseases of salivary glands	NA
+K13 Other diseases of lip and oral mucosa	NA
+K21 Gastro-oesophageal reflux disease	NA
+K22 Other diseases of oesophagus	NA
+K26 Duodenal ulcer	NA
+K29 Gastritis and duodenitis	NA
+K31 Other diseases of stomach and duodenum	NA
+K35 Acute appendicitis	NA
+K40 Inguinal hernia	NA
+K41 Femoral hernia	NA
+K42 Umbilical hernia	NA
+K43 Ventral hernia	NA
+K44 Diaphragmatic hernia	NA
+K50 Crohn's disease [regional enteritis]	NA
+K51 Ulcerative colitis	NA
+K52 Other non-infective gastro-enteritis and colitis	NA
+K55 Vascular disorders of intestine	NA
+K56 Paralytic ileus and intestinal obstruction without hernia	NA
+K57 Diverticular disease of intestine	NA
+K59 Other functional intestinal disorders	NA
+K60 Fissure and fistula of anal and rectal regions	NA
+K62 Other diseases of anus and rectum	NA
+K63 Other diseases of intestine	NA
+K64 Haemorrhoids and perianal venous thrombosis	NA
+K65 Peritonitis	NA
+K70 Alcoholic liver disease	NA
+K73 Chronic hepatitis, not elsewhere classified	NA
+K74 Fibrosis and cirrhosis of liver	NA
+K75 Other inflammatory liver diseases	NA
+K76 Other diseases of liver	NA
+K80 Cholelithiasis	NA
+K81 Cholecystitis	NA
+K82 Other diseases of gallbladder	NA
+K83 Other diseases of biliary tract	NA
+K85 Acute pancreatitis	NA
+K90 Intestinal malabsorption	NA
+K91 Postprocedural disorders of digestive system, not elsewhere classified	NA
+K92 Other diseases of digestive system	NA
+KELA_REIMBURSEMENT_202	NA
+Kela-code for severe mental illness	NA
+Keratitis	NA
+Keratoconus	NA
+Keratosis, Actinic	NA
+Keratosis, Seborrheic	NA
+ketoconazole	NA
+ketoprofen	NA
+Kidney Diseases, Cystic	NA
+Kidney Failure, Chronic	NA
+Kidney injury molecule 1 levels	Y
+kidney neoplasm	NA
+Kidney stone, ureter stone or bladder stone	NA
+Kidney transplant status	NA
+knee pain	NA
+Known or suspected fetal abnormality affecting management of mother	NA
+L02 Cutaneous abscess, furuncle and carbuncle	NA
+L03 Cellulitis	NA
+L27 Dermatitis due to substances taken internally	NA
+L30 Other dermatitis	NA
+L40 Psoriasis	NA
+L43 Lichen planus	NA
+L57 Skin changes due to chronic exposure to nonionising radiation	NA
+L60 Nail disorders	NA
+L72 Follicular cysts of skin and subcutaneous tissue	NA
+L91 Hypertrophic disorders of skin	NA
+L93 Lupus erythematosus	NA
+L94 Other localised connective tissue disorders	NA
+L95 Vasculitis limited to skin, not elsewhere classified	NA
+L98 Other disorders of skin and subcutaneous tissue, not elsewhere classified	NA
+Labour and delivery complicated by fetal stress [distress]	NA
+Lack of coordination	NA
+Lactose intolerance	NA
+lactose intolerance	NA
+Lactose intolerance, other/unspecified	NA
+lactulose	NA
+Lagophthalmos	NA
+Lamb/mutton intake	Y
+lamotrigine	NA
+lansoprazole	NA
+Large cell lymphoma	NA
+latanoprost	NA
+Lateral epicondylitis	NA
+Latte intake	Y
+Laxity of ligament or hypermobility syndrome	NA
+LDL direct	NA
+LDL direct, adjusted by medication	NA
+Lectin-like oxidized LDL receptor 1 levels	Y
+Leek intake	Y
+Leflunomide	NA
+Left bundle branch block	NA
+Left ventricular outflow tract obstruction (LVOTO), broad definition	NA
+Left ventricular outflow tract obstruction, narrow definition	NA
+Leg fat mass (left)	NA
+Leg fat mass (right)	NA
+Leg fat percentage (left)	NA
+Leg fat percentage (right)	NA
+Leg fat-free mass (left)	NA
+Leg fat-free mass (right)	NA
+Leg pain in calf/calves	NA
+Leg predicted mass (left)	NA
+Leg predicted mass (right)	NA
+Leiomyoma	NA
+Leisure/social activities	NA
+Length of menstrual cycle	NA
+Length of mobile phone use	Y
+Length of time at current address	Y
+Length of working week for main job	NA
+Lens Subluxation	NA
+Lesion of plantar nerve	NA
+letrozole	NA
+leukemia	NA
+Leukocyte Count	NA
+Leukocyte Disorders	NA
+Leukopenia	NA
+Leukoplakia of oral mucosa	NA
+leukotriene receptor antagonist|asthma	NA
+levothyroxine	NA
+Lewy Body Disease	NA
+Lichen ruber planus, wide definition including periferal and oral lichen planus	NA
+Lichen sclerosus et atrophicus	NA
+Lichen simplex chronicus	NA
+Lichen simplex chronicus and prurigo	NA
+Lifetime number of depressed periods	NA
+Lifetime number of sexual partners	NA
+Light smokers, at least 100 smokes in lifetime	NA
+Likelihood of resuming smoking	NA
+lipase inhibitor|obesity	NA
+Lipid Metabolism Disorders	NA
+Lipoma	NA
+Lipoma of skin and subcutaneous tissue	NA
+Lipoprotein A	NA
+Lipoprotein Lipase	NA
+Liquid used to make porridge	NA
+lisinopril	NA
+lithium carbonate	NA
+Liver	NA
+Liver abscess and sequelae of chronic liver disease	NA
+Liver Cirrhosis	NA
+Liver Cirrhosis, Biliary	NA
+Liver Diseases	NA
+Liver Diseases, Alcoholic	NA
+Liver intake	Y
+Localized scleroderma [morphea]	NA
+Localized skin eruption due to drugs and medicaments	NA
+Localized superficial swelling, mass, or lump	NA
+lofepramine	NA
+logMAR, final (right)	NA
+Loneliness	Y
+Loneliness, isolation	NA
+Long labour	NA
+long-acting anti-muscarinic bronchodilator|anti-muscarinic|bronchodilator|asthma	NA
+long-acting insulin analog|diabetes	NA
+Long-standing illness, disability or infirmity	NA
+Longest period of mania or irritability	NA
+Longest period spent worried or anxious	NA
+Longevity	NA
+Loose body in joint	NA
+loperamide	NA
+loratadine	NA
+lorazepam	NA
+losartan	NA
+Low Back Pain	NA
+Low calorie drink intake	Y
+Low fat cheese spread intake	Y
+Low fat hard cheese intake	Y
+Low Tension Glaucoma	NA
+Lower back pain or/and sciatica	NA
+LSIL lesion of the cervix uteri	NA
+LSIL lesion of the cervix uteri, vagina or vulva	NA
+LSIL lesion of the vulva	NA
+lumbar disc herniation	NA
+Lumbar disc prolapse	NA
+Lumbosacral plexus disorders	NA
+lung carcinoma	NA
+Lung Diseases, Interstitial	NA
+Lung Neoplasms	NA
+Lung transplant status	NA
+Lung transplantation	NA
+Lupus (localized and systemic)	NA
+Lupus erythematosus	NA
+Lupus Erythematosus, Systemic	NA
+Lyme disease	NA
+lymecycline	NA
+Lymphadenitis	NA
+Lymphangioleiomyomatosis (sporadic)	NA
+Lymphocyte count	NA
+Lymphocyte Count	NA
+Lymphocyte percentage	NA
+Lymphocytosis	NA
+Lymphoid leukaemia (controls excluding all cancers)	NA
+Lymphoid leukemia	NA
+Lymphoid leukemia, chronic	NA
+lymphoid neoplasm	NA
+Lymphoma, Follicular	NA
+Lymphoproliferative Disorders	NA
+Lysophosphatidylcholine_16:0_[M+H]1+/Lysophosphatidylethanolamine_19:0_[M+H]1+ levels	NA
+Lysophosphatidylcholine_16:1_[M+H]1+/Lysophosphatidylethanolamine_19:1_[M+H]1+ levels	Y
+Lysophosphatidylcholine_20:4_[M+H]1+ levels	Y
+Lysophosphatidylcholine-O_16:1_[M+H]1+/Lysophosphatidylcholine-P_16:0_[M+H]1+ levels	Y
+lysosomal pH modulator|TLR antagonist|anti-malarial	NA
+M05 Seropositive rheumatoid arthritis	NA
+M06 Other rheumatoid arthritis	NA
+M07 Psoriatic and enteropathic arthropathies	NA
+M10 Gout	NA
+M13 Other arthritis	NA
+M16 Coxarthrosis [arthrosis of hip]	NA
+M17 Gonarthrosis [arthrosis of knee]	NA
+M20 Acquired deformities of fingers and toes	NA
+M22 Disorders of patella	NA
+M24 Other specific joint derangements	NA
+M31 Other necrotising vasculopathies	NA
+M32 Systemic lupus erythematosus	NA
+M35 Other systemic involvement of connective tissue	NA
+M43 Other deforming dorsopathies	NA
+M51 Other intervertebral disk disorders	NA
+M62 Other disorders of muscle	NA
+M65 Synovitis and tenosynovitis	NA
+M67 Other disorders of synovium and tendon	NA
+M70 Soft tissue disorders related to use, overuse and pressure	NA
+M72 Fibroblastic disorders	NA
+M75 Shoulder lesions	NA
+M81 Osteoporosis without pathological fracture	NA
+M94 Other disorders of cartilage	NA
+M96 Postprocedural musculoskeletal disorders, not elsewhere classified	NA
+macrolide antibiotic|antibiotic	NA
+Macular cyst	NA
+Macular Degeneration	NA
+Macular degeneration (senile) of retina NOS	NA
+Macular degeneration (senile) of retina nos	NA
+Macular hole	NA
+Main speciality of consultant (recoded)	NA
+Major coronary heart disease event	NA
+major depressive disorder	NA
+Major depressive disorder	NA
+Major depressive disorder in trauma-unexposed individuals	NA
+Malabsorption Syndromes	NA
+Malabsorption/coeliac disease | non-cancer illness code, self-reported	NA
+malaria	NA
+Malignant immunoproliferative diseases (controls excluding all cancers)	NA
+Malignant melanoma of skin, excluding all cancers (controls excluding all cancers)	NA
+Malignant melanoma, excluding all cancers (controls excluding all cancers)	NA
+Malignant neoplasm of bladder	NA
+Malignant neoplasm of bladder, excluding all cancers (controls excluding all cancers)	NA
+Malignant neoplasm of brain, excluding all cancers (controls excluding all cancers)	NA
+Malignant neoplasm of breast, ER-negative, excluding all cancers (controls excluding all cancers)	NA
+Malignant neoplasm of breast, ER-positive, excluding all cancers (controls excluding all cancers)	NA
+Malignant neoplasm of bronchus and lung, excluding all cancers (controls excluding all cancers)	NA
+Malignant neoplasm of cervix uteri, excluding all cancers (controls excluding all cancers)	NA
+Malignant neoplasm of colon, excluding all cancers (controls excluding all cancers)	NA
+Malignant neoplasm of eye and adnexa, excluding all cancers (controls excluding all cancers)	NA
+Malignant neoplasm of female breast	NA
+Malignant neoplasm of head and neck, excluding all cancers (controls excluding all cancers)	NA
+Malignant neoplasm of hypopharynx, excluding all cancers (controls excluding all cancers)	NA
+Malignant neoplasm of intrahepatic ducts, biliary tract and gallbladder, excluding all cancers (controls excluding all cancers)	NA
+Malignant neoplasm of kidney, except renal pelvis, excluding all cancers (controls excluding all cancers)	NA
+Malignant neoplasm of lip, excluding all cancers (controls excluding all cancers)	NA
+Malignant neoplasm of liver, primary	NA
+Malignant neoplasm of oesophagus, excluding all cancers (controls excluding all cancers)	NA
+Malignant neoplasm of oral cavity, excluding all cancers (controls excluding all cancers)	NA
+Malignant neoplasm of other and ill-defined sites within the digestive organs and peritoneum	NA
+Malignant neoplasm of ovary and other uterine adnexa	NA
+Malignant neoplasm of pancreas, excluding all cancers (controls excluding all cancers)	NA
+Malignant neoplasm of prostate, excluding all cancers (controls excluding all cancers)	NA
+Malignant neoplasm of rectum, excluding all cancers (controls excluding all cancers)	NA
+Malignant neoplasm of rectum, rectosigmoid junction, and anus	NA
+Malignant neoplasm of skin	NA
+Malignant neoplasm of skin (all cancers excluded)	NA
+Malignant neoplasm of skin, excluding all cancers (controls excluding all cancers)	NA
+Malignant neoplasm of small intestine, excluding all cancers (controls excluding all cancers)	NA
+Malignant neoplasm of stomach, excluding all cancers (controls excluding all cancers)	NA
+Malignant neoplasm of testis	NA
+Malignant neoplasm of thymus, excluding all cancers (controls excluding all cancers)	NA
+Malignant neoplasm of thyroid gland, excluding all cancers (controls excluding all cancers)	NA
+Malignant neoplasm of ureter, excluding all cancers (controls excluding all cancers)	NA
+Malignant neoplasm of urinary organs, excluding all cancers (controls excluding all cancers)	NA
+Malignant neoplasm of uterus	NA
+Malignant neoplasm, excluding all cancers (controls excluding all cancers)	NA
+Malignant neoplasm, other	NA
+Malocclusion	NA
+Malocclusion, Angle Class III	NA
+Malunion and nonunion of fracture	NA
+Mandibular prognathia	NA
+Mandibular prognathia AND surgery (LeFortI or BSSO or LeFortI AND BSSO), including avohilmo	NA
+Mandibular retrognathia	NA
+Mango intake	Y
+Manic/hyper symptoms	NA
+Manifestations of mania or irritability	NA
+Manlignant and unknown neoplasms of brain and nervous system	NA
+Mantle cell lymphoma, excluding all cancers (controls excluding all cancers)	NA
+Map	Y
+Marginal zone B-cell lymphoma, excluding all cancers (controls excluding all cancers)	NA
+Mashed potato intake	Y
+mast cell stabilizer	NA
+Mastoiditis & related conditions	NA
+Maternal Age	Y
+Maternal care for cervical incompetence	NA
+Maternal care for known or suspected abnormality of pelvic organs	NA
+Maternal care for known or suspected disproportion	NA
+Maternal care for known or suspected malpresentation of fetus	NA
+Maternal care for other conditions predominantly related to pregnancy	Y
+Maternal care for other known or suspected fetal problems	NA
+Maternal smoking around birth	NA
+Matrix Metalloproteinase 1	Y
+Matrix Metalloproteinase 7	Y
+Maxillary retrognathism	NA
+Maximum carotid IMT (intima-medial thickness) at 120 degrees	NA
+Maximum carotid IMT (intima-medial thickness) at 150 degrees	NA
+Maximum carotid IMT (intima-medial thickness) at 210 degrees	NA
+Maximum carotid IMT (intima-medial thickness) at 240 degrees	NA
+Maximum digits remembered correctly	Y
+Maximum frequency of taking cannabis	Y
+Maximum heart rate during fitness test	NA
+Maximum workload during fitness test	NA
+Mean arterial pressure, automated reading	NA
+Mean arterial pressure, automated reading, adjusted by medication	NA
+Mean arterial pressure, combined automated + manual reading	NA
+Mean arterial pressure, combined automated + manual reading, adjusted by medication	NA
+Mean arterial pressure, manual reading	NA
+Mean arterial pressure, manual reading, adjusted by medication	NA
+Mean carotid IMT (intima-medial thickness) at 120 degrees	NA
+Mean carotid IMT (intima-medial thickness) at 150 degrees	NA
+Mean carotid IMT (intima-medial thickness) at 210 degrees	NA
+Mean carotid IMT (intima-medial thickness) at 240 degrees	NA
+Mean corpuscular haemoglobin	NA
+Mean corpuscular haemoglobin concentration	NA
+Mean corpuscular volume	NA
+Mean platelet (thrombocyte) volume	NA
+Mean Platelet Volume	NA
+Mean reticulocyte volume	NA
+Mean signal-to-noise ratio (SNR), (left)	NA
+Mean signal-to-noise ratio (SNR), (right)	NA
+Mean sphered cell volume	NA
+Mean time to correctly identify matches	Y
+Measles	NA
+measles,NA	NA
+mebeverine	NA
+Medical abortion	Y
+Medication for cholesterol, blood pressure or diabetes	NA
+Medication for cholesterol, blood pressure, diabetes, or take exogenous hormones	NA
+Medication for pain relief, constipation, heartburn	NA
+Medium-chain specific acyl-CoA dehydrogenase, mitochondrial measurement	Y
+mefenamic acid	NA
+Megaloblastic anemia	NA
+Melanocytic naevi	NA
+Melanocytic naevi of lower limb, including hip	NA
+Melanocytic naevi of trunk	NA
+Melanocytic naevi of upper limb, including shoulder	NA
+Melanocytic naevi, other sites/unspecified	NA
+Melanoma	NA
+melanoma	NA
+Melanoma in situ (controls excluding all cancers)	NA
+Melanoma of uvea (controls excluding all cancers)	NA
+Melanomas of skin, dx or hx	NA
+meloxicam	NA
+Memory Disorders	NA
+Memory loss	NA
+Memory, Short-Term	NA
+Meniere Disease	NA
+Meningeal Neoplasms	NA
+Meniscus derangement	NA
+Menopause	NA
+Menorrhagia	NA
+Menstruation Disturbances	NA
+Mental and behavioural disorders due to cannabinoids	NA
+Mental and behavioural disorders due to multiple drug use and use of multiple drugs and use of other psychoactive substances	NA
+Mental and behavioural disorders due to use of other stimulants, including caffeine	NA
+Mental Disorders	NA
+Mental Health	NA
+Mental health problems ever diagnosed by a professional	NA
+Mental retardation (more control exclusions)	NA
+mesalazine	NA
+Mesial bite	NA
+Mesothelioma, excluding all cancers (controls excluding all cancers)	NA
+Metabolic Diseases	NA
+Metabolic disorder, other/unspecified	NA
+Metabolic disorders	NA
+metformin	NA
+methimazole pro-drug|thyroperoxidase inhibitor|methimazole|anti-thyroid	NA
+Methods of admission to hospital (recoded)	NA
+Methods of discharge from hospital (recoded)	NA
+Methods of self-harm used	NA
+methotrexate	NA
+Methotrexate	NA
+metoclopramide	NA
+miconazole	NA
+miconazole/hydrocortisone	NA
+Microalbumin in urine	NA
+Microscopic polyangiitis	NA
+Migrain with aura	NA
+migraine disorder	NA
+Migraine Disorders	NA
+Migraine with aura	NA
+Migraine with aura and triptan purchases	NA
+Migraine without Aura	NA
+Migraine without aura, drug-induced	NA
+Migraine, single triptan purchase ok & required. ICD-code if available is included	NA
+Mild mental retardation	NA
+Milk added to cereal	Y
+Milk intake	Y
+Milk-based pudding intake	Y
+Mineral and other dietary supplements	Y
+Minimum carotid IMT (intima-medial thickness) at 120 degrees	NA
+Minimum carotid IMT (intima-medial thickness) at 150 degrees	NA
+Minimum carotid IMT (intima-medial thickness) at 210 degrees	NA
+Minimum carotid IMT (intima-medial thickness) at 240 degrees	NA
+mirtazapine	NA
+Miserableness	NA
+Mixed and other personality disorders	NA
+Mixed conductive and sensorineural hearing loss	NA
+Mixed connective tissue disease	NA
+Mixed fruit intake	Y
+Mixed hyperlipidaemia	NA
+Mixed vegetable intake	Y
+Moderate visual impairment, binocular	NA
+Modified Stumvoll Insulin Sensitivity Index (model adjusted for BMI)	NA
+Molar incisor enamel hypoplasia	NA
+Molar incisor enamel hypoplasia, with caries	NA
+mometasone	NA
+Monoarthritis, not elsewhere classified	NA
+Monocyte chemoattractant protein-4 levels	NA
+Monocyte count	NA
+Monocyte differentiation antigen CD14, soluble measurement	Y
+Monocyte percentage	NA
+montelukast	NA
+Month of birth	NA
+Mood Disorders	NA
+Mood disorders	NA
+Mood swings	NA
+Morning/evening person (chronotype)	Y
+Mother still alive	NA
+Mother's age	Y
+Mother's age at death	NA
+Motor Activity	NA
+Motor disorders (more control exclusions)	NA
+Motor Neuron Disease	NA
+Mouth/teeth dental problems	NA
+Mozzarella intake	Y
+MS-disease / Multiple Sclerosis	NA
+Mucosal proctocolitis	NA
+Mucous polyp of cervix	NA
+muculytic	NA
+Muesli intake	Y
+Multi-site chronic pain	NA
+Multiple gestation	NA
+Multiple myeloma	NA
+Multiple myeloma and malignant plasma cell neoplasms (controls excluding all cancers)	NA
+Multiple myeloma, excluding all cancers (controls excluding all cancers)	NA
+Multiple myeloma, Monoclonal gammopathy of undetermined significance (MGUS)	NA
+Multiple myeloma, Monoclonal gammopathy of undetermined significance (MGUS), excluding all cancers (controls excluding all cancers)	NA
+Multiple Sclerosis	NA
+Multiple sclerosis	NA
+multiple sclerosis	NA
+Muscle strain	NA
+Muscular Atrophy, Spinal	NA
+muscular disease	NA
+Muscular Diseases	NA
+Muscular dystrophies	NA
+Muscular dystrophies and other myopathies	NA
+Muscular wasting and disuse atrophy	NA
+Mushroom intake	Y
+Mycoses	NA
+Myeloid leukaemia (controls excluding all cancers)	NA
+Myeloid leukemia	NA
+Myeloid leukemia, acute	NA
+Myeloproliferative disease	NA
+Myeloproliferative diseases (CML excluded)	NA
+Myocardial infarction	NA
+Myocardial Infarction	NA
+myocardial infarction	NA
+Myocardial infarction (no controls excluded)	NA
+Myocardial infarction, strict	NA
+Myocardial Ischemia	NA
+Myoclonus	NA
+Myoglobin	NA
+Myopathy	NA
+Myopia	NA
+Myositis	NA
+Myotonic Disorders	NA
+myxedema,NA	NA
+N-terminal prohormone brain natriuretic peptide levels	Y
+N04 Nephrotic syndrome	NA
+N05 Unspecified nephritic syndrome	NA
+N08 Glomerular disorders in diseases classified elsewhere	NA
+N13 Obstructive and reflux uropathy	NA
+N17 Acute renal failure	NA
+N18 Chronic renal failure	NA
+N20 Calculus of kidney and ureter	NA
+N21 Calculus of lower urinary tract	NA
+N25 Disorders resulting from impaired renal tubular function	NA
+N28 Other disorders of kidney and ureter, not elsewhere classified	NA
+N32 Other disorders of bladder	NA
+N36 Other disorders of urethra	NA
+N41 Inflammatory diseases of prostate	NA
+N42 Other disorders of prostate	NA
+N43 Hydrocele and spermatocele	NA
+N48 Other disorders of penis	NA
+N49 Inflammatory disorders of male genital organs, not elsewhere classified	NA
+N60 Benign mammary dysplasia	NA
+N64 Other disorders of breast	NA
+N71 Inflammatory disease of uterus, except cervix	NA
+N73 Other female pelvic inflammatory diseases	NA
+N75 Diseases of Bartholin's gland	NA
+N80 Endometriosis	NA
+N81 Female genital prolapse	NA
+N82 Fistulae involving female genital tract	NA
+N84 Polyp of female genital tract	NA
+N85 Other noninflammatory disorders of uterus, except cervix	NA
+N88 Other noninflammatory disorders of cervix uteri	NA
+N89 Other noninflammatory disorders of vagina	NA
+N90 Other noninflammatory disorders of vulva and perineum	NA
+N92 Excessive, frequent and irregular menstruation	NA
+NA,celiac disease	NA
+nabumetone	NA
+NADPH--cytochrome P450 reductase measurement	Y
+Nail disorders	NA
+Nap during day	Y
+naproxen	NA
+Narcolepsy	NA
+Narcolepsy and cataplexy	NA
+Nasal cavity polyp	NA
+Nasal polyp	NA
+Nasal Polyps	NA
+Nasal polyps	NA
+neck pain,shoulder pain	NA
+Neck/shoulder pain for 3+ months	NA
+Necrobiosis lipoidica, not elsewhere classified	NA
+nefopam	NA
+Neoplasm of uncertain behavior	NA
+Neoplasms	NA
+Neovascular glaucoma	NA
+Neovascularization, Pathologic	NA
+Nephritis and nephropathy in diseases classified elsewhere	NA
+Nephritis and nephropathy with pathological lesion	NA
+Nephritis and nephropathy without mention of glomerulonephritis	NA
+nephrolithiasis	NA
+Nephrotic Syndrome	NA
+Nephrotic syndrome without mention of glomerulonephritis	NA
+Nerve, nerve root and plexus disorders	NA
+Nervous feelings	NA
+nervous system disease	NA
+Nervous System Diseases	NA
+Neuralgia and neuritis, unspecified	NA
+Neurodegenerative Diseases	NA
+Neuroendocrine tumor and carcinoma of pancreas, excluding all cancers (controls excluding all cancers)	NA
+Neuroendocrine tumor and carcinoma of small intestine, excluding all cancers (controls excluding all cancers)	NA
+Neuroendocrine tumor and carcinoma of stomach, excluding all cancers (controls excluding all cancers)	NA
+Neurofibromatosis	NA
+Neurological diseases	NA
+Neurological disorders	NA
+Neurological, eye or psychiatric disease	NA
+Neuromuscular Manifestations	NA
+Neuromyelitis Optica	NA
+Neurotic Disorders	NA
+Neuroticism	NA
+Neuroticism score	NA
+Neutropenia	NA
+Neutrophill count	NA
+Neutrophill percentage	NA
+Neutrophils	NA
+Never eat eggs, dairy, wheat, sugar	Y
+Never smoked | tobacco smoking	NA
+Never/rarely have milk | milk type used	Y
+Nezelof syndrome	NA
+nicorandil	NA
+nicotinic acetylcholine receptor agonist|smoking cessation	NA
+nifedipine	NA
+Night shifts worked	NA
+nitrate |anti-anginal agent|anti-hypertensive	NA
+nitrazepam	NA
+Nitrogen dioxide air pollution; 2005	Y
+Nitrogen dioxide air pollution; 2006	Y
+Nitrogen dioxide air pollution; 2007	Y
+Nitrogen dioxide air pollution; 2010	Y
+Nitrogen oxides air pollution; 2010	Y
+No | major dietary changes in the last 5 years	Y
+Nodular lymphoma	NA
+Noisy workplace	Y
+Non-accidental death in close genetic family	Y
+Non-albumin protein	NA
+Non-alcoholic Fatty Liver Disease	NA
+Non-butter spread type details	Y
+Non-cancer illness code, self-reported	NA
+Non-cancer illness year/age first occurred	NA
+Non-follicular lymphoma (controls excluding all cancers)	NA
+Non-Hodgkin lymphoma, all, excluding all cancers (controls excluding all cancers)	NA
+Non-Hodgkins lymphoma	NA
+non-Hodgkins lymphoma	NA
+Non-ischemic cardiomyopathy	NA
+Non-oily fish intake	Y
+non-opioid analgesic	NA
+Non-proliferative glomerulonephritis	NA
+non-selective beta-blocker|beta blocker	NA
+Non-seminoma of testis, excluding all cancers (controls excluding all cancers)	NA
+Non-small cell lung cancer, adenocarcinoma, excluding all cancers (controls excluding all cancers)	NA
+Non-small cell lung cancer, squamous, excluding all cancers (controls excluding all cancers)	NA
+non-steroidal anti-inflammatory drug|NSAID	NA
+Nonalcoholic steatohepatitis	NA
+Nondiabetic hypoglycaemic coma	NA
+None of the above (group 1) | illnesses of father	Y
+None of the above (group 1) | illnesses of mother	Y
+None of the above | blood clot, dvt, bronchitis, emphysema, asthma, rhinitis, eczema, allergy diagnosed by doctor	Y
+None of the above | medication for cholesterol, blood pressure or diabetes	Y
+None of the above | medication for cholesterol, blood pressure, diabetes, or take exogenous hormones	Y
+None of the above | medication for pain relief, constipation, heartburn	Y
+None of the above | pain type(s) experienced in last month	Y
+None of the above | qualifications	Y
+None of the above | vascular/heart problems diagnosed by doctor	Y
+Noninfectious gastroenteritis	NA
+Noninfective enteritis and colitis	NA
+Noninflammatory disorders of cervix	NA
+Noninflammatory disorders of vagina	NA
+Noninflammatory female genital disorders	NA
+Noninvasive Ventilation	NA
+Nonrheumatic aortic valve disorders	NA
+Nonspecific abnormal findings in stool contents	NA
+Nonspecific abnormal findings on radiological and other examination of biliary tract	NA
+Nonspecific chest pain	NA
+Nonspecific findings on examination of blood	NA
+Nonspecific lymphadenitis	NA
+Nonsuppurative otitis media	NA
+Nontoxic diffuse goitre	NA
+Nontoxic goitre/thyroid nodule	NA
+Nontoxic multinodular goiter	NA
+Nontoxic nodular goiter	NA
+Nontraumatic intracranial haemmorrhage	NA
+noradrenergic and specific serotonergic antidepressant|antidepressant|appetite stimulant	NA
+norethindrone	NA
+norethisterone	NA
+nortriptyline	NA
+nose injury	NA
+NSAID|non-steroidal anti-inflammatory drug	NA
+Number in household	Y
+Number of attempts	Y
+Number of baguettes with butter/margarine	Y
+Number of bread rolls with butter/margarine	Y
+Number of bread slices with butter/margarine	Y
+Number of children fathered	Y
+Number of cigarettes currently smoked daily (current cigarette smokers)	NA
+Number of cigarettes previously smoked daily	NA
+Number of cigarettes smoked daily, combined previous and current smoking	NA
+Number of correct matches in round	NA
+Number of crackers/crispbreads with butter/margarine	NA
+Number of days/week of moderate physical activity 10+ minutes	Y
+Number of days/week of vigorous physical activity 10+ minutes	NA
+Number of days/week walked 10+ minutes	Y
+Number of diet questionnaires completed	Y
+Number of fluid intelligence questions attempted within time limit	NA
+Number of full brothers	Y
+Number of full sisters	Y
+Number of incorrect matches in round	Y
+Number of older siblings	Y
+Number of operations, self-reported	NA
+Number of other bread types with butter/margarine	Y
+Number of pregnancy terminations	NA
+Number of self-reported cancers	NA
+Number of self-reported non-cancer illnesses	NA
+Number of stillbirths	NA
+Number of things worried about during worst period of anxiety	NA
+Number of times snap-button pressed	NA
+Number of treatments/medications taken	NA
+Number of triplets attempted (right)	NA
+Number of unsuccessful stop-smoking attempts	NA
+Number of vehicles in household	Y
+Nummular dermatitis	NA
+Nutritional and Metabolic Diseases	NA
+Nystagmus and other irregular eye movements	NA
+O-phosphoseryl-tRNA(Sec) selenium transferase measurement	Y
+O02 Other abnormal products of conception	NA
+O04 Medical abortion	NA
+O26 Maternal care for other conditions predominantly related to pregnancy	NA
+O32 Maternal care for known or suspected malpresentation of foetus	NA
+O36 Maternal care for other known or suspected foetal problems	NA
+O46 Antepartum haemorrhage, not elsewhere classified	NA
+O62 Abnormalities of forces of labour	NA
+O70 Perineal laceration during delivery	NA
+O75 Other complications of labour and delivery, not elsewhere classified	NA
+O99 Other maternal diseases classifiable elsewhere but complicating pregnancy, childbirth and the puerperium	NA
+Oat crunch intake	Y
+Oatcakes intake	Y
+Obesity	NA
+Obesity Hypoventilation Syndrome	NA
+Obesity related asthma	NA
+Obesity, Abdominal	NA
+Obesity, other/unspecified	NA
+Obstructed labour due to maternal pelvic abnormality	NA
+Obstructive chronic bronchitis	NA
+Occlusion and stenosis of precerebral arteries	NA
+Occlusion of cerebral arteries	NA
+Occlusion of cerebral arteries, with cerebral infarction	NA
+OCT measured (left)	NA
+OCT measured (right)	NA
+Oestradiol	NA
+Offspring birth weight	NA
+Ohter specific/unspecified arthritis	NA
+oilatum	Y
+Oily fish intake	Y
+Oligomenorrhea	NA
+Olives intake	Y
+olmesartan	NA
+omega-3 acid ethyl esters	NA
+omega-3 fatty acid supplement|Food Supplement	NA
+Omelette intake	Y
+omeprazole	NA
+Onion intake	Y
+Open bite	NA
+Open bite that required surgery (Lefort1 or BSSRO)	NA
+Open wound of foot except toe(s) alone	NA
+Open wound or laceration of eye or eyelid	NA
+Open wounds of extremities	Y
+Open-angle glaucoma	NA
+Operation code	NA
+Operation year/age first occurred	NA
+Operative procedures - main OPCS4	NA
+opioid analgesic	NA
+opioid analgesic|antipyretic	NA
+opioid analgesic|selective serotonin re-uptake inhibitor|norepinephrine re-uptake inhibitor	NA
+opioid|anti-diarrheal agent	NA
+Optic Neuritis	NA
+Oral leukoplakia and related diseases, including avohilmo	NA
+Oral leukoplakia, including avohilmo	NA
+Oral lichen ruber planus	NA
+Oral Ulcer	NA
+Orange intake	Y
+Orchitis and epididymitis	NA
+orlistat	NA
+Orthostatic hypotension	NA
+osmotic laxative	NA
+osmotic laxative|laxative	NA
+Osteitis deformans [Paget's disease of bone]	NA
+Osteoarthritis	NA
+osteoarthritis	NA
+Osteoarthritis of the hip or knee	NA
+Osteoarthritis of the hip or knee (hospital diagnosed)	NA
+Osteoarthritis, Hip	NA
+Osteoarthritis, Knee	NA
+Osteoarthritis; localized	NA
+Osteoarthrosis	NA
+Osteoarthrosis NOS	NA
+Osteoarthrosis, generalized	NA
+Osteoarthrosis, localized, primary	NA
+Osteomyelitis	NA
+Osteomyelitis, periostitis, and other infections involving bone	NA
+Osteonecrosis due to drugs	NA
+Osteopathies and chondropathies	NA
+osteopenia	NA
+Osteoporosis	NA
+osteoporosis	NA
+Osteoporosis NOS	NA
+Osteoporosis with pathological fracture (FG)	NA
+Osteoporosis, osteopenia and pathological fracture	NA
+Other (e.g. cornflakes, frosties) | cereal type	Y
+Other (seronegative) rheumatoid arthritis, wide	NA
+Other abnormal blood chemistry	NA
+Other abnormal glucose	NA
+Other abnormal products of conception	NA
+Other abnormal uterine and vaginal bleeding	NA
+Other acquired musculoskeletal deformity	NA
+Other acute and subacute forms of ischemic heart disease	NA
+Other acute disseminated demyelination	NA
+Other acute lower respiratory infections	NA
+Other acute skin changes due to ultraviolet radiation	NA
+Other alveolar and parietoalveolar pneumonopathy	NA
+Other and unspecified abdominal hernia	NA
+Other and unspecified anaemias	NA
+Other and unspecified coagulation defects	NA
+Other and unspecified corneal deformities and disorders	NA
+Other and unspecified degenerative diseases of nervous system	NA
+Other and unspecified disc disorder	NA
+Other and unspecified disease of Bartholin gland	NA
+Other and unspecified disorders of psychological development	NA
+Other and unspecified disorders of the nervous system	NA
+Other and unspecified disorders of vitreous body	NA
+Other and unspecified epidermal thickening	NA
+Other and unspecified glaucoma	NA
+Other and unspecified haemorrhagic conditions	NA
+Other and unspecified heterotropia	NA
+Other and unspecified iridocyclitis	NA
+Other and unspecified localized connective tissue disorders	NA
+Other and unspecified mononeuropathies, also in other diseases	NA
+Other and unspecified myopathies	NA
+Other and unspecified nerve root and plexus disorders, also in other diseases	NA
+Other and unspecified noninflammatory disorders of ovary, fallopian tube and broad ligament	NA
+Other and unspecified papulosquamous disorders	NA
+Other and unspecified pemphigoid	NA
+Other and unspecified polyneuropathies, also in other diseases	NA
+Other and unspecified rosacea	NA
+Other and unspecified skin changes due to chronic exposure to nonionizing radiation	NA
+Other and unspecified tonsillitis	NA
+Other and unspecified trigeminal disorders	NA
+Other and unspecified types of non-Hodgkin lymphoma, hilmo (controls excluding all cancers)	NA
+Other and/or unspecified nontoxic goitre	NA
+Other anemias	NA
+Other aneurysm	NA
+Other anxiety disorders	NA
+Other arterial embolism and thrombosis	NA
+Other arthritis (FG)	NA
+Other arthropathies	NA
+Other articular cartilage disorders	NA
+Other assisted single delivery	NA
+Other bacterial intestinal infections	NA
+Other benign neoplasm of connective and other soft tissue	NA
+Other benign neoplasm of uterus: Corpus uteri	NA
+Other benign neoplasms of skin	NA
+Other benign neoplasms of uterus	NA
+Other biliary tract disease	NA
+Other bullous disorders	NA
+Other bursal cyst	NA
+Other bursitis, not elsewhere classified	NA
+Other cataract	NA
+Other cerebral degenerations	NA
+Other chondrocalcinosis	NA
+Other chromosome abnormalities, not elsewhere classified	NA
+Other chronic ischemic heart disease, unspecified	NA
+Other chronic nonalcoholic liver disease	NA
+Other coffee type	NA
+Other complications of labour and delivery, not elsewhere classified	NA
+Other complications of pregnancy NEC	NA
+Other congenital anomalies of lower limb, including pelvic girdle	NA
+Other congenital malformations	NA
+Other congenital malformations of circulatory system	NA
+Other congenital malformations of ear	NA
+Other congenital malformations of heart	NA
+Other congenital malformations of nervous system	NA
+Other congenital malformations of skin	NA
+Other congenital malformations of the digestive system	NA
+Other congenital malformations of tongue, mouth and pharynx	NA
+Other congenital malformations of upper alimentary tract	NA
+Other corneal oedema	NA
+Other deficiency anemia	NA
+Other deformities of toe(s)	NA
+Other degenerative diseases of the nervous system	NA
+Other demyelinating diseases of central nervous system	NA
+Other demyelinating diseases of the central nervous system	NA
+Other dessert intake	Y
+Other diabetic retinopathy	NA
+Other diseases of arteries and capillaries	NA
+Other diseases of biliary tract	NA
+Other diseases of blood and blood-forming organs	NA
+Other diseases of blood and blood-forming organs, wide	NA
+Other diseases of gallbladder	NA
+Other diseases of intestines	NA
+Other diseases of jaws	NA
+Other diseases of lip and oral mucosa	NA
+Other diseases of pancreas	NA
+Other diseases of peritoneum	NA
+Other diseases of pleura	NA
+Other diseases of respiratory system, NEC	NA
+Other diseases of respiratory system, not elsewhere classified	NA
+Other diseases of stomach and duodenum	NA
+Other diseases of the digestive system	NA
+Other diseases of the respiratory system	NA
+Other diseases of upper respiratory tract	NA
+Other diseases of urinary system	NA
+Other disorders of amniotic fluid and membranes	NA
+Other disorders of arteries and arterioles	NA
+Other disorders of biliary tract	NA
+Other disorders of bladder	NA
+Other disorders of bone	NA
+Other disorders of breast	NA
+Other disorders of carbohydrate metabolism	NA
+Other disorders of choroid	NA
+Other disorders of circulatory system	NA
+Other disorders of cornea	NA
+Other disorders of ear	NA
+Other disorders of Eustachian tube	NA
+Other disorders of eyelids	NA
+Other disorders of fluid, electrolyte and acid-base balance	NA
+Other disorders of gallbladder	NA
+Other disorders of glucose regulation and pancreatic internal secretion	NA
+Other disorders of intestine	NA
+Other disorders of iris and ciliary body	NA
+Other disorders of kidney and ureter	NA
+Other disorders of liver	NA
+Other disorders of metabolism	NA
+Other disorders of neurohypophysis	NA
+Other disorders of optic [2nd] nerve and visual pathways	NA
+Other disorders of pancreatic internal secretion	NA
+Other disorders of patella	NA
+Other disorders of peripheral nervous system	NA
+Other disorders of peritoneum	NA
+Other disorders of prostate	NA
+Other disorders of skin and subcutaneous tissue	NA
+Other disorders of skin and subcutaneous tissue, not elsewhere classified	NA
+Other disorders of soft tissues	NA
+Other disorders of stomach and duodenum	NA
+Other disorders of testis	NA
+Other disorders of the genitourinary system	NA
+Other disorders of the musculoskeletal system and connective tissue	NA
+Other disorders of thyroid	NA
+Other disorders of tympanic membrane	NA
+Other disorders of urethra and urinary system	NA
+Other disorders of urethra and urinary tract	NA
+Other dorsopathies, not elsewhere classified	NA
+Other drink intake	Y
+Other drug-induced secondary parkinsonism	NA
+Other embolism and thrombosis	NA
+Other embolism and thrombosis (no controls excluded)	NA
+Other epidermal thickening	NA
+Other extrapyramidal and movement disorders in other diseases	NA
+Other eye problems	NA
+Other facial nerve disorders	NA
+Other female pelvic inflammatory diseases	NA
+Other follicular disorders	NA
+Other forms of chronic heart disease	NA
+Other forms of systemic lupus erythematosus	NA
+Other functional intestinal disorders	NA
+Other haemoglobinopathies	NA
+Other hammer toe(s) (acquired)	NA
+Other headache syndromes	NA
+Other hearing loss	NA
+Other hypertrophic and atrophic conditions of skin	NA
+Other immunodeficiencies	NA
+Other infectious and parasitic diseases	NA
+Other infective otitis externa	NA
+Other infiltrative disorders of skin and subcutaneous tissue	NA
+Other inflammatory liver diseases	NA
+Other inflammatory spondylopathies	NA
+Other insterstitial pulmonary diseases	NA
+Other localized connective tissue disorders	NA
+Other malignant neoplasms of skin (=non-melanoma skin cancer)	NA
+Other malignant neoplasms of skin (=non-melanoma skin cancer) (all cancers excluded)	NA
+Other malignant neoplasms of skin (=non-melanoma skin cancer), excluding all cancers (controls excluding all cancers)	NA
+Other maternal diseases classifiable elsewhere but complicating pregnancy, childbirth and the puerperium	NA
+Other maternal disorders predominantly related to pregnancy	NA
+Other melanin hyperpigmentation	NA
+Other menopausal disorders	NA
+Other mental disorder	NA
+Other mental disorders due to brain damage and dysfunction and to physical disease	NA
+Other metabolic disorders	NA
+Other milk-based pudding intake	Y
+Other necrotizing vasculopathies (FG)	NA
+Other neurological diseases	NA
+Other neurotic disorders	NA
+Other non-epithelial cancer of skin	NA
+Other noninfective disorders of lymphatic vessels and lymph nodes	NA
+Other noninfective gastroenteritis and colitis	NA
+Other noninflammatory disorders of cervix uteri	NA
+Other noninflammatory disorders of uterus, except cervix	NA
+Other noninflammatory disorders of vagina	NA
+Other nonmalignant breast conditions	NA
+Other nonthrombocytopenic purpura	NA
+Other obstetric trauma	NA
+Other obstructed labour	NA
+Other obstructive and reflux uropathy	NA
+Other otitis externa (chronic)	NA
+Other overlap syndromes	NA
+Other peripheral nerve disorders	NA
+Other predominantly sexually transmitted diseases, not elsewhere classified	NA
+Other primary thrombocytopenia	NA
+Other psoriatic arthropathies	NA
+Other puerperal infections	NA
+Other reaction to severe stress, and adjustment disorders	NA
+Other retinal artery occlusion	NA
+Other retinal disorders	NA
+Other salmonella infections	NA
+Other savoury snack intake	Y
+Other secondary coxarthrosis	NA
+Other septicaemia	NA
+Other serious medical condition/disability diagnosed by doctor	NA
+Other shoulder lesions	NA
+Other soft tissue disorders, not elsewhere classified	NA
+Other specific arthropathies, wide	NA
+Other specified benign mammary dysplasias	NA
+Other specified cardiac dysrhythmias	NA
+Other specified congenital anomalies of nervous system	NA
+Other specified congenital malformation syndromes affecting multiple systems	NA
+Other specified disorders of external ear	NA
+Other specified disorders of kidney and ureter	NA
+Other specified erythematous conditions	NA
+Other specified nonpsychotic and/or transient mental disorders	NA
+Other specified/unspecified deforming dorsopathies	NA
+Other specified/unspecified disorders of synovium and tendon +Other specified/unspecified bursopathies	NA
+Other specified/unspecified inflammatory spondylopathies	NA
+Other specified/unspecified nutritional deficiencies	NA
+Other specified/unspecified spondylopathies	NA
+Other specified/unspecified systemic involvement of connective tissue	NA
+Other strabismus	NA
+Other superficial mycoses	NA
+Other symptoms	NA
+Other symptoms and signs involving cognitive functions and awareness	NA
+Other systemic involvement of connective tissue	NA
+Other systemic involvement of connective tissue (FG)	NA
+Other tea intake	Y
+Other tests	Y
+Other type of bread | bread type	Y
+Other type of spread/margarine | spread type	Y
+Other vegetables intake	Y
+Other venous embolism and thrombosis	NA
+Other viral diseases, not elsewhere classified	NA
+Other viral infections characterized by skin and mucous membrane lesions, not elsewhere classified	NA
+Other vitamin B12 deficiency anemia	NA
+Other, unspecified and serous retinal detachments	NA
+Other/unspecified cytomegaloviral diseases	NA
+Other/unspecified disorders of vestibular function	NA
+Other/unspecified dorsalgia	NA
+Other/unspecified enthesopathies, not elsewhere classified	NA
+Other/unspecified reactive arthropathies	NA
+Other/unspecified seropositiverheumatoid arthritis	NA
+Other/unspecified synovitis and tenosynovitis	NA
+Otitis Externa	NA
+Otitis externa	NA
+Otitis externa, unspecified	NA
+Otitis media	NA
+Otitis media and Eustachian tube disorders	NA
+Otosclerosis	NA
+Ovarian cancer-related tumor marker CA 125 levels	Y
+Ovarian Cysts	NA
+Ovarian dysfunction	NA
+Ovarian dysfunction, other/unspecified	NA
+Overall health rating	NA
+Overweight, obesity and other hyperalimentation	NA
+Own or rent accommodation lived in	NA
+oxybutynin	NA
+oxytetracycline	NA
+P duration	NA
+P-Selectin	Y
+P2Y12 anti-platelet agent|anti-platelet	NA
+Pain	NA
+pain	NA
+Pain (limb, back, neck, head abdominally)	NA
+Pain and other symptoms associated with female genital organs	NA
+Pain in joint	NA
+Pain in limb	NA
+Pain type(s) experienced in last month	NA
+Palindromic rheumatism	NA
+Pallor and flushing	NA
+pancreas disease,liver disease,biliary tract disease	NA
+Pancreatitis	NA
+Pancreatitis, Alcoholic	NA
+Pancreatitis, Chronic	NA
+Panniculitis affecting regions of neck and back	NA
+Papillary adenocarcinoma of thyroid gland, excluding all cancers (controls excluding all cancers)	NA
+Papulosquamous disorders	NA
+paracetamol	NA
+Paralytic ileus	NA
+Paralytic ileus and intestinal obstruction	NA
+Paralytic strabismus	NA
+Paranoid personality disorder	NA
+Parkinson disease	NA
+Parkinson Disease	NA
+Parkinson Disease, Secondary	NA
+Parkinson's disease	NA
+paroxetine	NA
+Paroxysmal ventricular tachycardia	NA
+Parsnip intake	Y
+Part of a multiple birth	Y
+Participation in an health questionnaire (not invited vs invited)	Y
+Particulate matter air pollution (pm10); 2007	Y
+Particulate matter air pollution (pm2.5) absorbance; 2010	Y
+Particulate matter air pollution (pm2.5); 2010	Y
+Past tobacco smoking	NA
+Patellar Dislocation	NA
+Patellar tendinitis	NA
+Pathologic fracture of vertebrae	NA
+Patient classification on admission (recoded)	NA
+Pattern 1 | hair/balding pattern	NA
+Pattern 4 | hair/balding pattern	NA
+PCT responsible for patient data	NA
+PDE5 inhibitor|pulmonary hypertension|erectile dysfunction	NA
+Pea intake	Y
+Peach/nectarine intake	Y
+Peak expiratory flow (PEF)	NA
+Peak Expiratory Flow Rate	NA
+Pear intake	Y
+Pediatric Obesity	NA
+Pediculosis, acariasis and other infestations	NA
+Pemphigoid	NA
+Pemphigoid, Bullous	NA
+penicillin	NA
+peppermint oil	Y
+Peptic Ulcer	NA
+peptic ulcer	NA
+Peptic ulcer (excl. esophageal)	NA
+Percent liver fat	NA
+Percentage of invited food questionnaires completed	Y
+Perforation of tympanic membrane	NA
+Periapical abscess	NA
+Pericarditis	NA
+Perineal laceration during delivery	NA
+Perioral dermatitis	NA
+Peripheral angiopathy in diseases classified elsewhere	NA
+Peripheral artery disease	NA
+Peripheral artery disease (no controls excluded)	NA
+Peripheral atherosclerosis	NA
+Peripheral enthesopathies and allied syndromes	NA
+Peripheral or central vertigo	NA
+Peripheral retinal degeneration	NA
+Peripheral vascular disease	NA
+peripheral vascular disease	NA
+Peripheral vascular disease, unspecified	NA
+Peritoneal adhesions (postoperative) (postinfection)	NA
+Peritoneal or intestinal adhesions	NA
+peritonitis	NA
+Peritonitis and retroperitoneal infections	NA
+Peritonsillar Abscess	NA
+pernicious anemia	NA
+Pernicious anemia	NA
+Peroxidase	Y
+Persistent delusional disorders	NA
+Personal history of diseases of blood and blood-forming organs	NA
+Personal Satisfaction	NA
+Personality	NA
+Personality and behavioural disorders due to brain disease, damage and dysfunction	NA
+Personality disorder	NA
+Personality Disorders	NA
+Phakomatoses, not elsewhere classified	NA
+phenoxymethylpenicillin	NA
+Phlebitis and thrombophlebitis	NA
+Phlebitis and thrombophlebitis (not including DVT)	NA
+Phlebitis and thrombophlebitis (not including DVT) (no controls excluded)	NA
+Phlebitis and thrombophlebitis of lower extremities	NA
+Phlebitis and thrombophlebitis of lower extremities, unspecified, drug-induced	NA
+Phosphate	NA
+Phosphatidylcholine_30:0_[M+H]1+/Phosphatidylethanolamine_33:0_[M+H]1+/Phosphatidate_35:1_[M+NH4]1+ levels	Y
+Phosphatidylcholine_32:0_[M+H]1+/Phosphatidylethanolamine_35:0_[M+H]1+/Phosphatidate_37:1_[M+NH4]1+ levels	Y
+Phosphatidylcholine_32:1_[M+H]1+/Phosphatidylethanolamine_35:1_[M+H]1+/Phosphatidate_37:2_[M+NH4]1+ levels	Y
+Phosphatidylcholine_34:0_[M+H]1+/Phosphatidylethanolamine_37:0_[M+H]1+/Phosphatidate_39:1_[M+NH4]1+ levels	Y
+Phosphatidylcholine_34:1_[M+H]1+/Phosphatidylethanolamine_37:1_[M+H]1+/Phosphatidate_39:2_[M+NH4]1+ levels	Y
+Phosphatidylcholine_34:3_[M+H]1+/Phosphatidylethanolamine_37:3_[M+H]1+/Phosphatidate_39:4_[M+NH4]1+ levels	Y
+Phosphatidylcholine_35:1_[M+H]1+/Phosphatidylethanolamine_38:1_[M+H]1+/Phosphatidate_40:2_[M+NH4]1+ levels	Y
+Phosphatidylcholine-2O_32:0_[M+H]1+ levels	Y
+Phosphatidylcholine-O_18:1_[M+H]1+/Phosphatidylcholine-P_18:0_[M+H]1+ levels	Y
+Phosphatidylcholine-O_30:1_[M+H]1+/Phosphatidylcholine-P_30:0_[M+H]1+/Phosphatidylethanolamine-O_33:1_[M+H]1+ levels	Y
+Phosphatidylcholine-O_31:0_[M+H]1+/Phosphatidylethanolamine-O_34:0_[M+H]1+ levels	Y
+Phosphatidylcholine-O_31:2_[M+H]1+/Phosphatidylcholine-P_31:1_[M+H]1+/Phosphatidylethanolamine-O_34:2_[M+H]1+ levels	Y
+Phosphatidylcholine-O_32:0_[M+H]1+/Phosphatidylethanolamine-O_35:0_[M+H]1+ levels	Y
+Phosphatidylcholine-O_32:1_[M+H]1+/Phosphatidylcholine-P_32:0_[M+H]1+/Phosphatidylethanolamine-O_35:1_[M+H]1+ levels	Y
+Phosphatidylcholine-O_34:1_[M+H]1+/Phosphatidylcholine-P_34:0_[M+H]1+/Phosphatidylethanolamine-O_37:1_[M+H]1+ levels	Y
+Phosphatidylcholine-O_34:2_[M+H]1+/Phosphatidylcholine-P_34:1_[M+H]1+/Phosphatidylethanolamine-O_37:2_[M+H]1+ levels	Y
+Phosphatidylcholine-O_34:3_[M+H]1+/Phosphatidylcholine-P_34:2_[M+H]1+/Phosphatidylethanolamine-P_37:2_[M+H]1+ levels	Y
+Phosphatidylcholine-O_35:1_[M+H]1+/Phosphatidylcholine-P_35:0_[M+H]1+/Phosphatidylethanolamine-O_38:1_[M+H]1+ levels	Y
+Phosphatidylcholine-O_36:1_[M+H]1+/Phosphatidylcholine-P_36:0_[M+H]1+/Phosphatidylethanolamine-O_39:1_[M+H]1+ levels	Y
+Phosphatidylcholine-O_36:2_[M+H]1+/Phosphatidylcholine-P_36:1_[M+H]1+/Phosphatidylethanolamine-P_39:1_[M+H]1+ levels	Y
+Phosphatidylcholine-O_36:4_[M+H]1+/Phosphatidylcholine-P_36:3_[M+H]1+ levels	Y
+Phosphatidylcholine-O_37:1_[M+H]1+/Phosphatidylcholine-P_37:0_[M+H]1+/Phosphatidylethanolamine-O_40:1_[M+H]1+ levels	Y
+Phosphatidylcholine-O_37:2_[M+H]1+/Phosphatidylcholine-P_37:1_[M+H]1+/Phosphatidylethanolamine-O_40:2_[M+H]1+ levels	Y
+Phosphatidylcholine-O_38:1_[M+H]1+/Phosphatidylcholine-P_38:0_[M+H]1+/Phosphatidylethanolamine-P_41:0_[M+H]1+ levels	Y
+Phosphatidylcholine-O_38:2_[M+H]1+/Phosphatidylcholine-P_38:1_[M+H]1+ levels	Y
+Phosphatidylcholine-O_38:4_[M+H]1+/Phosphatidylcholine-P_38:3_[M+H]1+ levels	Y
+Phosphatidylcholine-O_38:5_[M+H]1+/Phosphatidylcholine-P_38:4_[M+H]1+ levels	Y
+Phosphatidylcholine-O_39:0_[M+H]1+/Phosphatidylethanolamine-O_42:0_[M+H]1+ levels	Y
+Phosphatidylcholine-O_40:5_[M+H]1+/Phosphatidylcholine-P_40:4_[M+H]1+ levels	Y
+Phosphatidylcholine-O_40:6_[M+H]1+/Phosphatidylcholine-P_40:5_[M+H]1+ levels	Y
+Phosphatidylethanolamine-O_36:5_[M+H]1+/Phosphatidylethanolamine-P_36:4_[M+H]1+ levels	Y
+Phosphatidylethanolamine-O_38:5_[M+H]1+/Phosphatidylethanolamine-P_38:4_[M+H]1+ levels	Y
+Phosphatidylethanolamine-O_38:6_[M+H]1+/Phosphatidylethanolamine-P_38:5_[M+H]1+ levels	Y
+Phosphatidylethanolamine-O_40:6_[M+H]1+/Phosphatidylethanolamine-P_40:5_[M+H]1+ levels	Y
+Phosphatidylethanolamine-P_38:6_[M+H]1+ levels	Y
+Phosphatidylglycerol_34:1_[M+H]1+ levels	Y
+Phosphatidylglycerol-O_38:0_[M+NH4]1+ levels	Y
+Phosphatidylglycerol-O_40:1_[M+NH4]1+ levels	Y
+Phosphatidylinositol_34:1_[M-H]1- levels	NA
+Phospholipase D3 measurement	Y
+physical activity	NA
+physical activity measurement	NA
+Pilonidal Sinus	NA
+Pineapple intake	Y
+pioglitazone	NA
+piroxicam	NA
+Pituitary hyperfunction	NA
+Pituitary hypofunction	NA
+pizotifen	NA
+Pizza intake	Y
+Place of birth in UK - east co-ordinate	Y
+Place of birth in uk - east co-ordinate	Y
+Place of birth in UK - north co-ordinate	Y
+Place of birth in uk - north co-ordinate	NA
+Placenta Growth Factor	Y
+Placenta Previa	NA
+Plain cereal intake	Y
+Plantar fascial fibromatosis	NA
+Plasminogen measurement	Y
+Platelet count	NA
+Platelet Count	NA
+Platelet crit	NA
+Platelet distribution width	NA
+Plays computer games	Y
+Pleural plaque	NA
+pleurisy	NA
+Plum intake	Y
+PM: final answer	Y
+PM: initial answer	Y
+Pneumococcal pneumonia	NA
+Pneumoconiosis	NA
+Pneumoconiosis due to asbestos and other mineral fibres	NA
+Pneumonia	NA
+Pneumonia (excl. viral and due to other infectious organisms not elsewhere classified)	NA
+Pneumonitis due to inhalation of food or vomitus	NA
+Pneumonitis due to solids and liquids	NA
+Pneumothorax	NA
+pneumovax	NA
+Poisoning by agents primarily affecting the gastrointestinal system	NA
+Poisoning by antibiotics	NA
+Poisoning by primarily systemic agents	NA
+Poisoning by water, mineral, and uric acid metabolism drugs	NA
+Polyarteritis nodosa	NA
+Polyarteritis nodosa and allied conditions	NA
+Polyarthritis, unspecified	NA
+Polyarthropathies	NA
+Polyarthrosis	NA
+Polycystic ovarian syndrome, broad definition	NA
+Polycystic ovarian syndrome, consortium definition	NA
+Polycystic ovaries	NA
+Polycystic Ovary Syndrome	NA
+Polycythemia vera	NA
+Polycythemia Vera	NA
+polycythemia vera	NA
+Polycythemia, secondary	NA
+Polyglandular dysfunction	NA
+Polymorphous light eruption	NA
+Polymyalgia Rheumatica	NA
+polymyalgia rheumatica	NA
+Polymyositis	NA
+Polyneuropathy in diabetes	NA
+Polyp of corpus uteri	NA
+Polyp of female genital organs	NA
+Polyp of the female genital tract	NA
+Pork intake	Y
+Pork Meat	Y
+Portal hypertension	NA
+Postdysenteric arthropathy	NA
+Posterior thigh lean muscle volume (left)	NA
+Posterior thigh lean muscle volume (right)	NA
+Postinfectious hypothyroidism	NA
+Postinflammatory pulmonary fibrosis	NA
+Postmenopausal atrophic vaginitis	NA
+Postmenopausal bleeding	NA
+Postmenopausal osteoporosis with pathological fracture	NA
+Postpartum haemorrhage	NA
+Postpartum haemorrhage due to retained placenta	NA
+Postprocedural disorders of ear and mastoid process, not elsewhere classified	NA
+Postprocedural endocrine and metabolic disorders, not elsewhere classified	NA
+Postzoster neuralgia	NA
+Potassium	NA
+Potassium in urine	NA
+Poultry intake	Y
+Powdered/instant soup intake	Y
+pravastatin	NA
+Pre-eclampsia	NA
+Pre-eclampsia or eclampsia	NA
+Pre-eclampsia or poor fetal growth	NA
+Pre-existing hypertension complicating pregnancy, childbirth and the puerperium	NA
+Precordial pain	NA
+prednisolone	NA
+Prednisolone	NA
+Preeclampsia and eclampsia	NA
+Pregnancy hypertension	NA
+Pregnancy with abortive outcome	NA
+Premature beats	NA
+Premature rupture of membranes	NA
+Presbycusis	NA
+Presbyopia	NA
+Presence of other functional implants	NA
+Preterm labour and delivery	NA
+Primary angle-closure glaucoma	NA
+Primary biliary cholangitis (PBC)	NA
+Primary biliary cirrhosis	NA
+Primary coxarthrosis, bilateral	NA
+Primary gonarthrosis, bilateral	NA
+Primary open angle glaucoma	NA
+Primary open-angle glaucoma, strict	NA
+Primary pulmonary hypertension	NA
+Primary thrombocytopenia	NA
+Primary_lymphoid and hematopoietic malignant neoplasms (controls excluding all cancers)	NA
+Primary/intrinsic cardiomyopathies	NA
+Private healthcare	Y
+pro-kinetic agent|dopamine D2 antagonist	NA
+Problems associated with amniotic cavity and membranes	NA
+Problems related to medical facilities and other health care	NA
+Processed meat intake	Y
+prochlorperazine	NA
+Procreative management	NA
+Proctocolitis	NA
+procyclidine	NA
+Professional informed about anxiety	NA
+Professional informed about depression	NA
+Progressive vascular leukoencephalopathy	NA
+Prolapse of vaginal walls	NA
+Proliferative diabetic retinopathy	NA
+Prolonged pregnancy	NA
+propranolol	NA
+Prospective memory result	NA
+prostaglandin analog	NA
+Prostaglandin E synthase 2 measurement	Y
+prostate carcinoma	NA
+Prostatic Hyperplasia	NA
+Prostatic Neoplasms	NA
+Prostatitis	NA
+Protein	NA
+Protein Z-dependent protease inhibitor measurement	Y
+Prothrombin measurement	Y
+proton pump inhibitor|PPI	NA
+Prurigo	NA
+Prurigo and Lichen	NA
+Prurigo nodularis	NA
+psoriasis	NA
+Psoriasis	NA
+Psoriasis (vulgaris), strict definition	NA
+Psoriasis and related disorders	NA
+Psoriasis vulgaris	NA
+Psoriatic and enteropathic arthropathies	NA
+psoriatic arthritis	NA
+Psoriatic arthropathy	NA
+Psychiatric diseases	NA
+Psychological or psychiatric problem	NA
+psychosis	NA
+Pterygium	NA
+Ptosis of eyelid	NA
+Puberty, Delayed	Y
+Pulmonary congestion and hypostasis	NA
+Pulmonary Disease, Chronic Obstructive	NA
+Pulmonary Embolism	NA
+pulmonary embolism	NA
+Pulmonary embolism	NA
+Pulmonary embolism (no controls excluded)	NA
+Pulmonary embolism and infarction, acute	NA
+Pulmonary eosinophilia, not elsewhere classified	NA
+Pulmonary Fibrosis	NA
+pulmonary fibrosis	NA
+Pulmonary heart disease	NA
+Pulmonary Heart Disease	NA
+Pulse pressure, automated reading	NA
+Pulse pressure, automated reading, adjusted by medication	NA
+Pulse pressure, combined automated + manual reading	NA
+Pulse pressure, combined automated + manual reading, adjusted by medication	NA
+Pulse pressure, manual reading	NA
+Pulse pressure, manual reading, adjusted by medication	NA
+Pulse rate	NA
+Pulse rate (during blood-pressure measurement)	NA
+Pulse rate, automated reading	NA
+Pulse wave Arterial Stiffness index	NA
+Pulse wave peak to peak time	NA
+Pulse wave reflection index	NA
+Pulses intake	Y
+Pure hypercholesterolaemia	NA
+Pure hyperglyceridaemia	NA
+Purpura and other hemorrhagic conditions	NA
+Purulent endophthalmitis	NA
+Pustulosis palmaris et plantaris	NA
+Pyelonephritis	NA
+Pyogenic arthritis	NA
+Pyogenic granuloma	NA
+Pyothorax	NA
+Q21 Congenital malformations of cardiac septa	NA
+Q63 Other congenital malformations of kidney	NA
+Q66 Congenital deformities of feet	NA
+Q76 Congenital malformations of spine and bony thorax	NA
+Q85 Phakomatoses, not elsewhere classified	NA
+QRS duration	NA
+Qualifications	NA
+Quantitative Trait Loci	NA
+quinine bisulfate	NA
+R00 Abnormalities of heart beat	NA
+R04 Haemorrhage from respiratory passages	NA
+R06 Abnormalities of breathing	NA
+R07 Pain in throat and chest	NA
+R09 Other symptoms and signs involving the circulatory and respiratory systems	NA
+R10 Abdominal and pelvic pain	NA
+R23 Other skin changes	NA
+R26 Abnormalities of gait and mobility	NA
+R29 Other symptoms and signs involving the nervous and musculoskeletal systems	NA
+R41 Other symptoms and signs involving cognitive functions and awareness	NA
+R43 Disturbances of smell and taste	NA
+R46 Symptoms and signs involving appearance and behaviour	NA
+R50 Fever of unknown origin	NA
+R57 Shock, not elsewhere classified	NA
+R59 Enlarged lymph nodes	NA
+R73 Elevated blood glucose level	NA
+R79 Other abnormal findings of blood chemistry	NA
+rabeprazole	NA
+Radial styloid tenosynovitis [de Quervain]	NA
+Radiculopathy	NA
+ramipril	NA
+ranitidine	NA
+Rare circulating lymphoid malignancy, excluding all cancers (controls excluding all cancers)	NA
+Ras-related protein Rab-2A measurement	Y
+Raynaud's syndrome	NA
+Reaction Time	NA
+Reactive arthropathies	NA
+Reactive arthropathies, FINNGEN	NA
+Reason for not eating or drinking normally	NA
+Reason for reducing amount of alcohol drunk	NA
+Reason former drinker stopped drinking alcohol	NA
+Recent changes in speed/amount of moving or speaking	NA
+Recent easy annoyance or irritability	NA
+Recent feelings of depression	NA
+Recent feelings of foreboding	NA
+Recent feelings of inadequacy	NA
+Recent feelings of tiredness or low energy	NA
+Recent feelings or nervousness or anxiety	NA
+Recent inability to stop or control worrying	NA
+Recent lack of interest or pleasure in doing things	NA
+Recent medication for asthma	NA
+Recent poor appetite or overeating	NA
+Recent restlessness	NA
+Recent thoughts of suicide or self-harm	NA
+Recent trouble concentrating on things	NA
+Recent trouble relaxing	NA
+Recent worrying too much about different things	NA
+Receptor, PAR-1	Y
+Receptors, Interleukin-17	Y
+Receptors, TNF-Related Apoptosis-Inducing Ligand	Y
+Receptors, Tumor Necrosis Factor, Type II	Y
+Recurrent cholesteatoma of postmastoidectomy cavity	NA
+Recurrent or chronic depression	NA
+Recurring oral aphthae, including avohilmo	NA
+Red blood cell (erythrocyte) count	NA
+Red blood cell (erythrocyte) distribution width	NA
+Red Meat	NA
+Red wine intake	Y
+Redundant prepuce and phimosis/BXO	NA
+Redundant prepuce, phimosis and paraphimosis	NA
+refractive error	NA
+Refractive Errors	NA
+Regional enteritis	NA
+Reimbursement for rheumatic diseases	NA
+Reiter disease	NA
+Relapsing fevers	NA
+Relative age of first facial hair	Y
+Relative age voice broke	Y
+Renal colic	NA
+Renal failure	NA
+Renal Insufficiency	NA
+Renal tubulo-interstitial diseases	NA
+Renal tubulo-intestitial diseases	NA
+Renin	Y
+Repeated disturbing thoughts of stressful experience in past month	NA
+Reported occurrences of cancer	NA
+Reproduciblity of spirometry measurement using ERS/ATS criteria	NA
+Respiration Disorders	NA
+Respiratory abnormalities	NA
+Respiratory arrest	NA
+Respiratory conditions due to inhalation of chemicals, gases, fumes and vapours	NA
+Respiratory disorders in diseases classified elsewhere	NA
+Respiratory failure, insufficiency, arrest	NA
+Respiratory Hypersensitivity	NA
+Respiratory insufficiency	NA
+Respiratory or ear-nose-throat disease	NA
+Respiratory Tract Diseases	NA
+Respiratory Tract Infections	NA
+Respiratory tuberculosis, confirmed	NA
+Restless leg syndrome	NA
+Retained placenta and membranes, without haemorrhage	NA
+Retention of urine	NA
+Reticulocyte count	NA
+Reticulocyte percentage	NA
+Reticulocytosis	NA
+Retinal breaks without detachment	NA
+Retinal detachment with retinal break	NA
+Retinal detachment with retinal defect	NA
+Retinal detachments and breaks	NA
+Retinal detachments and defects	NA
+Retinal Diseases	NA
+Retinal Hemorrhage	NA
+Retinal vascular disorders	NA
+Retinal vascular occlusion	NA
+Retinoschisis and retinal cysts	NA
+Retrobulbar neuritis in diseases classified elsewhere	NA
+Rhesus isoimmunization in pregnancy	NA
+Rheumatic disease of the heart valves	NA
+Rheumatic Heart Disease	NA
+Rheumatism, unspecified	NA
+Rheumatoid arthritis	NA
+rheumatoid arthritis	NA
+Rheumatoid arthritis and other inflammatory polyarthropathies	NA
+Rheumatoid factor	NA
+Rhinitis, Allergic	NA
+Rhinitis, Allergic, Seasonal	NA
+Rhinophyma	NA
+Right bundle-branch block	NA
+risedronate	NA
+Risk taking	Y
+rivaroxaban	NA
+Rooibos tea intake	Y
+rosacea	NA
+Rose wine intake	Y
+Rosuvastatin Calcium	NA
+Rotator Cuff	NA
+Rubella [German measles]	NA
+S00 Superficial injury of head	NA
+S02 Fracture of skull and facial bones	NA
+S05 Injury of eye and orbit	NA
+S06 Intracranial injury	NA
+S29 Other and unspecified injuries of thorax	NA
+S30 Superficial injury of abdomen, lower back and pelvis	NA
+S32 Fracture of lumbar spine and pelvis	NA
+S53 Dislocation, sprain and strain of joints and ligaments of elbow	NA
+S56 Injury of muscle and tendon at forearm level	NA
+S61 Open wound of wrist and hand	NA
+S62 Fracture at wrist and hand level	NA
+S66 Injury of muscle and tendon at wrist and hand level	NA
+S67 Crushing injury of wrist and hand	NA
+S82 Fracture of lower leg, including ankle	NA
+S83 Dislocation, sprain and strain of joints and ligaments of knee	NA
+S86 Injury of muscle and tendon at lower leg level	NA
+Sacrococcygeal disorders, not elsewhere classified	NA
+Sacroiliitis, not elsewhere classified	NA
+Salad / raw vegetable intake	Y
+Salads	Y
+salicylic acid	NA
+salmeterol	NA
+salmeterol/fluticasone	NA
+Salpingitis and oophoritis	NA
+Salt added to food	Y
+Salted nuts intake	Y
+Salted peanuts intake	Y
+Sarcoidosis	NA
+sarcoma	NA
+Satsuma intake	Y
+Sausage intake	Y
+Scabies	NA
+Scarlet fever	NA
+Scavenger receptor class A member 5 measurement	Y
+schizophrenia	NA
+Schizophrenia	NA
+Schizophrenia and other psychotic disorders	NA
+Schizophrenia or delusion (more control exclusions)	NA
+Sciatic Neuropathy	NA
+Sciatica+with lumbago	NA
+Scleritis	NA
+Scoliosis	NA
+seasonal allergic rhinitis	NA
+seasonal allergic rhinitis,allergic rhinitis	NA
+Seated height	NA
+Seating box height	Y
+Sebaceous cyst	NA
+Sebaceous Gland Diseases	NA
+Seborrheic keratosis	NA
+Seborrhoeic dermatitis	NA
+Second degree AV block	NA
+Second line medication for Crohns disease	NA
+Secondary hypertension	NA
+Secondary hypothyroidism	NA
+Secondary malignancy of bone	NA
+Secondary malignancy of lymph nodes	NA
+Secondary malignancy of respiratory organs	NA
+Secondary malignant neoplasm	NA
+Secondary malignant neoplasm of digestive systems	NA
+Secondary malignant neoplasm of liver	NA
+Secondary malignant neoplasm of skin	NA
+Secondary thrombocytopenia	NA
+Seeds intake	Y
+Seen a psychiatrist for nerves, anxiety, tension or depression	NA
+Seen doctor (GP) for nerves, anxiety, tension or depression	NA
+selective alpha1-antagonist|alpha blocker	NA
+selective alpha2-agonist|alpha agonist	NA
+selective beta1 antagonist|beta blocker	NA
+selective beta2 receptor agonist|beta agonist	NA
+selective COX-2 NSAID|non-steroidal anti-inflammatory drug|NSAID	NA
+selective COX-2 NSAID|NSAID|non-steroidal anti-inflammatory drug	NA
+Selective deficiency of immunoglobulin A [IgA]y	NA
+Selective deficiency of immunoglobulin G [IgG] subclasses	NA
+selective estrogen receptor modulator|SERM	NA
+selective histamine H1 inverse agonist|antihistamine	NA
+selective serotonin re-uptake inhibitor|SSRI	NA
+self reported educational attainment	NA
+Seminoma of testis, excluding all cancers (controls excluding all cancers)	NA
+Senile cataract	NA
+Sensitivity / hurt feelings	NA
+Sensitivity and Specificity	NA
+Sensorineural hearing loss	NA
+Separation of retinal layers (serosa)	NA
+Septal defects	NA
+Septicemia	NA
+Sequelae of cerebrovascular disease	NA
+Sequelae of infectious and parasitic diseases	NA
+Seretide 50 evohaler | treatment/medication code	NA
+Seronegative rheumatoid arthritis	NA
+Seropositive rheumatoid arthritis	NA
+Seropositive rheumatoid arthritis, strict definition	NA
+Seropositive rheumatoid arthritis, wide	NA
+serotonin receptor antagonist|alpha-adrenergic receptor antagonist|selective histamine H1 inverse agonist	NA
+serotonin-norepinephrine reuptake inhibitor|SNRI|antidepressant	NA
+Serotransferrin measurement	Y
+Serous carcinoma of ovary, excluding all cancers (controls excluding all cancers)	NA
+sertraline	NA
+Serum Albumin	NA
+Serum amyloid A-2 protein measurement	Y
+Serum phosphate levels	NA
+Severe diabetic background retinopathy	NA
+Severe non-proliferative background diabetic retinopathy	NA
+severe traumatic brain injury, does not include concussion	NA
+Severe visual impairment, monocular	NA
+Severity of manic/irritable episodes	NA
+Sexual Behavior	NA
+Sexual interference by partner or ex-partner without consent as an adult	NA
+SHBG	Y
+short-acting insulin analog|diabetes	NA
+Shortness of breath walking on level ground	NA
+Shoulder lesions	NA
+Sialolithiasis	NA
+Sicca syndrome	NA
+Sicca syndrome [Sjgren]	NA
+Side salad intake	Y
+Signal-to-noise-ratio (SNR) of triplet (left)	NA
+sildenafil	NA
+Simple and unspecified goiter	NA
+Simvador 10mg tablet | treatment/medication code	NA
+simvastatin	NA
+Simvastatin	NA
+Single crust pastry intake	Y
+Single delivery by caesarean section	NA
+Single delivery by forceps and vacuum extractor	NA
+Single spontaneous delivery	NA
+Sinoatrial node dysfunction (Bradycardia)	NA
+Sinusitis	NA
+SIR2-like protein 2 levels	Y
+sitagliptin	NA
+Sitting height	NA
+Size of white wine glass drunk	NA
+Sjogren syndrome	NA
+Sjogren's Syndrome	NA
+Skin cancer	NA
+Skin colour	Y
+Skin Diseases, Papulosquamous	NA
+Skin Diseases, Vesiculobullous	NA
+skin neoplasm	NA
+Skin Neoplasms	NA
+Skull and face fracture and other intercranial injury	NA
+skull fractures	NA
+SLE (Finngen)	NA
+Sleep apnea	NA
+Sleep Apnea Syndromes	NA
+Sleep apnoea, including avohilmo	NA
+Sleep disorders	NA
+Sleep duration	NA
+Sleep Initiation and Maintenance Disorders	NA
+Sleep Wake Disorders	NA
+Sleeplessness / insomnia	NA
+Small cell lung cancer, excluding all cancers (controls excluding all cancers)	NA
+Small fibre neuropathy	NA
+Smoking	NA
+smoking behavior	NA
+Smoking dependency	NA
+Smoking status	NA
+Smoking status, ever vs never	NA
+Smoking/smokers in household	NA
+Snoring	NA
+Sodium Chloride, Dietary	Y
+sodium cromoglicate	NA
+Sodium in urine	NA
+sodium/potassium transporter inhibitor|heart failure	NA
+Soft tissue disorders related to use, overuse and pressure	NA
+Soft Tissue Injuries	NA
+solifenacin	NA
+Somatoform disorder	NA
+Someone to take to doctor when needed as a child	NA
+sotalol	NA
+Source of myocardial infarction report	NA
+Source of NSTEMI report	NA
+Sources of admission to hospital (recoded)	NA
+SPARC-related modular calcium-binding protein 1 measurement	Y
+Specific development disorders of speech and language	NA
+Speech-reception-threshold (SRT) estimate (left)	NA
+Speech-reception-threshold (SRT) estimate (right)	NA
+Spells in hospital	NA
+Spermatocele	NA
+Spherical power (left)	NA
+Spherical power (right)	NA
+Sphingomyelin_32:1_[M+H]1+ levels	Y
+Sphingomyelin_33:1_[M+H]1+ levels	Y
+Sphingomyelin_34:0_[M+H]1+ levels	Y
+Sphingomyelin_34:1_[M+H]1+ levels	Y
+Sphingomyelin_34:2_[M+H]1+ levels	Y
+Sphingomyelin_35:1_[M+H]1+ levels	Y
+Sphingomyelin_36:1_[M+H]1+ levels	Y
+Sphingomyelin_37:1_[M+H]1+ levels	Y
+Sphingomyelin_38:1_[M+H]1+ levels	Y
+Sphingomyelin_38:2_[M+H]1+ levels	Y
+Sphingomyelin_39:1_[M+H]1+ levels	Y
+Sphingomyelin_39:2_[M+H]1+ levels	Y
+Sphingomyelin_40:0_[M+H]1+ levels	Y
+Sphingomyelin_40:1_[M+H]1+ levels	Y
+Sphingomyelin_40:2_[M+H]1+ levels	Y
+Sphingomyelin_40:3_[M+H]1+ levels	Y
+Sphingomyelin_40:3_[M+OAc]1- levels	Y
+Sphingomyelin_41:0_[M+H]1+ levels	Y
+Sphingomyelin_41:2_[M+H]1+ levels	Y
+Sphingomyelin_42:1_[M+H]1+ levels	Y
+Sphingomyelin_42:2_[M+H]1+ levels	Y
+Sphingomyelin_42:3_[M+H]1+ levels	Y
+Sphingomyelin_42:3_[M+OAc]1- levels	Y
+Spinal Diseases	NA
+Spinal instabilities	NA
+Spinal osteochondrosis	NA
+Spinal Stenosis	NA
+Spinal stenosis	NA
+Spinocerebellar Degenerations	NA
+Spirochaetales Infections	NA
+Spleen volume	NA
+Splenomegaly	NA
+Spondylitis, Ankylosing	NA
+Spondyloarthritis	NA
+Spondylolisthesis	NA
+Spondylopathies	NA
+Spondylopathies (FG)	NA
+Spondylosis	NA
+Spondylosis and allied disorders	NA
+Spondylosis with myelopathy	NA
+Spondylosis without myelopathy	NA
+Spontaneous rupture of synovium and tendon	NA
+Squamous cell neoplasms and carcinoma of cervix, excluding all cancers (controls excluding all cancers)	NA
+Squamous cell neoplasms and carcinomas of the skin, excluding all cancers (controls excluding all cancers)	NA
+Squash intake	Y
+Standard tea intake	Y
+Standing height	NA
+Staphylococcus infections	NA
+Started insulin within one year diagnosis of diabetes	NA
+Statin medication	NA
+Status epilepticus	NA
+Status post-ami	NA
+Stenosis and insufficiency of lacrimal passages	NA
+Stewed fruit intake	Y
+Stomach/abdominal pain for 3+ months	NA
+Stomatitis and related lesions	NA
+Stomatitis, Aphthous	NA
+Strabismus	NA
+Strenuous sports | types of physical activity in last 4 weeks	NA
+stress incontinence, female	NA
+Stricture of artery	NA
+Stroke	NA
+stroke	NA
+Stroke, excluding SAH	NA
+Stronger worrying (than other people) during period of worst anxiety	Y
+Subacute thyroiditis	NA
+Subarachnoid haemorrhage	NA
+subarachnoid hemorrhage	NA
+Subdural hemorrhage	NA
+Subjective visual disturbances	NA
+Substance addiction and disorders	NA
+Substance use, excluding alcohol	NA
+Substance-Related Disorders	NA
+Substances taken for anxiety	NA
+Substances taken for depression	NA
+Sudden idiopathic hearing loss	NA
+Suffer from 'nerves'	NA
+Suggestive for eosinophilic asthma	NA
+Suicide or other Intentional self-harm	Y
+sulfasalazine	NA
+Sulfasalazine	NA
+Sulfhydryl oxidase 2 measurement	Y
+sulfonylurea|diabetes	NA
+Sunburn	NA
+Superficial cellulitis and abscess	NA
+Superficial injury without mention of infection	NA
+Suppurative and unspecified otitis media	NA
+Supraventricular premature beats	NA
+Surgery on leg arteries (other than for varicose veins)	NA
+Sushi intake	Y
+Sweet biscuits intake	Y
+Sweet pepper intake	Y
+Sweetcorn intake	Y
+Sweetened cereal intake	Y
+Sweets intake	Y
+Swelling of limb	NA
+Symptoms affecting skin	NA
+Symptoms and disorders of the joints	NA
+Symptoms concerning nutrition, metabolism, and development	Y
+Symptoms involving digestive system	NA
+Symptoms involving head and neck	NA
+Symptoms involving nervous and musculoskeletal systems	NA
+Symptoms involving respiratory system and other chest symptoms	NA
+Syncope and collapse	NA
+Syndrome of inappropriate secretion of antidiuretic hormone	NA
+Synovial cyst of popliteal space [Baker]	NA
+Synoviopathy	NA
+Synovitis and tenosynovitis	NA
+Systemic connective tissue disorders	NA
+systemic lupus erythematosus	NA
+Systemic lupus erythematosus	NA
+Systemic sclerosis	NA
+Systemic sclerosis,strict definition	NA
+Systolic blood pressure, automated reading	NA
+Systolic blood pressure, automated reading, adjusted by medication	NA
+Systolic blood pressure, combined automated + manual reading	NA
+Systolic blood pressure, combined automated + manual reading, adjusted by medication	NA
+Systolic blood pressure, manual reading	NA
+Systolic blood pressure, manual reading, adjusted by medication	NA
+T14 Injury of unspecified body region	NA
+T17 Foreign body in respiratory tract	NA
+T31 Burns classified according to extent of body surface involved	NA
+T40 Poisoning by narcotics and psychodysleptics [hallucinogens]	NA
+T43 Poisoning by psychotropic drugs, not elsewhere classified	NA
+T44 Poisoning by drugs primarily affecting the autonomic nervous system	NA
+T47 Poisoning by agents primarily affecting gastro-intestinal system	NA
+T51 Toxic effect of alcohol	NA
+T80 Complications following infusion, transfusion and therapeutic injection	NA
+T81 Complications of procedures, not elsewhere classified	NA
+T82 Complications of cardiac and vascular prosthetic devices, implants and grafts	NA
+T84 Complications of internal orthopaedic prosthetic devices, implants and grafts	NA
+T85 Complications of other internal prosthetic devices, implants and grafts	NA
+T87 Complications peculiar to reattachment and amputation	NA
+T91 Sequelae of injuries of neck and trunk	NA
+Tachycardia	NA
+Tachycardia, Paroxysmal	NA
+tadalafil	NA
+Taking other prescription medications	NA
+tamoxifen	NA
+tamsulosin	NA
+Tartrate-Resistant Acid Phosphatase	Y
+Tea	Y
+Tea intake	Y
+temazepam	NA
+Temporal arteritis	NA
+Temporomandibular joint disorders	NA
+Temporomandibular joint disorders, including avohilmo	NA
+Tendon Entrapment	NA
+Tense / 'highly strung'	NA
+Tense, sore, or aching muscles during worst period of anxiety	NA
+Tension headache	NA
+terbinafine	NA
+terbutaline	NA
+Testicular dysfunction	NA
+Testicular Germ Cell Tumor	NA
+Testicular Hydrocele	NA
+Testosterone	NA
+tetracycline antibiotic|antibiotic	NA
+thiamine	NA
+thiamine supplement|Food Supplement	Y
+thiazide diuretic|diuretic	NA
+thiazolidinedione|diabetes	NA
+Thickness of butter/margarine spread on baguettes	Y
+Thickness of butter/margarine spread on bread rolls	Y
+Thickness of butter/margarine spread on crackers/crispbreads	Y
+Thickness of butter/margarine spread on large baps	Y
+Thickness of butter/margarine spread on other bread	Y
+Thickness of butter/margarine spread on sliced bread	Y
+Third [oculomotor] nerve palsy	NA
+Thoracic aortic aneurysm	NA
+throat disease	NA
+Throat pain	NA
+Thrombocytopenia	NA
+thrombocytopenia	NA
+Thromboembolism	NA
+Thrombomodulin	Y
+Thromboplastin	Y
+Thyroid cancer	NA
+thyroid carcinoma	NA
+thyroid disease	NA
+thyroid hormone	NA
+Thyroid Nodule	NA
+Thyroid problem (not cancer)	NA
+Thyroiditis	NA
+Thyroiditis, Autoimmune	NA
+Thyroiditis, Subacute	NA
+Thyroiditis, unspecified	NA
+Thyrotoxicosis	NA
+Thyrotoxicosis with diffuse goitre	NA
+Thyrotoxicosis with or without goiter	NA
+Thyrotoxicosis with toxic single thyroid nodule	NA
+Thyroxine	NA
+Thyroxine product | treatment/medication code	NA
+tibia fracture	NA
+Tibial collateral bursitis [Pellegrini-Stieda]	NA
+tibolone	NA
+Time from waking to first cigarette	Y
+Time spend outdoors in summer	NA
+Time spent doing light physical activity	NA
+Time spent doing moderate physical activity	NA
+Time spent doing vigorous physical activity	NA
+Time spent driving	Y
+Time spent outdoors in winter	Y
+Time spent using computer	NA
+Time spent watching television (TV)	Y
+Time spent watching television (tv)	Y
+Time to answer	Y
+Time to complete round	Y
+Tinea	NA
+Tinned tuna intake	Y
+Tinnitus	NA
+Tinnitus severity/nuisance	NA
+tiotropium	NA
+TNF-related activation-induced cytokine levels	Y
+TNF-Related Apoptosis-Inducing Ligand	NA
+Tobacco smoking	NA
+Tobacco use	NA
+Tobacco use disorder	NA
+tolterodine	NA
+Tongue abnormality	NA
+tongue neoplasm	NA
+Tonsillectomy and adenotomy	NA
+Tonsillitis	NA
+Tooth agenesis EXCLUDE clefts and syndromes	NA
+Tooth Diseases	NA
+Torsion dystonia	NA
+Torticollis	NA
+Total bilirubin	NA
+Total protein	NA
+Total thigh muscle volume	NA
+Townsend deprivation index at recruitment	Y
+Toxic effect of ethanol	NA
+Toxic liver disease	NA
+Toxic multinodular goiter	NA
+Tracheitis	NA
+Traction detachment of retina	NA
+tramadol	NA
+tranexamic acid	NA
+Transient ischemic attack	NA
+Transport type for commuting to job workplace	NA
+Trauma exposure	Y
+Traumatic arthropathy	NA
+travoprost	NA
+trazodone	NA
+Treatment speciality of consultant (recoded)	Y
+Treatment/medication code	NA
+Triacylglycerol_46:5_[M+NH4]1+ levels	Y
+Triacylglycerol_47:4_[M+NH4]1+ levels	Y
+Triacylglycerol_48:2_[M+NH4]1+ levels	Y
+Triacylglycerol_48:3_[M+NH4]1+ levels	Y
+Triacylglycerol_48:4_[M+NH4]1+ levels	Y
+Triacylglycerol_49:2_[M+NH4]1+ levels	Y
+Triacylglycerol_49:3_[M+NH4]1+ levels	Y
+Triacylglycerol_50:2_[M+NH4]1+ levels	Y
+Triacylglycerol_50:3_[M+NH4]1+ levels	Y
+Triacylglycerol_50:4_[M+NH4]1+ levels	Y
+Triacylglycerol_51:2_[M+NH4]1+ levels	Y
+Triacylglycerol_51:3_[M+NH4]1+ levels	Y
+Triacylglycerol_51:4_[M+NH4]1+ levels	Y
+Triacylglycerol_52:1_[M+NH4]1+ levels	Y
+Triacylglycerol_52:2_[M+NH4]1+ levels	Y
+Triacylglycerol_52:3_[M+NH4]1+ levels	Y
+Triacylglycerol_52:4_[M+NH4]1+ levels	Y
+Triacylglycerol_52:5_[M+NH4]1+ levels	Y
+Triacylglycerol_53:2_[M+NH4]1+ levels	Y
+Triacylglycerol_53:3_[M+NH4]1+ levels	Y
+Triacylglycerol_53:4_[M+NH4]1+ levels	Y
+Triacylglycerol_53:5_[M+NH4]1+ levels	Y
+Triacylglycerol_54:2_[M+NH4]1+ levels	Y
+Triacylglycerol_54:3_[M+NH4]1+ levels	Y
+Triacylglycerol_54:4_[M+NH4]1+ levels	Y
+Triacylglycerol_54:5_[M+NH4]1+ levels	Y
+Triacylglycerol_55:8_[M+NH4]1+ levels	Y
+Triacylglycerol_55:9_[M+NH4]1+ levels	NA
+Triacylglycerol_56:4_[M+NH4]1+ levels	Y
+Triacylglycerol_56:5_[M+NH4]1+ levels	Y
+tricyclic antidepressant|antidepressant	NA
+tricyclic antihistamine|selective histamine H1 inverse agonist|antihistamine	NA
+Trigeminal nerve disorders [CN5]	NA
+Triglycerides	NA
+trimethoprim	NA
+Trochanteric bursitis	NA
+Trouble falling asleep	NA
+Trouble falling or staying asleep, or sleeping too much	NA
+Trunk fat mass	NA
+Trunk fat percentage	NA
+Trunk fat-free mass	NA
+Trunk predicted mass	NA
+Tuberculosis, wide	NA
+Tumor Necrosis Factor Ligand Superfamily Member 14	Y
+Tumor Necrosis Factor-alpha	Y
+Turnip/swede intake	Y
+Twin gestation	NA
+Type 1 diabetes	NA
+type 1 diabetes mellitus	NA
+Type 1 diabetes with coma	NA
+Type 1 diabetes with ketoacidosis	NA
+Type 1 diabetes with neurological complications	NA
+Type 1 diabetes with ophthalmic complications	NA
+Type 1 diabetes with ophthalmic manifestations	NA
+Type 1 diabetes with other specified/multiple/unspecified complications	NA
+Type 1 diabetes with renal complications	NA
+Type 1 diabetes without complications	NA
+Type 1 diabetes, definitions combined	NA
+Type 1 diabetes, strict definition, subgroup 2	NA
+Type 2 diabetes	NA
+type 2 diabetes mellitus	NA
+Type 2 diabetes with ketoacidosis	NA
+Type 2 diabetes with neurological manifestations	NA
+Type 2 diabetes with ophthalmic complications	NA
+Type 2 diabetes with ophthalmic manifestations	NA
+Type 2 diabetes with other specified/multiple/unspecified complications	NA
+Type 2 diabetes without complications	NA
+Type 2 diabetes, definitions combined	NA
+Type 2 diabetes, wide definition	NA
+Type of accommodation lived in	NA
+Type of baguette eaten	NA
+Type of bread roll eaten	NA
+Type of fat/oil used in cooking	NA
+Type of large bap eaten	NA
+Type of sliced bread eaten	NA
+Type of tobacco currently smoked	NA
+Type of yogurt eaten	NA
+Type1 diabetes, definitions combined, early onset	NA
+Types of physical activity in last 4 weeks	NA
+Types of spread used on bread/crackers	NA
+Types of spreads/sauces consumed	NA
+Types of transport used (excluding work)	NA
+U80 Agent resistant to penicillin and related antibiotics	NA
+U82 Resistance to betalactam antibiotics	NA
+U83 Resistance to other antibiotics	NA
+Ulcer of esophagus	NA
+Ulcer of lower limb, not elsewhere classified	NA
+Ulcer of oesophagus, drug-induced	NA
+Ulcer of vagina/vulva	NA
+ulcerative colitis	NA
+Ulcerative colitis	NA
+Ulcerative colitis (strict definition, require KELA, min 2 HDR)	NA
+Ulcerative colitis (strict) with PSC	NA
+Ulcerative colitis, NAS	NA
+Ulcerative enterocolitis	NA
+Ulcerative ileocolitis	NA
+Ulcerative proctitis	NA
+Ulna Fractures	NA
+Umbilical hernia	NA
+Undefined dementia	NA
+Undefined dementia (more controls excluded)	NA
+unipolar depression	NA
+Universal erythroderma, KELA reimbursement	NA
+Unsalted nuts intake	Y
+Unspecific neurodegenerative disorder	NA
+Unspecified acute lower respiratory infection	NA
+Unspecified behavioural syndromes associated with physiological disturbances and physical factors +Physiological and behavioural factors associated with disorders of diseases classified elsewhere	NA
+Unspecified dementia	NA
+Unspecified diabetes	NA
+Unspecified diabetic retinopathy	NA
+Unspecified monoarthritis	NA
+Unspecified parasitic disease	NA
+Unspecified protein-energy malnutrition	NA
+Unstable angina (intermediate coronary syndrome)	NA
+Urate	NA
+Urea	NA
+Urethral stricture	NA
+Urethritis and urethral syndrome	NA
+urgency urinary incontinence	NA
+urinary bladder carcinoma	NA
+Urinary calculus	NA
+Urinary obstruction	NA
+Urinary Retention	NA
+Urinary tract infection	NA
+Urokinase-Type Plasminogen Activator	Y
+Urticaria	NA
+Use of disulfiram, acamprosate or naltrexone	NA
+Use of hypnotics and sedatives	NA
+Use of sun/uv protection	Y
+Used an inhaler for chest within last hour	NA
+Usual side of head for mobile phone use	NA
+Usual walking pace	Y
+Uterine leiomyoma	NA
+Uterine Prolapse	NA
+Uterine/Uterovaginal prolapse	NA
+Uveitis, noninfectious or NOS	NA
+Uveitis, Posterior	NA
+V13 Pedal cyclist injured in collision with car, pick-up truck or van	NA
+V28 Motorcycle rider injured in noncollision transport accident	NA
+Vaginitis/vulvovaginitis/vulvitis/abscess of vulva	NA
+Valgus deformity, not elsewhere classified	NA
+varenicline	NA
+Variation in diet	Y
+Varicose Veins	NA
+Varicose veins	NA
+Varicose veins (no controls excluded)	NA
+Varicose veins of lower extremity	NA
+Varicose veins of lower extremity, symptomtic	NA
+Vascular dementia	NA
+Vascular dementia (mixed)	NA
+Vascular dementia (subcortical)	NA
+Vascular dementia (undefined)	NA
+Vascular Diseases	NA
+Vascular diseases of the intestine	NA
+Vascular disorders of skin	NA
+Vascular disorders of the intestines	NA
+Vascular Endothelial Growth Factor A	NA
+Vascular Endothelial Growth Factor D	Y
+Vascular insufficiency of intestine	NA
+Vascular Stiffness	NA
+Vascular/heart problems diagnosed by doctor	NA
+vasculitis	NA
+Vasomotor rhinitis (mode)	NA
+Vegetable consumers	NA
+Vegetable pieces intake	Y
+Vegetarian alternatives intake	Y
+venlafaxine	NA
+Venous complications and haemorrhoids in pregnancy	NA
+Venous complications and haemorrhoids in the puerperium	NA
+Venous Thromboembolism	NA
+Venous thromboembolism	NA
+Venous Thrombosis	NA
+Ventolin 100micrograms inhaler | treatment/medication code	NA
+Ventral hernia	NA
+Ventricular rate	NA
+Vertebral, anorectal, cardiavascular, thracheoesophagial, renal and limb anomaly	NA
+Vertiginous syndromes and other disorders of vestibular system	NA
+Vertigo	NA
+Vesicular integral-membrane protein VIP36 measurement	Y
+Vestibular Neuronitis	NA
+Viral agents as the cause of diseases classified to other chapters	NA
+Viral and other specified intestinal infections	NA
+Viral haemorrhagic fevers, not elsewhere classified/unspecified	NA
+Viral hepatitis	NA
+Viral hepatitis C	NA
+Viral infections characterized by skin and mucous membrane lesions	NA
+Viral pneumonia	NA
+Viral warts	NA
+Viral warts & HPV	NA
+Virus Diseases	NA
+Vision Disorders	NA
+Visual field defects	NA
+Visual impairment including blindness (binocular or monocular)	NA
+Visual loss	NA
+Vital Capacity	NA
+Vitamin and mineral supplements	NA
+Vitamin and/or mineral supplement use	NA
+Vitamin B 12 Deficiency	NA
+Vitamin B-complex deficiencies	NA
+vitamin B12	NA
+Vitamin B6	NA
+Vitamin C	NA
+Vitamin D	NA
+Vitamin D Deficiency	NA
+Vitamin D deficiency	NA
+vitamin D derivative	NA
+vitamin D derivative|dietary supplement	NA
+Vitamin K-dependent protein C measurement	Y
+vitamin supplement exposure measurement	Y
+Vitiligo	NA
+Volume level set by participant (left)	NA
+Volume level set by participant (right)	Y
+von Willebrand Diseases	NA
+von Willebrand factor A domain-containing protein 1 measurement	Y
+von Willebrand factor measurement	Y
+Von willebrand's disease	NA
+W01 Fall on same level from slipping, tripping and stumbling	NA
+W07 Fall involving chair	NA
+W11 Fall on and from ladder	NA
+W13 Fall from, out of or through building or structure	NA
+W19 Unspecified fall	NA
+W21 Striking against or struck by sports equipment	Y
+W31 Contact with other and unspecified machinery	NA
+W54 Bitten or struck by dog	NA
+Waist circumference	NA
+waist-hip ratio	NA
+Waking too early	NA
+Waldenstrom macroglobulinemia, lymphoplasmacytic lymphoma, excluding all cancers (controls excluding all cancers)	NA
+Walking Speed	NA
+warfarin	NA
+Warfarin	NA
+Water intake	Y
+Watercress intake	Y
+Wears glasses or contact lenses	NA
+Weekly usage of mobile phone in last 3 months	Y
+Wegener granulomatosis	NA
+Wegener's granulomatosis	NA
+Weight	NA
+Weight change compared with 1 year ago	NA
+Weight change during worst episode of depression	NA
+Weight, inverse-rank normalized	NA
+Weight, manual entry	NA
+Wet age-related macular degeneration	NA
+Wet Macular Degeneration	NA
+Wheeze or whistling in the chest in last year	NA
+Which eye(s) affected by astigmatism	NA
+Which eye(s) affected by hypermetropia (long sight)	NA
+Which eye(s) affected by presbyopia	NA
+White | bread type	Y
+White blood cell (leukocyte) count	NA
+White fish intake	Y
+White rice intake	Y
+White wine intake	Y
+Whole body fat mass	NA
+Whole body fat-free mass	NA
+Whole body water mass	Y
+Whole egg intake	Y
+Wholemeal pasta intake	Y
+Whooping Cough	NA
+Why reduced smoking	NA
+Why stopped smoking	NA
+Witnessed sudden violent death	NA
+Work hours per week - exact value	Y
+Work/job satisfaction	NA
+Worked with materials containing asbestos	NA
+Worked with paints, thinners or glues	NA
+Worked with pesticides	NA
+Workplace had a lot of cigarette smoke from other people smoking	NA
+Workplace had a lot of diesel exhaust	NA
+Workplace very cold	NA
+Workplace very hot	NA
+Workplace very noisy	NA
+Worrier / anxious feelings	NA
+Worry too long after embarrassment	NA
+X40 Accidental poisoning by and exposure to nonopioid analgesics, antipyretics and antirheumatics	NA
+X44 Accidental poisoning by and exposure to other and unspecified drugs, medicaments and biological substances	NA
+X50 Overexertion and strenuous or repetitive movements	NA
+X51 Travel and motion	Y
+X58 Exposure to other specified factors	NA
+X61 Intentional self-poisoning by and exposure to antiepileptic, sedative-hypnotic, anti-Parkinsonism and psychotropic drugs, not elsewhere classified	NA
+X62 Intentional self-poisoning by and exposure to narcotics and psychodysleptics [hallucinogens], not elsewhere classified	NA
+X64 Intentional self-poisoning by and exposure to other and unspecified drugs, medicaments and biological substances	NA
+X99 Assault by sharp object	Y
+Xanthelasma of eyelid	NA
+xanthine oxidase inhibitor|anti-gout agent	NA
+Y04 Assault by bodily force	NA
+Y40 Systemic antibiotics	NA
+Y41 Other systemic anti-infectives and antiparasitics	NA
+Y43 Primarily systemic agents	NA
+Y46 Antiepileptics and anti-Parkinsonism drugs	NA
+Y57 Other and unspecified drugs and medicaments	NA
+Y65 Other misadventures during surgical and medical care	NA
+Y83 Surgical operation and other surgical procedures as the cause of abnormal reaction of the patient, or of later complication, without mention of misadventure at the time of the procedure	NA
+Y84 Other medical procedures as the cause of abnormal reaction of the patient, or of later complication, without mention of misadventure at the time of the procedure	NA
+Y85 Sequelae of transport accidents	NA
+Year ended full time education	Y
+Year gap started	Y
+Year immigrated to UK (United Kingdom)	NA
+Year job started	NA
+Year of birth	NA
+Years since last cervical smear test	NA
+Yes, because of other reasons | major dietary changes in the last 5 years	Y
+Yorkshire pudding intake	Y
+Z00 General examination and investigation of persons without complaint or reported diagnosis	NA
+Z01 Other special examinations and investigations of persons without complaint or reported diagnosis	NA
+Z03 Medical observation and evaluation for suspected diseases and conditions	Y
+Z08 Follow-up examination after treatment for malignant neoplasm	NA
+Z09 Follow-up examination after treatment for conditions other than malignant neoplasms	NA
+Z13 Special screening examination for other diseases and disorders	NA
+Z29 Need for other prophylactic measures	NA
+Z34 Supervision of normal pregnancy	NA
+Z36 Antenatal screening	NA
+Z41 Procedures for purposes other than remedying health state	NA
+Z42 Follow-up care involving plastic surgery	NA
+Z45 Adjustment and management of implanted device	NA
+Z47 Other orthopaedic follow-up care	NA
+Z50 Care involving use of rehabilitation procedures	NA
+Z51 Other medical care	NA
+Z53 Persons encountering health services for specifie procedures, not carried out	NA
+Z60 Problems related to social environment	Y
+Z63 Other problems related to primary support group, including family circumstances	NA
+Z71 Persons encountering health services for other counselling and medical advice, not elsewhere classified	NA
+Z73 Problems related to life-management difficulty	NA
+Z74 Problems related to care-provider dependency	NA
+Z75 Problems related to medical facilities and other health care	NA
+Z80 Family history of malignant neoplasm	NA
+Z82 Family history of certain disabilities and chronic diseases leading to disablement	NA
+Z84 Family history of other conditions	NA
+Z85 Personal history of malignant neoplasm	NA
+Z86 Personal history of certain other diseases	NA
+Z88 Personal history of allergy to drugs, medicaments and biologocal substances	NA
+Z90 Acquired absence of organs, not elsewhere classified	NA
+Z92 Personal history of medical treatment	NA
+Z93 Artificial opening status	NA
+Z95 Presence of cardiac and vascular implants and grafts	NA
+Z96 Presence of other functional implants	NA
+Z98 Other postsurgical states	NA
+Z99 Dependence on enabling machines and devices, not elsewhere classified	NA
+zolpidem	NA

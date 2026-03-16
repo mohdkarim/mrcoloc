@@ -40,6 +40,9 @@ Rscript scripts/mrcoloc_paper_2025_supp_figures.R
 
 # Generate supplementary tables (ST1-ST17)
 Rscript scripts/generate_mrcoloc_supplement.R
+
+# Generate flowchart numbers (requires supplement output)
+Rscript scripts/flowchart_numbers.R
 ```
 
 Or run the full setup in one command:
@@ -60,6 +63,9 @@ All data is automatically downloaded by `scripts/download_data.R`:
 ### Data Sources
 - **Zenodo DOI**: [10.5281/zenodo.18451758](https://doi.org/10.5281/zenodo.18451758)
 - **Minikel et al. Nature 2024**: [10.1038/s41586-024-07316-0](https://doi.org/10.1038/s41586-024-07316-0)
+
+### Optional: TOP-LD for protein-altering variant annotation
+The supplementary table pipeline includes optional PAV annotation using [TOP-LD](https://github.com/linnabrown/topld_api) (Huang et al. 2022). If the TOP-LD binary is not present, the pipeline completes normally with PAV columns set to NA. To enable PAV annotation, clone the TOP-LD repository into `topld_api/` at the project root and provide LD reference data from [LDlink](https://ldlink.nih.gov/?tab=apiaccess). See the inline documentation in `scripts/generate_mrcoloc_supplement.R` for step-by-step instructions.
 
 ## Repository Structure
 ```
@@ -91,11 +97,13 @@ mrcoloc/
 # Install required packages
 install.packages(c(
   "tidyverse", "data.table", "openxlsx", "DescTools",
-  "ggplot2", "UpSetR", "googlesheets4", "ckbplotr"
+  "UpSetR", "ckbplotr", "fuzzyjoin", "Rmpfr",
+  "binom", "epitools", "lawstat", "weights",
+  "DiagrammeR", "DiagrammeRsvg", "htmlwidgets"
 ))
 
 # Bioconductor packages
-BiocManager::install(c("AnnotationDbi", "org.Hs.eg.db"))
+BiocManager::install(c("AnnotationDbi", "org.Hs.eg.db", "biomaRt"))
 ```
 
 ## Outputs
@@ -113,8 +121,8 @@ BiocManager::install(c("AnnotationDbi", "org.Hs.eg.db"))
 ### Supplementary Tables
 | Table | Description |
 |-------|-------------|
-| ST1 | Outcome GWAS datasets |
-| ST2 | Proteomic GWAS datasets |
+| ST1 | Proteomic GWAS datasets |
+| ST2 | Outcome GWAS datasets |
 | ST3 | Excluded traits |
 | ST4 | Figure 1a enrichment data |
 | ST5 | Figure 1b UpSet plot data |

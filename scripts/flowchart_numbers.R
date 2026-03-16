@@ -37,13 +37,10 @@ suppressPackageStartupMessages({
   library(org.Hs.eg.db)
   library(tidyverse)
   library(data.table)
-  library(googlesheets4)
   library(DiagrammeR)
   library(DiagrammeRsvg)
   library(htmlwidgets)
 })
-
-gs4_deauth()
 
 # --- Paths ---
 project_root <- Sys.getenv("MRCOLOC_ROOT", 
@@ -67,7 +64,7 @@ flowchart <- list()
 # SECTION 1: pQTL DATA SOURCES
 # ============================================================================
 
-message("[1/10] Counting pQTL data sources...")
+message("[1/10] pQTL data sources...")
 
 pqtl_datasets <- tribble(
   ~dataset, ~platform, ~n_proteins, ~sample_size,
@@ -93,7 +90,7 @@ cat("   pQTL datasets: ", flowchart$pqtl_n_datasets, "\n")
 # SECTION 2: OUTCOME GWAS SOURCES
 # ============================================================================
 
-message("[2/10] Counting outcome GWAS sources...")
+message("[2/10] outcome GWAS sources...")
 
 flowchart$gwas_total <- 8762
 flowchart$gwas_catalog <- 754
@@ -128,8 +125,8 @@ if (!file.exists(st7_path)) {
 ST7 <- readRDS(st7_path)
 
 # Excluded traits
-toremove <- read_sheet("https://docs.google.com/spreadsheets/d/1TDz8oRI5H-DMHOTs0bZgm2dcisYeuvdSCybn4NcHESw", 
-                       sheet = "v4") %>% filter(to_remove == "Y")
+toremove <- read_tsv(file.path(data_dir, "excluded_traits.tsv"), show_col_types = FALSE) %>%
+  filter(to_remove == "Y")
 flowchart$traits_excluded <- nrow(toremove)
 
 # Target-trait pair counts from ST7
@@ -230,10 +227,7 @@ cat("   Pharmaprojects total T-I pairs: ", format(flowchart$pharmaprojects_total
 
 message("[7/10] Building background gene set (pgenes)...")
 
-olink <- read_sheet(
-  "https://docs.google.com/spreadsheets/d/1DBHpr_Y3pFja4tMju3ZDJV8Gv-oTLq6wEuS0HtYjGbQ",
-  sheet = "olink_complete"
-)
+olink <- read_tsv(file.path(data_dir, "olink_complete.tsv"), show_col_types = FALSE)
 
 olink2 <- olink %>%
   separate_rows(`Uniprot ID`, sep = ",") %>%
@@ -655,9 +649,8 @@ cat("
 
 Output files:
   1. ", csv_path, "
-  2. ", svg_file, "
-  3. ", html_file, "
-  4. ", verif_path, "
+  2. ", html_file, "
+  3. ", verif_path, "
 
 KEY NUMBERS FOR MANUSCRIPT:
 ───────────────────────────────────────────────────────────────────────────────
