@@ -48,6 +48,24 @@ cat("
 
 message("[0/12] Loading packages and configuration...")
 
+# Auto-install missing CRAN packages
+cran_pkgs <- c("tidyverse", "data.table", "Rmpfr", "stringr", "openxlsx", "DescTools",
+               "binom", "epitools", "janitor", "glue", "lawstat", "weights", "optparse", "MASS")
+missing <- cran_pkgs[!cran_pkgs %in% installed.packages()[,"Package"]]
+if (length(missing) > 0) {
+  message("   Installing missing CRAN packages: ", paste(missing, collapse = ", "))
+  install.packages(missing, repos = "https://cloud.r-project.org")
+}
+
+# Auto-install missing Bioconductor packages
+bioc_pkgs <- c("AnnotationDbi", "org.Hs.eg.db", "biomaRt")
+missing_bioc <- bioc_pkgs[!bioc_pkgs %in% installed.packages()[,"Package"]]
+if (length(missing_bioc) > 0) {
+  message("   Installing missing Bioconductor packages: ", paste(missing_bioc, collapse = ", "))
+  if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager")
+  BiocManager::install(missing_bioc, ask = FALSE, update = FALSE)
+}
+
 suppressPackageStartupMessages({
   library(AnnotationDbi)
   library(org.Hs.eg.db)

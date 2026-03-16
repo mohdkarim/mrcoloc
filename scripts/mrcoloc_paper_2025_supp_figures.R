@@ -26,11 +26,19 @@ message("
 
 message("[0/5] Loading packages...")
 
+# Auto-install missing packages
+cran_pkgs <- c("tidyverse", "data.table", "DescTools", "ckbplotr", "fuzzyjoin", "scales",
+               "binom", "epitools", "janitor", "glue", "lawstat", "weights", "openxlsx", "optparse", "MASS")
+missing <- cran_pkgs[!cran_pkgs %in% installed.packages()[,"Package"]]
+if (length(missing) > 0) {
+  message("   Installing missing packages: ", paste(missing, collapse = ", "))
+  install.packages(missing, repos = "https://cloud.r-project.org")
+}
+
 suppressPackageStartupMessages({
   library(tidyverse)
   library(data.table)
   library(DescTools)
-
   library(ckbplotr)
   library(grid)
   library(fuzzyjoin)

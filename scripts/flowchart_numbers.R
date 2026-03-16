@@ -32,6 +32,14 @@ cat("
 
 message("[0/10] Loading packages and configuration...")
 
+# Auto-install missing packages
+cran_pkgs <- c("tidyverse", "data.table", "DiagrammeR", "DiagrammeRsvg", "htmlwidgets")
+missing <- cran_pkgs[!cran_pkgs %in% installed.packages()[,"Package"]]
+if (length(missing) > 0) {
+  message("   Installing missing packages: ", paste(missing, collapse = ", "))
+  install.packages(missing, repos = "https://cloud.r-project.org")
+}
+
 suppressPackageStartupMessages({
   library(tidyverse)
   library(data.table)

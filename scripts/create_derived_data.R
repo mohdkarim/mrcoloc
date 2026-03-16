@@ -25,13 +25,21 @@ cat("
 # SETUP
 # ============================================================================
 
-# Check for required packages
-required_packages <- c("tidyverse", "data.table")
-missing_packages <- required_packages[!required_packages %in% installed.packages()[,"Package"]]
+# Auto-install missing CRAN packages
+cran_pkgs <- c("tidyverse", "data.table")
+missing <- cran_pkgs[!cran_pkgs %in% installed.packages()[,"Package"]]
+if (length(missing) > 0) {
+  cat("Installing missing CRAN packages:", paste(missing, collapse = ", "), "\n")
+  install.packages(missing, repos = "https://cloud.r-project.org")
+}
 
-if (length(missing_packages) > 0) {
-  cat("Installing missing packages:", paste(missing_packages, collapse = ", "), "\n")
-  install.packages(missing_packages, repos = "https://cloud.r-project.org")
+# Bioconductor packages (needed for pgenes construction)
+bioc_pkgs <- c("AnnotationDbi", "org.Hs.eg.db")
+missing_bioc <- bioc_pkgs[!bioc_pkgs %in% installed.packages()[,"Package"]]
+if (length(missing_bioc) > 0) {
+  cat("Installing missing Bioconductor packages:", paste(missing_bioc, collapse = ", "), "\n")
+  if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager")
+  BiocManager::install(missing_bioc, ask = FALSE, update = FALSE)
 }
 
 suppressPackageStartupMessages({
