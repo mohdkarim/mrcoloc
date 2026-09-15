@@ -216,37 +216,149 @@ if (exists("t_step")) message("   done (", round(difftime(Sys.time(), t_step, un
 cat("--- Creating pgenes.rds ---\n\n")
 t_step <- Sys.time()
 
-pgenes_file <- file.path(data_raw, "pgenes.rds")
+# ---------------------------------------------------------------------------
+# [R2.10 FIX] Revised for the Nature Medicine revision, in response to
+# Reviewer 2 comment 10. Two defects in the previous version:
+#
+#  (1) Olink panel accessions were mapped to symbols by a single route
+#      (org.Hs.eg.db) and unmapped accessions were then silently dropped by
+#      filter(!is.na(...)). 40 of 2,960 accessions fail that mapping, and two of
+#      them - LPA and PSCA - are drug targets assayed by UKB-PPP with
+#      Bonferroni-significant pQTL MR associations. They were therefore missing
+#      from the very background they belong in, which inflated the headline
+#      relative success estimate. Accessions are now resolved through BOTH
+#      available routes (the local data/olink_complete_extended.tsv UniProt ->
+#      Gene name table, and org.Hs.eg.db) and the union taken; 22 symbols
+#      resolve only via the local table and 103 only via org.Hs.eg.db, so
+#      neither route alone is sufficient. Accessions unresolvable by both are
+#      now REPORTED rather than silently discarded.
+#
+#  (2) No per-platform measured-protein sets existed, so the per-platform rows
+#      of Figure 1a fell back to `platform == p` in merge3_pqtl. That column is
+#      only populated on Bonferroni-significant rows, so those backgrounds were
+#      conditioned on the very evidence under test. We now also emit
+#      pgenes_platform.rds, which decomposes pgenes by platform, and the figure
+#      script uses it for the platform backgrounds.
+#
+# A protein tested for pQTL MR is additionally unioned in as a completeness
+# backstop, restricted to symbols that appear as targets in the therapeutic
+# index - only those can affect any target-indication estimate, and the
+# restriction discards parsing junk by construction (sub("_.*$", "", key)
+# truncates compound protein names such as CKMT1A_CKMT1B).
+#
+# LIMITATION: the unfiltered MR dataset does not contain UKBPPP_2023, which is
+# why the Olink panel manifest is needed to represent UKB-PPP. For the seven
+# other studies the protein lists derive from proteins that had a testable
+# instrument, so assayed proteins with no detected pQTL are under-represented
+# for the SomaScan studies. Closing that would require their assay manifests,
+# which are not available here. See peer_review/background_bug_and_fix.txt.
+# ---------------------------------------------------------------------------
 
-if (file.exists(pgenes_file)) {
-  cat("  [SKIP] Already exists:", basename(pgenes_file), "\n\n")
+pgenes_file   <- file.path(data_raw, "pgenes.rds")
+platform_file <- file.path(data_raw, "pgenes_platform.rds")
+rebuild_pgenes <- isTRUE(as.logical(Sys.getenv("MRCOLOC_REBUILD_PGENES", "FALSE")))
+
+if (file.exists(pgenes_file) && file.exists(platform_file) && !rebuild_pgenes) {
+  cat("  [SKIP] Already exists:", basename(pgenes_file), "+", basename(platform_file), "\n\n")
 } else {
   suppressPackageStartupMessages({
     library(AnnotationDbi)
     library(org.Hs.eg.db)
   })
 
-  # Olink genes
-  cat("  Loading Olink panel genes...\n")
-  olink <- read_tsv(file.path(project_root, "data", "olink_complete.tsv"), show_col_types = FALSE)
-  olink2 <- olink %>%
-    separate_rows(`Uniprot ID`, sep = ",") %>%
-    mutate(hgnc_protein = AnnotationDbi::mapIds(org.Hs.eg.db, keys = `Uniprot ID`,
-           column = "SYMBOL", keytype = "UNIPROT", multiVals = "first")) %>%
-    filter(!is.na(hgnc_protein))
-  olink_genes <- unique(as.character(olink2$hgnc_protein))
+  # Sentinel strings that must never enter a gene set. "NULL" was present in the
+  # pre-revision pgenes.rds, from as.character() on an unmapped accession.
+  BAD_SYMBOLS <- c("NA", "NULL", "", "NaN")
 
-  # Other genes from unfiltered dataset
-  cat("  Extracting gene list from unfiltered dataset...\n")
+  plat_of <- function(x) case_when(
+    x %in% c("UKBPPP_2023", "SCALLOP_2020", "HILLARY_2019", "FOLKERSEN_2017") ~ "Olink",
+    x %in% c("SUN_2018", "SUHRE_2017", "PIETZNER_2020")                       ~ "Somascan",
+    x == "OLLI_2017"                                                          ~ "Other",
+    TRUE ~ NA_character_
+  )
+
+  # --- 1. Olink assay manifest, resolved by both available routes ------------
+  cat("  Resolving Olink panel accessions to gene symbols (two routes)...\n")
+  acc <- read_tsv(file.path(project_root, "data", "olink_complete.tsv"),
+                  show_col_types = FALSE) %>%
+    separate_rows(`Uniprot ID`, sep = ",") %>%
+    mutate(up = trimws(`Uniprot ID`)) %>%
+    filter(!is.na(up), up != "") %>%
+    distinct(up)
+
+  local_map <- read_tsv(file.path(project_root, "data", "olink_complete_extended.tsv"),
+                        show_col_types = FALSE) %>%
+    transmute(up = `UniProt ID`, sym = `Gene name`) %>%
+    filter(!is.na(up), !is.na(sym)) %>%
+    distinct()
+
+  res <- acc %>%
+    left_join(local_map, by = "up") %>%
+    group_by(up) %>%
+    summarise(sym_local = dplyr::first(na.omit(sym)), .groups = "drop")
+
+  res$sym_orgdb <- tryCatch(
+    as.character(suppressMessages(AnnotationDbi::mapIds(
+      org.Hs.eg.db, keys = res$up, column = "SYMBOL",
+      keytype = "UNIPROT", multiVals = "first"))),
+    error = function(e) { cat("    [warn] org.Hs.eg.db UNIPROT mapping unavailable\n"); NA_character_ }
+  )
+
+  olink_panel <- setdiff(unique(na.omit(c(res$sym_local, res$sym_orgdb))), BAD_SYMBOLS)
+  cat(sprintf("    accessions %d -> symbols %d | local-only %d, orgdb-only %d, unresolved %d\n",
+              nrow(res), length(olink_panel),
+              sum(!is.na(res$sym_local) & is.na(res$sym_orgdb)),
+              sum(is.na(res$sym_local) & !is.na(res$sym_orgdb)),
+              sum(is.na(res$sym_local) & is.na(res$sym_orgdb))))
+
+  # --- 2. Per-study protein lists from the unfiltered MR dataset -------------
+  cat("  Extracting per-study protein lists (large file, ~3 min)...\n")
   df_unfiltered <- readRDS(file.path(data_raw,
     "mr_prot_unfiltered_dataset_v1_v2_without_egger_with_transcoloc.rds"))
-  othergenes <- unique(df_unfiltered$hgnc_protein[!is.na(df_unfiltered$hgnc_protein)])
+  study_prot <- df_unfiltered %>%
+    transmute(prot = hgnc_protein, study = as.character(Data)) %>%
+    filter(!is.na(prot), prot != "") %>%
+    mutate(platform = plat_of(study)) %>%
+    distinct()
   rm(df_unfiltered); gc(verbose = FALSE)
 
-  pgenes <- unique(c(olink_genes, othergenes))
+  # --- 3. Completeness backstop: proteins tested for pQTL MR ----------------
+  # Vocabulary is merge2's gene column (the therapeutic index). Verified
+  # identical to unique(merge3_pqtl$gene) - 2,517 symbols both ways - and used
+  # here because merge3_pqtl.rds is created later in this script.
+  cat("  Extracting tested proteins from pqtl_mrcoloc_2025.rds...\n")
+  ti_genes <- read_tsv(file.path(project_root, "data", "minikel", "merge2.tsv.gz"),
+                       show_col_types = FALSE) %>%
+    filter(!is.na(gene), gene != "") %>% distinct(gene) %>% pull(gene)
+
+  pq <- readRDS(file.path(data_raw, "pqtl_mrcoloc_2025.rds"))
+  tested <- tibble(prot = sub("_.*$", "", pq$key), study = as.character(pq$Data)) %>%
+    filter(!is.na(prot), prot != "") %>%
+    mutate(platform = plat_of(study)) %>%
+    distinct()
+  rm(pq); gc(verbose = FALSE)
+
+  # --- 4. Assemble ----------------------------------------------------------
+  pset <- function(p) setdiff(unique(c(
+    study_prot$prot[study_prot$platform == p],
+    intersect(tested$prot[tested$platform == p], ti_genes))), BAD_SYMBOLS)
+
+  pgenes_platform <- list(
+    Olink    = setdiff(unique(c(olink_panel, pset("Olink"))), BAD_SYMBOLS),
+    Somascan = pset("Somascan"),
+    Other    = pset("Other")
+  )
+  pgenes <- unique(unlist(pgenes_platform, use.names = FALSE))
+
+  stopifnot(setequal(pgenes, unique(unlist(pgenes_platform))))
+
   saveRDS(pgenes, pgenes_file)
-  cat("    -> Success:", length(pgenes), "genes\n\n")
-  rm(olink, olink2, olink_genes, othergenes, pgenes)
+  saveRDS(pgenes_platform, platform_file)
+  cat(sprintf("    -> Success: %d genes (Olink %d, Somascan %d, Other %d)\n\n",
+              length(pgenes), length(pgenes_platform$Olink),
+              length(pgenes_platform$Somascan), length(pgenes_platform$Other)))
+  rm(acc, local_map, res, olink_panel, study_prot, tested, ti_genes,
+     pgenes, pgenes_platform)
   gc(verbose = FALSE)
 }
 

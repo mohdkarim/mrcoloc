@@ -205,8 +205,11 @@ merge2 <- read_tsv(file.path(minikel_dir, "merge2.tsv.gz"),
 # Indications
 indic <- read_tsv(file.path(data_dir, "indic.tsv"), show_col_types = FALSE)
 
-# Load pre-computed background gene set
-pgenes <- readRDS(file.path(project_root, "data_raw/pgenes.rds"))
+# Load pre-computed background gene sets
+# [R2.10 FIX] pgenes_platform.rds decomposes pgenes into the proteins measured
+# on each platform, and is used for the per-platform backgrounds below.
+pgenes          <- readRDS(file.path(project_root, "data_raw/pgenes.rds"))
+pgenes_platform <- readRDS(file.path(project_root, "data_raw/pgenes_platform.rds"))
 
 message("   Loaded ", nrow(merge3_pqtl), " T-I associations")
 message("   ", length(pgenes), " genes in proteomics background")
@@ -245,7 +248,12 @@ get_pgene_enrichment <- function(ti_best, pgenes) {
     total_gs   = sum(baseline$gensup, na.rm = TRUE),
     succ_nogs  = sum(!long$gensup & long$success, na.rm = TRUE),
     total_nogs = sum(!baseline$gensup, na.rm = TRUE),
-    source     = "pQTL",
+    # [R2.3 FIX] Relabelled from "pQTL". The identical estimate appeared twice in
+    # Figure 1a - once as "pQTL" under "By genetic evidence source" and once as
+    # "L2G share: >= 0.5" under "By pQTL + L2G share" - so a row labelled only
+    # "pQTL", sitting among apparent alternatives (OMIM, FinnGen, All OTG,
+    # PICCOLO), read as pQTL evidence standing alone. Reviewer 2 comment 3.
+    source     = "pQTL (+ L2G >= 0.5)",
     label      = "By genetic evidence source"
   )
 }
@@ -492,10 +500,16 @@ enrichment_by_platform <- map_dfr(c("Somascan", "Olink"), function(p) {
            platform == p) %>%
     distinct(ti_uid)
   
+  # [R2.10 FIX] Background = proteins MEASURED on this platform, not proteins
+  # with a Bonferroni-significant association on it. `platform` is populated only
+  # on significant rows (it is assigned after the Bonferroni filter in
+  # create_derived_data.R), so the previous filter conditioned the background on
+  # the very evidence under test. The support filter above deliberately keeps
+  # `platform == p` - support IS evidence and is correctly conditioned on it.
   ti_best_platform <- merge3_pqtl %>%
     filter(!is.na(gene), gene != "",
            !is.na(indication_mesh_id), indication_mesh_id != "",
-           !is.na(ccat), platform == p) %>%
+           !is.na(ccat), gene %in% pgenes_platform[[p]]) %>%
     left_join(indic %>% select(indication_mesh_id, genetic_insight),
               by = "indication_mesh_id") %>%
     filter(genetic_insight != "none") %>%

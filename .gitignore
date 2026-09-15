@@ -51,3 +51,9 @@ Thumbs.db
 # Claude Code
 CLAUDE.md
 .claude/
+
+# Peer review working files - LOCAL ONLY.
+# Contains response-strategy notes explicitly marked "not for the reviewer"
+# (held-in-reserve arguments, deliberate omissions). Must not be published.
+# Every reproducibility-relevant script already lives in scripts/.
+peer_review/
