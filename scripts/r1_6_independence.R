@@ -147,23 +147,27 @@ factorial_2x2 <- function(dat, other_flag, other_name) {
   ref <- tab %>% filter(cell == refcell)
   cat(sprintf("\n  reference: %s = %d/%d = %.1f%%\n\n",
               refcell, ref$launched, ref$n, 100*ref$launched/ref$n))
-  for (cc in setdiff(tab$cell, refcell)) {
+  # [ST19] cell-vs-reference estimates are now collected, not just printed
+  cellrs <- bind_rows(lapply(setdiff(tab$cell, refcell), function(cc) {
     r <- tab %>% filter(cell == cc)
     if (r$n < 5 || r$launched == 0) {
-      cat(sprintf("  %-30s vs ref   UNDERPOWERED (%d/%d)\n", cc, r$launched, r$n)); next
+      cat(sprintf("  %-30s vs ref   UNDERPOWERED (%d/%d)\n", cc, r$launched, r$n))
+      return(tibble(cell = cc, est = NA_real_, lwr.ci = NA_real_, upr.ci = NA_real_))
     }
     rr <- as.data.frame(BinomRatioCI(r$launched, r$n, ref$launched, ref$n, method = "katz"))
     cat(sprintf("  %-30s vs ref   RS=%5.2f (%4.2f-%5.2f)\n",
                 cc, rr$est, rr$lwr.ci, rr$upr.ci))
-  }
+    tibble(cell = cc, est = rr$est, lwr.ci = rr$lwr.ci, upr.ci = rr$upr.ci)
+  }))
 
   # --- stratified pQTL effect within each stratum of the other source
+  # [ST19] results collected as well as printed
   cat(sprintf("\n  Stratified: pQTL+ vs pQTL- within each %s stratum\n\n", other_name))
-  for (lev in c(TRUE, FALSE)) {
+  strat <- bind_rows(lapply(c(TRUE, FALSE), function(lev) {
     sub <- d %>% filter(.o == lev)
     rs2(sub, sub$pq, sprintf("pQTL effect | %s %s", other_name,
                              ifelse(lev, "POSITIVE", "NEGATIVE")))
-  }
+  }))
 
   # --- Breslow-Day test of homogeneity of the pQTL OR across strata
   arr <- array(NA_integer_, dim = c(2,2,2),
@@ -180,15 +184,25 @@ factorial_2x2 <- function(dat, other_flag, other_name) {
   }
   cat("\n  2x2x2 table:\n"); print(arr)
   bd <- try(BreslowDayTest(arr), silent = TRUE)
+  bd_p <- NA_real_
   if (!inherits(bd, "try-error")) {
+    bd_p <- as.numeric(bd$p.value)
     cat(sprintf("\n  Breslow-Day homogeneity of pQTL OR across %s strata: p = %.3f\n",
-                other_name, bd$p.value))
-    cat("  (p > 0.05 => no evidence of interaction => pQTL effect consistent\n")
-    cat("   across strata, i.e. acts independently of ", other_name, ")\n", sep = "")
+                other_name, bd_p))
+    if (bd_p < 0.05) {
+      cat("  (p < 0.05 => SIGNIFICANT heterogeneity: the pQTL effect is NOT constant\n")
+      cat("   across ", other_name, " strata. Do NOT describe the sources as independent;\n", sep = "")
+      cat("   use complementary-coverage wording. See CLAUDE.md error 2.)\n")
+    } else {
+      cat("  (p > 0.05 => no evidence of interaction, though note the test is\n")
+      cat("   underpowered with this few pairs per cell)\n")
+    }
   } else {
     cat("\n  Breslow-Day test not computable (empty cells)\n")
   }
-  invisible(tab)
+  # [ST19] return everything needed to build the supplementary table
+  invisible(list(other = other_name, tab = tab, ref = ref,
+                 cellrs = cellrs, strat = strat, bd_p = bd_p))
 }
 
 t_om <- factorial_2x2(cm, cm$om, "OMIM")
@@ -200,8 +214,48 @@ cat("  4. pQTL with NEITHER OMIM NOR Genebass support\n")
 cat("================================================================\n\n")
 sub <- cm %>% filter(!om & !gb)
 cat(sprintf("  [stratum: %d Phase I pairs]\n", nrow(sub)))
-invisible(rs2(sub, sub$pq, "pQTL effect | no OMIM and no Genebass"))
+neither <- rs2(sub, sub$pq, "pQTL effect | no OMIM and no Genebass")
 
-saveRDS(list(marginal = marg, omim = t_om, genebass = t_gb),
+saveRDS(list(marginal = marg, omim = t_om, genebass = t_gb, neither = neither),
         "output/r1_6_independence.rds")
-cat("\n  -> output/r1_6_independence.rds\n\n")
+cat("\n  -> output/r1_6_independence.rds\n")
+
+# ============================================================================
+# [ST19] Supplementary table: pQTL x OMIM and pQTL x Genebass factorial,
+# stratified estimates and Breslow-Day homogeneity tests.
+# Column names follow ST4's convention so the sheet can be dropped straight
+# into generate_mrcoloc_supplement.R.
+# ============================================================================
+row_ <- function(panel, label, x, n, est = NA, lwr = NA, upr = NA, note = "") {
+  tibble(panel_group = panel, source_label = label,
+         count_string = if (is.na(x)) "" else sprintf("(%d/%d)", x, n),
+         rate = if (is.na(x)) "" else sprintf("%.1f%%", 100 * x / n),
+         rs_estimate = est, rs_lwr_95ci = lwr, rs_upr_95ci = upr, note = note)
+}
+
+st19 <- bind_rows(lapply(list(t_om, t_gb), function(f) {
+  panel <- sprintf("pQTL x %s", f$other)
+  cells <- f$tab %>% left_join(f$cellrs, by = "cell")
+  bind_rows(
+    bind_rows(lapply(seq_len(nrow(cells)), function(i) {
+      r <- cells[i, ]
+      row_(panel, r$cell, r$launched, r$n, r$est, r$lwr.ci, r$upr.ci,
+           if (identical(r$cell, f$ref$cell)) "reference cell" else "vs reference cell")
+    })),
+    bind_rows(lapply(seq_len(nrow(f$strat)), function(i) {
+      s <- f$strat[i, ]
+      row_(sprintf("%s (stratified)", panel), s$label, s$x1, s$n1,
+           s$est, s$lwr.ci, s$upr.ci, sprintf("comparator (%d/%d)", s$x2, s$n2))
+    })),
+    row_(sprintf("%s (stratified)", panel),
+         sprintf("Breslow-Day homogeneity of the pQTL odds ratio across %s strata", f$other),
+         NA, NA, NA, NA, NA, sprintf("p = %.3f", f$bd_p))
+  )
+}))
+st19 <- bind_rows(st19,
+  row_("Neither source present", neither$label, neither$x1, neither$n1,
+       neither$est, neither$lwr.ci, neither$upr.ci,
+       sprintf("comparator (%d/%d)", neither$x2, neither$n2)))
+
+write_tsv(st19, "output/ST19_pqtl_omim_genebass_factorial.tsv")
+cat("  -> output/ST19_pqtl_omim_genebass_factorial.tsv\n\n")

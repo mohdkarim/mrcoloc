@@ -215,4 +215,36 @@ cat(sprintf("  (supported pairs: %d launched / %d Phase I)\n", a50$x1, a50$n1))
 
 saveRDS(list(A = A, A_ref = A_ref, B = B, C = C, D = D, cells = cell_tab),
         "output/r1_5_results.rds")
-cat("\n  -> output/r1_5_results.rds\n\n")
+cat("\n  -> output/r1_5_results.rds\n")
+
+# ============================================================================
+# [ST22] Supplementary table for Reviewer 1 comment 5: relative success of
+# pQTL-supported pairs stratified by their TI-level maximum L2G share, plus the
+# literal below-threshold comparisons the reviewer asked for.
+#
+# The reviewer asked for L2G < 0.25, < 0.50 and < 0.75. Those strata contain too
+# few launched pQTL-supported pairs to estimate: hence the underpowered flags.
+# NOTE: max L2G share is taken at TI level. Filtering rows on l2g_share and then
+# taking distinct(ti_uid) yields non-disjoint strata - see r1_5_diagnostic.R.
+#
+# Columns follow ST4's convention for direct inclusion in the supplement.
+# ============================================================================
+st22 <- bind_rows(
+  C %>% transmute(panel_group = "By TI-level maximum L2G share band",
+                  source_label = label,
+                  count_string = sprintf("(%d/%d)/(%d/%d)", x1, n1, x2, n2),
+                  rs_estimate = est, rs_lwr_95ci = lwr.ci, rs_upr_95ci = upr.ci,
+                  note = flag),
+  A %>% transmute(panel_group = "Below-threshold, as requested by the reviewer",
+                  source_label = label,
+                  count_string = sprintf("(%d/%d)/(%d/%d)", x1, n1, x2, n2),
+                  rs_estimate = est, rs_lwr_95ci = lwr.ci, rs_upr_95ci = upr.ci,
+                  note = flag),
+  B %>% transmute(panel_group = "Below-threshold, matched strata",
+                  source_label = label,
+                  count_string = sprintf("(%d/%d)/(%d/%d)", x1, n1, x2, n2),
+                  rs_estimate = est, rs_lwr_95ci = lwr.ci, rs_upr_95ci = upr.ci,
+                  note = flag)
+)
+write_tsv(st22, "output/ST22_l2g_band_stratification.tsv")
+cat("  -> output/ST22_l2g_band_stratification.tsv\n\n")

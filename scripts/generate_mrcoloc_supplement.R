@@ -1363,6 +1363,43 @@ message("[11/12] Creating Excel workbook...")
 t_step <- Sys.time()
 
 # Prepare all tables
+
+# ============================================================================
+# SECTION 10b: ST17 (REPLACED) and ST18-ST22 for the Nature Medicine revision
+# ============================================================================
+# These sheets come from the response-analysis scripts, which must be run first:
+#   r2_5_alignment_table.R      -> ST17 (replaces the old success-pairs table)
+#   r2_5_build_st18.R           -> ST18 directional sensitivity
+#   r1_6_independence.R         -> ST19 pQTL x OMIM / Genebass factorial
+#   r2_1_saturation_cascade.R   -> ST20 filtering cascade
+#   r2_6_cluster_robust_ci.R    -> ST21 cluster-robust intervals
+#   r1_5_pqtl_lacking_l2g.R     -> ST22 L2G band stratification
+# If a file is absent the sheet is skipped with a warning rather than failing, so
+# the supplement can still be built from the main pipeline alone.
+
+message("[10b/12] Loading revision tables ST17-ST22...")
+read_rev <- function(f, label) {
+  path <- file.path(output_dir, f)
+  if (!file.exists(path)) {
+    warning("  [SKIP] ", label, ": ", f, " not found - run the response scripts first",
+            call. = FALSE, immediate. = TRUE)
+    return(NULL)
+  }
+  d <- readr::read_tsv(path, show_col_types = FALSE)
+  message(sprintf("    %-6s %-46s %d rows", label, f, nrow(d)))
+  d
+}
+
+# ST17 is REPLACED: the old sheet listed successful pQTL-supported pairs; the new
+# one carries the same 23 pairs plus the directional-alignment annotation (R2.5).
+ST17_new <- read_rev("r2_5_alignment_table.tsv",              "ST17")
+ST18     <- read_rev("ST18_directional_sensitivity.tsv",      "ST18")
+ST19     <- read_rev("ST19_pqtl_omim_genebass_factorial.tsv", "ST19")
+ST20     <- read_rev("r2_1_saturation_cascade.tsv",           "ST20")
+ST21     <- read_rev("ST21_cluster_robust_ci.tsv",            "ST21")
+ST22     <- read_rev("ST22_l2g_band_stratification.tsv",      "ST22")
+if (!is.null(ST17_new)) ST17 <- ST17_new
+
 all_tables <- list(
   "Key" = Key,
   "ST1 - Proteomic_GWAS" = ST2,
@@ -1381,8 +1418,15 @@ all_tables <- list(
   "ST14 - LOO_Universe1" = ST14,
   "ST15 - LOO_Universe2" = ST15,
   "ST16 - All_MR_pairs" = ST16,
-  "ST17 - pqtl_success_ti_pairs" = ST17
+  "ST17 - pqtl_success_ti_pairs" = ST17,
+  "ST18 - Directional_Sensitivity" = ST18,
+  "ST19 - pQTL_x_OMIM_Genebass"    = ST19,
+  "ST20 - Filtering_Cascade"       = ST20,
+  "ST21 - Cluster_Robust_CI"       = ST21,
+  "ST22 - L2G_Band_Stratification" = ST22
 )
+# drop any sheet whose source file was missing
+all_tables <- all_tables[!vapply(all_tables, is.null, logical(1))]
 
 # Sheet titles
 sheet_titles <- list(
@@ -1403,7 +1447,12 @@ sheet_titles <- list(
   "ST14 - LOO_Universe1" = "Supplementary Table 14: Leave-One-Out Sensitivity (Universe 1)",
   "ST15 - LOO_Universe2" = "Supplementary Table 15: Leave-One-Out Sensitivity (Universe 2)",
   "ST16 - All_MR_pairs" = "Supplementary Table 16: All Bonferroni-Significant MR Target-Trait Pairs",
-  "ST17 - pqtl_success_ti_pairs" = "Supplementary Table 17: Successful pQTL-Supported TI Pairs"
+  "ST17 - pqtl_success_ti_pairs" = "Supplementary Table 17: Successful pQTL-Supported T-I Pairs with Directional Alignment",
+  "ST18 - Directional_Sensitivity" = "Supplementary Table 18: Directional Sensitivity of pQTL Relative Success",
+  "ST19 - pQTL_x_OMIM_Genebass"    = "Supplementary Table 19: pQTL Support Cross-Classified with OMIM and Genebass",
+  "ST20 - Filtering_Cascade"       = "Supplementary Table 20: Filtering Cascade from Phase I Pairs to pQTL-Supported Pairs",
+  "ST21 - Cluster_Robust_CI"       = "Supplementary Table 21: Relative Success with Intervals Accounting for Repeated Targets",
+  "ST22 - L2G_Band_Stratification" = "Supplementary Table 22: pQTL Relative Success Stratified by Maximum L2G Share"
 )
 
 # Clean all tables
