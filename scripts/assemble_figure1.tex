@@ -1,0 +1,71 @@
+% ============================================================================
+% Figure 1 composite assembly
+% ============================================================================
+% Figure 1 was previously assembled by hand in PowerPoint and inserted into the
+% manuscript as a raster snapshot (2048 x 1831 px, ~290 dpi at 180 mm). That made
+% the figure impossible to regenerate when the underlying analysis changed - which
+% is exactly what happened during the Nature Medicine revision.
+%
+% This file reproduces the same arrangement from the three panel PDFs emitted by
+% mrcoloc_paper_2025_main_figures.R, as vector graphics:
+%
+%      +---------------------------+  +------------------+
+%      |                           |  |                  |
+%      |   a  fig1a_forest_main    |  |  b  fig1b_upset  |
+%      |                           |  |                  |
+%      +---------------------------+  +------------------+
+%      +---------------------------------------------------+
+%      |   c  fig1c_forest_gene_annot                      |
+%      +---------------------------------------------------+
+%
+% Layout measured from the original composite embedded in the submitted
+% manuscript: panel a occupied 54% of the content width, panel b 42.5%, and
+% panel c spanned the full width beneath them.
+%
+% NOTE on panel b: mrcoloc_paper_2025_main_figures.R:646 opens the device with
+% pdf(...) WITHOUT onefile=FALSE (unlike line 163 which does), and UpSetR::upset()
+% then leaves a blank leading page, so fig1b_upset.pdf is a 2-page PDF with the
+% plot on page 2. \includegraphics takes page 1, which silently yielded an empty
+% panel b. The build therefore extracts the content page first.
+%
+% Build:  cd /home/mohd/mrcoloc
+%         pdfseparate -f 2 -l 2 figures/fig1b_upset.pdf figures/fig1b_upset_page%d.pdf
+%         mv figures/fig1b_upset_page2.pdf figures/fig1b_upset_content.pdf
+%         pdflatex -output-directory=figures scripts/assemble_figure1.tex
+% Output: figures/assemble_figure1.pdf  (page auto-sized to content)
+% ============================================================================
+
+% Page size is set explicitly to the measured content size: this TinyTeX install
+% has neither standalone.cls nor pdfcrop, so the page is sized by hand. If panel
+% dimensions change, rerun scripts/fit_figure1_page.py to recompute PAGEH.
+\documentclass{article}
+\usepackage[paperwidth=190mm,paperheight=198mm,margin=5mm]{geometry}
+\usepackage{graphicx}
+\usepackage{mathptmx}          % Times, to match the manuscript
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\graphicspath{{figures/}{./}}
+
+% panel label: bold lower-case letter, Nature house style
+\newcommand{\panel}[1]{{\fontsize{11}{13}\selectfont\textbf{#1}}}
+
+\begin{document}
+
+% ---- top row: a (54%) and b (42.5%), 3.5% gutter ------------------------------
+\begin{minipage}[t]{0.540\textwidth}
+  \panel{a}\\[1mm]
+  \includegraphics[width=\linewidth]{fig1a_forest_main.pdf}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.425\textwidth}
+  \panel{b}\\[1mm]
+  \includegraphics[width=\linewidth]{fig1b_upset_content.pdf}
+\end{minipage}
+
+\vspace{5mm}
+
+% ---- bottom: c spanning the full width ---------------------------------------
+\panel{c}\\[1mm]
+\includegraphics[width=\textwidth]{fig1c_forest_gene_annot.pdf}
+
+\end{document}

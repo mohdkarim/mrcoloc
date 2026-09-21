@@ -56,15 +56,28 @@ s5 <- pq %>% filter(ti_uid %in% s1, !is.na(bxy_pval), bxy_pval <= BONF,
                     comb_norm >= 0.8, !is.na(l2g_share), l2g_share >= 0.5) %>%
       distinct(ti_uid) %>% pull(ti_uid)
 
+# NOTE: s2 ("any pQTL MR association present") and s3 ("Bonferroni-significant")
+# are the SAME set here, because merge3 only ever retains Bonferroni-significant
+# associations - the significance filter is applied upstream, not by this script.
+# The s2 row was therefore removed from the published table: it retained 100% of
+# the previous row, which reads as a filter that did nothing and invites the
+# question "what did that step do?". The two are collapsed into one step whose
+# label states the threshold. s2 is still computed and checked below so the fact
+# is recorded in the run log. Do not reinstate the row without re-checking this.
+stopifnot(setequal(s2, s3))
+
 casc <- tibble(
   step = c("Phase I T-I pairs, target measured on a proteomics platform",
-           "  + any pQTL MR association present for the target",
-           "  + MR association Bonferroni-significant (p < 1.06e-9)",
+           "  + Bonferroni-significant pQTL MR association for the target (p < 1.06e-9)",
            "  + MR trait MeSH-matched to the indication (>= 0.8)",
            "  + L2G share >= 0.5  [= pQTL-supported, as published]"),
-  n = c(length(s1), length(s2), length(s3), length(s4), length(s5))) %>%
+  n = c(length(s1), length(s3), length(s4), length(s5))) %>%
   mutate(pct_of_universe = sprintf("%.2f%%", 100 * n / length(s1)),
          retained_from_prev = c(NA, sprintf("%.1f%%", 100 * n[-1] / lag(n)[-1])))
+
+cat(sprintf("\n  [check] pairs with any pQTL association = %d; with a Bonferroni-significant\n", length(s2)))
+cat(sprintf("          one = %d. Identical, because merge3 is already significance-filtered,\n", length(s3)))
+cat("          so these two steps are reported as one row in ST20.\n")
 
 cat("\n=== filtering cascade ===\n\n")
 print(as.data.frame(casc), row.names = FALSE, right = FALSE)
