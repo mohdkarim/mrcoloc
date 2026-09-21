@@ -10,11 +10,29 @@ Code and data to reproduce analyses from:
 > Karim MA*, Hukku A, Ariano B, Holzinger E, Tsepilov Y, Hayhurst J, Buniello A, McDonagh EM, Castel SE, Nelson MR, Maranville J, Yerges-Armstrong L, Ghoussaini M*  
 > *Manuscript in preparation*
 
+## Which branch you want
+
+| Branch | What it is |
+|---|---|
+| `master` | The code as first submitted. Kept unchanged as a record of that version. It reproduces the originally reported **4.7×**. |
+| **`revision`** | **Use this one.** The corrected and extended analysis, reproducing the current **4.4×** and all supplementary tables ST1–ST22. |
+
+```bash
+git clone -b revision https://github.com/mohdkarim/mrcoloc.git
+```
+
+The two differ because a protein-identifier mapping step failed silently on `master`,
+omitting a small number of assayed proteins from the measured-protein universe that
+defines both the pQTL-supported set and its comparison group. Correcting it moves the
+headline estimate from 4.7 to 4.4; the number of launched pQTL-supported pairs (23) and
+the estimates for other genetic evidence are unchanged.
+
 ## Key Findings
 
-- pQTL-supported target-indication pairs show **4.7× higher** probability of clinical success (Phase I → Launch)
+- pQTL-supported target-indication pairs show **4.4× higher** probability of clinical success (Phase I → Launch)
 - This exceeds the 2.6× enrichment from human genetic evidence lacking pQTL support
 - pQTL-based enrichment is prominent in druggable protein families (enzymes, kinases) that show limited enrichment from genetic evidence alone
+- Intervals allowing for multiple indications sharing one target gene are given in ST21 (cluster-robust 2.89–6.81; cluster bootstrap 2.50–6.40)
 
 ## Interactive Browser
 
@@ -26,7 +44,7 @@ Total pipeline time is approximately **15 minutes** (excluding data download).
 
 ```bash
 # Clone the repository
-git clone https://github.com/mohdkarim/mrcoloc.git
+git clone -b revision https://github.com/mohdkarim/mrcoloc.git
 cd mrcoloc
 
 # Step 1: Download all data (~1 GB, ~1 min)
